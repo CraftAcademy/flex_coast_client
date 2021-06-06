@@ -1,0 +1,228 @@
+#root {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2 {
+  font-size: 32px;
+  color: #fe876f;
+  margin: 50px 0;
+}
+
+@media only screen and (max-width: 700px) {
+  h2 {
+    font-size: 1.2rem;
+    margin: 50px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  color: #fe876f;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  h3 {
+    font-size: 18px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.MuiSelect-icon {
+  color: white !important;
+}
+
+.MuiAppBar-root {
+  background-color: #02afb0 !important;
+}
+
+.MuiInput-root {
+  color: white !important;
+}
+
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+}
+
+@media only screen and (max-width: 520px) {
+  .form-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.question-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 520px) {
+  .question-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+.question-container img {
+  height: 60px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 10px;
+}
+
+.question-container p {
+  color: white;
+  background-color: #02afb0;
+  font-size: 1.4rem;
+  padding: 16px;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 520px) {
+  .question-container p {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+.type-field-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 520px) {
+  .type-field-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.type-field-container input {
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 0 10px;
+  text-align: center;
+  height: 50px;
+  min-width: 200px;
+  margin-right: 10px;
+  outline: none;
+  border: 2px solid #fe876f;
+  color: #fe876f;
+}
+
+@media only screen and (max-width: 520px) {
+  .type-field-container input {
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+}
+
+.type-field-container input::before {
+  outline: none;
+  border: none;
+}
+
+.type-field-container input::-webkit-input-placeholder {
+  text-transform: capitalize;
+  color: #fe876f;
+}
+
+.type-field-container input:-ms-input-placeholder {
+  text-transform: capitalize;
+  color: #fe876f;
+}
+
+.type-field-container input::-ms-input-placeholder {
+  text-transform: capitalize;
+  color: #fe876f;
+}
+
+.type-field-container input::placeholder {
+  text-transform: capitalize;
+  color: #fe876f;
+}
+
+.type-field-container .done-btn {
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  cursor: pointer;
+  border: 2px solid #fe876f;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.type-field-container .done-btn:hover {
+  background-color: #fe876f;
+}
+
+.type-field-container .done-btn:focus {
+  background-color: #fe876f;
+}
+
+.welcomeMessage {
+  padding-bottom: 30px;
+  border-bottom: 3px solid #fe876f;
+}
+
+.MuiButton-root {
+  border-radius: 20px !important;
+  font-size: 24px !important;
+  color: white !important;
+  background-color: #02afb0 !important;
+  padding: 10px !important;
+  -ms-flex-item-align: center !important;
+      -ms-grid-row-align: center !important;
+      align-self: center !important;
+}
+
+@media only screen and (max-width: 520px) {
+  .MuiButton-root {
+    font-size: 18px !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
