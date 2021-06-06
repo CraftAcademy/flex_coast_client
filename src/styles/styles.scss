@@ -1,0 +1,121 @@
+@import 'globals';
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+  @media only screen and (max-width: 520px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.question-container {
+  display: flex;
+  margin-bottom: 50px;
+  @media only screen and (max-width: 520px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  img {
+    height: 60px;
+    align-self: center;
+    margin-right: 10px;
+  }
+
+  p {
+    color: white;
+    background-color: $mainColor;
+    font-size: 1.4rem;
+    padding: 16px;
+    border-radius: 20px;
+    @media only screen and (max-width: 520px) {
+      font-size: 18px;
+      padding: 20px;
+    }
+  }
+}
+
+.type-field-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 50px;
+  @media only screen and (max-width: 520px) {
+    flex-direction: column;
+    h3{
+     margin-right: 35%;
+    }
+  }
+
+  input {
+    font-size: 1rem;
+    border-radius: 20px;
+    padding: 0 10px;
+    text-align: center;
+    height: 50px;
+    min-width: 200px;
+    margin-right: 10px;
+    outline: none;
+    border: 2px solid $secondaryColor;
+    color: $secondaryColor;
+    @media only screen and (max-width: 520px) {
+      margin-bottom: 10px;
+      margin-right: 0px;
+    }
+    &::before {
+      outline: none;
+      border: none;
+    }
+
+    &::placeholder {
+      color: $secondaryColor;
+    }
+  }
+
+  .done-btn {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid $secondaryColor;
+    transition: 0.3s;
+    @media only screen and (max-width: 520px) {
+      margin-left: 10px;
+    }
+    &:hover {
+      background-color: $secondaryColor;
+    }
+    &:focus {
+      background-color: $secondaryColor;
+    }
+  }
+}
+
+.welcomeMessage {
+  padding-bottom: 30px;
+  border-bottom: 3px solid $secondaryColor;
+}
+
+.MuiButton-root {
+  border-radius: 20px !important;
+  font-size: 20px !important;
+  color: white !important;
+  background-color: $mainColor !important;
+  padding: 10px !important;
+  align-self: center !important;
+  @media only screen and (max-width: 520px) {
+    font-size: 18px !important;
+  }
+} 
