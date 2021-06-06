@@ -1,13 +1,14 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
-import './styles/desktop.css'
+import QuestionaryForm from './views/QuestionaryForm'
+import './styles/styles.css'
 import './styles/globals.css'
+import Header from './components/Header'
 
 const App = () => {
-  const { t } = useTranslation()
   return (
     <>
-      <h1 className='title'>{t('getStarted')}</h1>
+      <Header />
+      <QuestionaryForm />
     </>
   )
 }
