@@ -4,13 +4,13 @@ import en from './locales/en'
 import se from './locales/se'
 
 const resources = {
-  se: se,
-  en: en,
+  Svenska: se,
+  English: en,
 }
 
 i18n.use(initReactI18next).init({
   resources,
-  fallbackLng: 'en',
+  fallbackLng: 'English',
   interpolation: {
     escapeValue: false,
   },
