@@ -5,12 +5,12 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
   font-size: 32px;
-  color: #fe876f;
+  color: #ffd09c;
   margin: 50px 0;
 }
 
@@ -23,7 +23,7 @@ h2 {
 
 h3 {
   font-size: 24px;
-  color: #fe876f;
+  color: #ffd09c;
   padding-right: 10px;
   margin-bottom: 10px;
 }
@@ -33,7 +33,7 @@ h3 {
     font-size: 18px;
     margin-top: 5px;
     padding-right: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 }
 
@@ -44,15 +44,64 @@ h3 {
   }
 }
 
+.custom-button {
+  height: 50px;
+  cursor: pointer;
+  background-color: rgba(97, 247, 210, 0.9);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 14px 24px;
+  font-size: 18px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #61f7d2;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.custom-button a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+}
+
 .MuiSelect-icon {
   color: white !important;
 }
 
 .MuiAppBar-root {
-  background-color: #02afb0 !important;
+  background-color: #61f7d2 !important;
 }
 
 .MuiInput-root {
   color: white !important;
+}
+
+.MuiToolbar-root {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.MuiButton-root {
+  border-radius: 20px !important;
+  font-size: 20px !important;
+  color: white !important;
+  background-color: #61f7d2 !important;
+  padding: 10px !important;
+  -ms-flex-item-align: center !important;
+      -ms-grid-row-align: center !important;
+      align-self: center !important;
+}
+
+@media only screen and (max-width: 520px) {
+  .MuiButton-root {
+    font-size: 18px !important;
+  }
 }
 /*# sourceMappingURL=globals.css.map */
