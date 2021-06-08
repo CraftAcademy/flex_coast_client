@@ -93,6 +93,11 @@ h3 {
   @media only screen and (max-width: 520px) {
     font-size: 18px !important;
   }
-}
+} 
 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 // Blueprints
