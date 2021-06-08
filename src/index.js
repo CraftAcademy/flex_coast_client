@@ -17,3 +17,7 @@ ReactDOM.render(
 )
 
 reportWebVitals()
+
+if (window.Cypress) {
+  window.store = store
+}
