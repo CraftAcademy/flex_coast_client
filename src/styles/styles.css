@@ -5,12 +5,12 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
   font-size: 32px;
-  color: #fe876f;
+  color: #ffd09c;
   margin: 50px 0;
 }
 
@@ -23,7 +23,7 @@ h2 {
 
 h3 {
   font-size: 24px;
-  color: #fe876f;
+  color: #ffd09c;
   padding-right: 10px;
   margin-bottom: 10px;
 }
@@ -44,16 +44,65 @@ h3 {
   }
 }
 
+.custom-button {
+  height: 50px;
+  cursor: pointer;
+  background-color: rgba(97, 247, 210, 0.9);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 14px 24px;
+  font-size: 18px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #61f7d2;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.custom-button a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+}
+
 .MuiSelect-icon {
   color: white !important;
 }
 
 .MuiAppBar-root {
-  background-color: #02afb0 !important;
+  background-color: #61f7d2 !important;
 }
 
 .MuiInput-root {
   color: white !important;
+}
+
+.MuiToolbar-root {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.MuiButton-root {
+  border-radius: 20px !important;
+  font-size: 20px !important;
+  color: white !important;
+  background-color: #61f7d2 !important;
+  padding: 10px !important;
+  -ms-flex-item-align: center !important;
+      -ms-grid-row-align: center !important;
+      align-self: center !important;
+}
+
+@media only screen and (max-width: 520px) {
+  .MuiButton-root {
+    font-size: 18px !important;
+  }
 }
 
 .form-container {
@@ -68,15 +117,13 @@ h3 {
   max-width: 800px;
   margin: auto;
   margin-top: 50px;
-  padding-top: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 10px 50px 0 50px;
   border-radius: 20px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 620px) {
   .form-container {
     padding-left: 0px;
     padding-right: 0px;
@@ -90,7 +137,7 @@ h3 {
   margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 620px) {
   .question-container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -109,13 +156,13 @@ h3 {
 
 .question-container p {
   color: white;
-  background-color: #02afb0;
+  background-color: #61f7d2;
   font-size: 1.4rem;
   padding: 16px;
   border-radius: 20px;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 620px) {
   .question-container p {
     font-size: 18px;
     padding: 20px;
@@ -139,7 +186,7 @@ h3 {
   margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 620px) {
   .type-field-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -160,11 +207,11 @@ h3 {
   min-width: 200px;
   margin-right: 10px;
   outline: none;
-  border: 2px solid #fe876f;
-  color: #fe876f;
+  border: 2px solid #ffd09c;
+  color: #ffd09c;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 620px) {
   .type-field-container input {
     margin-bottom: 10px;
     margin-right: 0px;
@@ -177,19 +224,19 @@ h3 {
 }
 
 .type-field-container input::-webkit-input-placeholder {
-  color: #fe876f;
+  color: #ffd09c;
 }
 
 .type-field-container input:-ms-input-placeholder {
-  color: #fe876f;
+  color: #ffd09c;
 }
 
 .type-field-container input::-ms-input-placeholder {
-  color: #fe876f;
+  color: #ffd09c;
 }
 
 .type-field-container input::placeholder {
-  color: #fe876f;
+  color: #ffd09c;
 }
 
 .type-field-container .done-btn {
@@ -198,44 +245,125 @@ h3 {
   width: 50px;
   padding: 10px;
   cursor: pointer;
-  border: 2px solid #fe876f;
+  border: 2px solid #ffd09c;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 620px) {
   .type-field-container .done-btn {
     margin-left: 10px;
   }
 }
 
 .type-field-container .done-btn:hover {
-  background-color: #fe876f;
+  background-color: #ffd09c;
 }
 
 .type-field-container .done-btn:focus {
-  background-color: #fe876f;
+  background-color: #ffd09c;
 }
 
 .welcomeMessage {
   padding-bottom: 30px;
-  border-bottom: 3px solid #fe876f;
+  border-bottom: 3px solid #ffd09c;
 }
 
-.MuiButton-root {
-  border-radius: 20px !important;
-  font-size: 20px !important;
-  color: white !important;
-  background-color: #02afb0 !important;
-  padding: 10px !important;
-  -ms-flex-item-align: center !important;
-      -ms-grid-row-align: center !important;
-      align-self: center !important;
+.hero-section {
+  background-image: url("/src/assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 80vh;
 }
 
-@media only screen and (max-width: 520px) {
-  .MuiButton-root {
-    font-size: 18px !important;
+.hero-section .header-container {
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 75px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 15%;
+}
+
+@media only screen and (max-width: 620px) {
+  .hero-section .header-container {
+    margin: 0 20px;
   }
+}
+
+.hero-section .header-container button {
+  margin-right: 20px;
+}
+
+.hero-section .header-container div:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-section .header-container .logo {
+  height: 100px;
+}
+
+.hero-section .welcome-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #fff;
+  margin: 150px 20vw;
+  text-align: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 620px) {
+  .hero-section .welcome-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 100px 40px 0 40px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.hero-section .welcome-text h1 {
+  padding-bottom: 35px;
+  text-shadow: 0 0 3px #2a2929;
+  padding-right: 10px;
+  font-size: 45px;
+  max-width: 600px;
+}
+
+@media only screen and (max-width: 620px) {
+  .hero-section .welcome-text h1 {
+    font-size: 40px;
+  }
+}
+
+.hero-section .welcome-text button {
+  min-width: 180px;
+}
+
+.testimonials-container {
+  height: 50vh;
+  background-color: rgba(255, 208, 156, 0.2);
 }
 /*# sourceMappingURL=styles.css.map */

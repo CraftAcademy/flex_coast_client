@@ -1,7 +1,5 @@
 @import 'globals';
 
-$mobile: 520px;
-
 .form-container {
   display: flex;
   flex-direction: column;
@@ -53,8 +51,8 @@ $mobile: 520px;
   margin-bottom: 50px;
   @media only screen and (max-width: $mobile) {
     flex-direction: column;
-    h3{
-     margin-right: 35%;
+    h3 {
+      margin-right: 35%;
     }
   }
 
@@ -106,4 +104,73 @@ $mobile: 520px;
 .welcomeMessage {
   padding-bottom: 30px;
   border-bottom: 3px solid $secondaryColor;
+}
+
+// Landing Page
+
+.hero-section {
+  background-image: $hero-img;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 80vh;
+
+  .header-container {
+    padding: 50px 0;
+    display: flex;
+    height: 75px;
+    justify-content: space-between;
+    margin: 0 15%;
+    @media only screen and (max-width: $mobile) {
+      margin: 0 20px;
+    }
+
+    button {
+      margin-right: 20px;
+    }
+
+    div:first-of-type {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 100px;
+    }
+  }
+
+  .welcome-text {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    margin: 150px 20vw;
+    text-align: left;
+    align-items: center;
+    justify-content: space-evenly;
+    @media only screen and (max-width: $mobile) {
+      flex-direction: column;
+      margin: 100px 40px 0 40px;
+      align-items: flex-start;
+    }
+
+    h1 {
+      padding-bottom: 35px;
+      text-shadow: 0 0 3px rgb(42, 41, 41);
+      padding-right: 10px;
+      font-size: 45px;
+      max-width: 600px;
+      @media only screen and (max-width: $mobile) {
+        font-size: 40px;
+      }
+    }
+
+    button {
+      min-width: 180px;
+    }
+  }
+}
+
+.testimonials-container {
+  height: 50vh;
+  background-color: rgba(255, 208, 156, 0.2);
 }
