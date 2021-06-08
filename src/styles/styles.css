@@ -21,29 +21,6 @@ h2 {
   }
 }
 
-h3 {
-  font-size: 24px;
-  color: #fe876f;
-  padding-right: 10px;
-  margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 700px) {
-  h3 {
-    font-size: 18px;
-    margin-top: 5px;
-    padding-right: 10px;
-    margin-bottom: 10px;
-  }
-}
-
-@media only screen and (max-width: 520px) {
-  h3 {
-    font-size: 18px;
-    padding-right: 10px;
-  }
-}
-
 .MuiSelect-icon {
   color: white !important;
 }
@@ -54,6 +31,29 @@ h3 {
 
 .MuiInput-root {
   color: white !important;
+}
+
+.MuiButton-root {
+  border-radius: 20px !important;
+  font-size: 20px !important;
+  color: white !important;
+  background-color: #02afb0 !important;
+  padding: 10px !important;
+  -ms-flex-item-align: center !important;
+      -ms-grid-row-align: center !important;
+      align-self: center !important;
+}
+
+@media only screen and (max-width: 520px) {
+  .MuiButton-root {
+    font-size: 18px !important;
+  }
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .form-container {
@@ -68,9 +68,7 @@ h3 {
   max-width: 800px;
   margin: auto;
   margin-top: 50px;
-  padding-top: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 10px 50px 0 50px;
   border-radius: 20px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
@@ -151,13 +149,34 @@ h3 {
   }
 }
 
-.type-field-container input {
-  font-size: 1rem;
+.type-field-container h3 {
+  font-size: 24px;
+  color: #fe876f;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .type-field-container h3 {
+    font-size: 18px;
+    margin-top: 5px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .type-field-container h3 {
+    font-size: 18px;
+    padding-right: 10px;
+  }
+}
+
+.type-field-container .input, .type-field-container .input:disabled, .type-field-container .input-filled {
+  font-size: 1.4rem;
   border-radius: 20px;
-  padding: 0 10px;
   text-align: center;
-  height: 50px;
-  min-width: 200px;
+  height: 55px;
   margin-right: 10px;
   outline: none;
   border: 2px solid #fe876f;
@@ -165,37 +184,68 @@ h3 {
 }
 
 @media only screen and (max-width: 520px) {
-  .type-field-container input {
+  .type-field-container .input, .type-field-container .input:disabled, .type-field-container .input-filled {
     margin-bottom: 10px;
     margin-right: 0px;
   }
 }
 
-.type-field-container input::before {
+.type-field-container .input::before, .type-field-container .input:disabled::before, .type-field-container .input-filled::before {
   outline: none;
   border: none;
 }
 
-.type-field-container input::-webkit-input-placeholder {
+.type-field-container .input:focus::-webkit-input-placeholder, .type-field-container .input-filled:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.type-field-container .input:focus:-ms-input-placeholder, .type-field-container .input-filled:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.type-field-container .input:focus::-ms-input-placeholder, .type-field-container .input-filled:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.type-field-container .input:focus::placeholder, .type-field-container .input-filled:focus::placeholder {
+  color: transparent;
+}
+
+.type-field-container .input::-webkit-input-placeholder, .type-field-container .input:disabled::-webkit-input-placeholder, .type-field-container .input-filled::-webkit-input-placeholder {
   color: #fe876f;
 }
 
-.type-field-container input:-ms-input-placeholder {
+.type-field-container .input:-ms-input-placeholder, .type-field-container .input:disabled:-ms-input-placeholder, .type-field-container .input-filled:-ms-input-placeholder {
   color: #fe876f;
 }
 
-.type-field-container input::-ms-input-placeholder {
+.type-field-container .input::-ms-input-placeholder, .type-field-container .input:disabled::-ms-input-placeholder, .type-field-container .input-filled::-ms-input-placeholder {
   color: #fe876f;
 }
 
-.type-field-container input::placeholder {
+.type-field-container .input::placeholder, .type-field-container .input:disabled::placeholder, .type-field-container .input-filled::placeholder {
   color: #fe876f;
 }
 
-.type-field-container .done-btn {
+.type-field-container .input[type='number'], .type-field-container .input-filled[type='number'] {
+  width: 100px;
+}
+
+.type-field-container .input:disabled, .type-field-container .input-filled:disabled {
+  background-color: #fe876f;
+  color: white;
+}
+
+.type-field-container .input-filled {
+  background-color: #fe876f;
+  color: white;
+}
+
+.type-field-container .done-btn, .type-field-container .done-btn-filled {
   border-radius: 100%;
-  height: 50px;
-  width: 50px;
+  margin-bottom: 10px;
+  height: 55px;
+  width: 55px;
   padding: 10px;
   cursor: pointer;
   border: 2px solid #fe876f;
@@ -204,38 +254,63 @@ h3 {
 }
 
 @media only screen and (max-width: 520px) {
-  .type-field-container .done-btn {
+  .type-field-container .done-btn, .type-field-container .done-btn-filled {
     margin-left: 10px;
   }
 }
 
-.type-field-container .done-btn:hover {
+.type-field-container .done-btn:hover, .type-field-container .done-btn-filled:hover {
   background-color: #fe876f;
 }
 
-.type-field-container .done-btn:focus {
+.type-field-container .done-btn:hover .icon, .type-field-container .done-btn-filled:hover .icon, .type-field-container .done-btn:hover .icon-filled, .type-field-container .done-btn-filled:hover .icon-filled {
+  color: white;
+}
+
+.type-field-container .done-btn-filled {
   background-color: #fe876f;
+}
+
+.type-field-container .done-btn .icon, .type-field-container .done-btn-filled .icon, .type-field-container .done-btn .icon-filled, .type-field-container .done-btn-filled .icon-filled {
+  color: #fe876f;
+}
+
+.type-field-container .done-btn .icon-filled, .type-field-container .done-btn-filled .icon-filled {
+  color: white;
+}
+
+.type-field-container .radio-group {
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.type-field-container .radio-group input[type='radio'] {
+  visibility: hidden;
+  display: none;
+}
+
+.type-field-container .radio-group label {
+  margin-right: 10px;
+  border: 2px solid #fe876f;
+  border-radius: 20px;
+  font-size: 22px;
+  color: #fe876f;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.type-field-container .radio-group input[type='radio']:checked + label {
+  color: white;
+  background: #fe876f;
+}
+
+.type-field-container .radio-group label + input[type='radio'] + label {
+  border-left: 2px solid #fe876f;
 }
 
 .welcomeMessage {
   padding-bottom: 30px;
   border-bottom: 3px solid #fe876f;
-}
-
-.MuiButton-root {
-  border-radius: 20px !important;
-  font-size: 20px !important;
-  color: white !important;
-  background-color: #02afb0 !important;
-  padding: 10px !important;
-  -ms-flex-item-align: center !important;
-      -ms-grid-row-align: center !important;
-      align-self: center !important;
-}
-
-@media only screen and (max-width: 520px) {
-  .MuiButton-root {
-    font-size: 18px !important;
-  }
 }
 /*# sourceMappingURL=styles.css.map */
