@@ -10,7 +10,7 @@ describe('User can send inquiry', () => {
         },
       }
     )
-    cy.visit('/')
+    cy.visit('/inquiry')
   })
   describe('Successfully', () => {
     it('is expected to display success message', () => {
