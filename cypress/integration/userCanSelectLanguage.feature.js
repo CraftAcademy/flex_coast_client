@@ -1,6 +1,6 @@
 describe('User can switch between languages', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('/inquiry')
   })
 
   it('is expected to change the UI language', () => {
