@@ -4,16 +4,12 @@ import { Link } from 'react-router-dom'
 const CustomButton = ({
   children,
   dataCy = 'button',
-  clickHandler,
+  onClick,
   link = false,
   to,
 }) => {
-  
   const button = (
-    <button
-      className='custom-button'
-      data-cy={dataCy}
-      onClick={() => clickHandler}>
+    <button className='custom-button' data-cy={dataCy} onClick={onClick}>
       {children}
     </button>
   )

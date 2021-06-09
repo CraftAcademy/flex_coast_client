@@ -3,8 +3,8 @@ import store from '../state/store/configureStore'
 
 const Inquiries = {
   async create(formData) {
-    try { 
-      let params = {form_data: formData}
+    try {
+      let params = { form_data: formData }
       let response = await axios.post('/inquiries', params)
       store.dispatch({
         type: 'SET_SUBMIT_MESSAGE',

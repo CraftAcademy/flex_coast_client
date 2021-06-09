@@ -1,16 +1,52 @@
-import React from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
+import React, { useState } from 'react'
 import LanguageSelect from './LanguageSelect'
+import logo from '../assets/logo.svg'
+import CustomButton from './custom/CustomButton'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
+import Drawer from '@material-ui/core/Drawer'
 
-const Header = () => {
+const LandingHeader = ({ landing }) => {
+  const [open, setOpen] = useState(false)
+  const isSmall = useMediaQuery('(max-width:620px)')
+
   return (
-    <AppBar position='static'>
-      <Toolbar>
-        <LanguageSelect />
-      </Toolbar>
-    </AppBar>
+    <div
+      data-cy='header'
+      className={landing ? 'page-header-landing' : 'page-header'}
+      >
+      <a href='/'>
+        <img src={logo} alt='logo' className='logo' data-cy='flex-coast' />
+      </a>
+      {isSmall ? (
+        <div className='dropdown-menu'>
+          <IconButton onClick={() => setOpen(true)}>
+            <MenuIcon fontSize='large' />
+          </IconButton>
+          <Drawer
+            className='dropdown-container'
+            anchor='top'
+            open={open}
+            onClose={() => setOpen(false)}>
+            <>
+              <CustomButton dataCy='phone-number'>
+                <a href='tel:+46812345678'>08-123 456 78</a>
+              </CustomButton>
+              <LanguageSelect />
+            </>
+          </Drawer>
+        </div>
+      ) : (
+        <div className='menu-wrapper'>
+          <CustomButton dataCy='phone-number'>
+            <a href='tel:+46812345678'>08-123 456 78</a>
+          </CustomButton>
+          <LanguageSelect />
+        </div>
+      )}
+    </div>
   )
 }
 
-export default Header
+export default LandingHeader

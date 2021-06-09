@@ -9,6 +9,10 @@ import reportWebVitals from './reportWebVitals'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 axios.defaults.baseURL = 'https://flex-coast-development.herokuapp.com/api'
+axios.defaults.baseURL =
+  process.env.REACT_APP_STAGE === 'production'
+    ? 'https://flex-coast-production.herokuapp.com/api'
+    : 'https://flex-coast-development.herokuapp.com/api'
 
 ReactDOM.render(
   <Router>

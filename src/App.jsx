@@ -1,11 +1,10 @@
 import React from 'react'
 import QuestionaryForm from './views/QuestionaryForm'
-import './styles/styles.css'
+import './styles/questionnaire.css'
 import './styles/globals.css'
-import Header from './components/Header'
+import './styles/landingPage.css'
 import { Route, Switch } from 'react-router-dom'
 import LandingPage from './views/LandingPage'
-
 
 const App = () => {
   return (
@@ -14,7 +13,6 @@ const App = () => {
         <LandingPage />
       </Route>
       <Route exact path='/inquiry'>
-        <Header />
         <QuestionaryForm />
       </Route>
     </Switch>

@@ -9,10 +9,23 @@
   margin-top: 50px;
   padding: 10px 50px 0 50px;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+  border: 1px solid lightgray;
   @media only screen and (max-width: $mobile) {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .custom-button {
+    width: 200px;
+    margin: 0 auto;
+  }
+}
+
+.welcomeMessage {
+  padding-bottom: 30px;
+  border-bottom: 3px solid $secondaryColor;
+  @media only screen and (max-width: $mobile) {
+    margin: 20px 20px 50px 20px;
   }
 }
 
@@ -20,7 +33,7 @@
   display: flex;
   margin-bottom: 50px;
   @media only screen and (max-width: $mobile) {
-    justify-content: center;
+    justify-content: left;
     margin-bottom: 30px;
   }
 
@@ -43,7 +56,7 @@
   }
 }
 
-.type-field-container {
+.answer-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -51,9 +64,7 @@
   margin-bottom: 50px;
   @media only screen and (max-width: $mobile) {
     flex-direction: column;
-    h3 {
-      margin-right: 35%;
-    }
+    align-items: right;
   }
 
   h3 {
@@ -64,11 +75,13 @@
     @media only screen and (max-width: 700px) {
       font-size: 18px;
       margin-top: 5px;
+      margin-right: 35%;
       padding-right: 10px;
       margin-bottom: 10px;
     }
     @media only screen and (max-width: 520px) {
       font-size: 18px;
+
       padding-right: 10px;
     }
   }
@@ -85,6 +98,7 @@
     @media only screen and (max-width: $mobile) {
       margin-bottom: 10px;
       margin-right: 0px;
+      max-width: 70%;
     }
 
     &::before {
@@ -156,7 +170,6 @@
     display: inline-block;
 
     input[type='radio'] {
-      
       visibility: hidden;
       display: none;
     }
@@ -178,125 +191,7 @@
     }
 
     label + input[type='radio'] + label {
-      
       border-left: 2px solid $secondaryColor;
     }
   }
-}
-
-.welcomeMessage {
-  padding-bottom: 30px;
-  border-bottom: 3px solid $secondaryColor;
-}
-
-// Landing Page
-
-.hero-section {
-  background-image: $hero-img;
-  background-size: cover;
-  background-position: center;
-  width: 100vw;
-  height: 80vh;
-  @media only screen and (max-width: $mobile) {
-    height: 100vh;
-  }
-
-  .header-container {
-    padding: 50px 0;
-    display: flex;
-    height: 75px;
-    justify-content: space-between;
-    margin: 0 15%;
-    @media only screen and (max-width: $mobile) {
-      margin: 0 20px;
-    }
-
-    button {
-      margin-right: 20px;
-    }
-
-    .menu-wrapper {
-      display: flex;
-      align-items: center;
-    }
-
-    .dropdown-menu {
-      button:first-of-type {
-        color: #fff;
-      }
-    }
-
-    .logo {
-      height: 100px;
-    }
-  }
-
-  .welcome-text {
-    display: flex;
-    flex-direction: row;
-    color: #fff;
-    margin: 150px 20vw;
-    text-align: left;
-    align-items: center;
-    justify-content: space-evenly;
-    @media only screen and (max-width: $mobile) {
-      flex-direction: column;
-      margin: 100px 40px 0 40px;
-      align-items: flex-start;
-    }
-
-    h1 {
-      padding-bottom: 35px;
-      text-shadow: 0 0 3px rgb(42, 41, 41);
-      padding-right: 10px;
-      font-size: 45px;
-      max-width: 600px;
-      @media only screen and (max-width: $mobile) {
-        font-size: 40px;
-      }
-    }
-
-    button {
-      min-width: 180px;
-    }
-  }
-}
-
-.dropdown-container {
-  .MuiPaper-root {
-    background-color: $secondaryColorMedOpacity;
-    padding: 0 25%;
-    height: 50%;
-    align-items: center;
-    justify-content: space-evenly;
-
-    button {
-      background-color: transparent;
-      border: 1px solid #fff;
-    }
-
-    .MuiInputBase-root {
-      border: 1px solid #fff;
-      padding: 10px 20px;
-      border-radius: 4px;
-    }
-  }
-}
-
-#menu-language {
-  .MuiPaper-root {
-    @media only screen and (max-width: $mobile) {
-      background-color: $secondaryColor;
-      color: white;
-      width: 125px;
-      position: absolute;
-      left: 50% !important;
-      transform: translateX(-50%) !important;
-    }
-  }
-}
-
-.testimonials-container {
-  height: 50vh;
-  background-color: $secondaryColorLowOpacity;
 }
