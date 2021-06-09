@@ -1,5 +1,5 @@
 import React from 'react'
-import agent from '../assets/agent.png'
+import agent from '../../assets/agent.png'
 
 const Question = ({ text, dataCy = 'question' }) => {
   return (

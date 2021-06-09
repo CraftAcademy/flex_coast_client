@@ -1,11 +1,8 @@
 const en = {
   translation: {
-
     landingPage: {
-
       introText: 'Flexible short term office leasing in lovely Gothenburg',
-      startButton: 'Get Started'
-
+      startButton: 'Get Started',
     },
     welcomeMessage:
       "Hi! Let's talk requirements, so we can provide personalised suggestions for your company.",
@@ -19,11 +16,10 @@ const en = {
       size: 'We are a group of: ',
       officeType: 'We need: ',
       officeLable: 'Office',
-      openSpaceLable: 'Open space'
+      openSpaceLable: 'Open space',
     },
     submitButton: 'Submit',
   },
-
 }
 
 export default en
