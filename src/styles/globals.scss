@@ -187,6 +187,8 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 #footer {
+  background-color: #fff;
+  padding-top: 50px;
   width: 100vw;
   margin: 40px 0 40px 0;
   padding-bottom: 100px;
@@ -212,7 +214,7 @@ input[type='number']::-webkit-outer-spin-button {
     h3 {
       text-decoration: underline;
     }
-    
+
     .footer-text {
       color: rgb(255, 224, 189);
       text-decoration: none;
@@ -229,7 +231,6 @@ input[type='number']::-webkit-outer-spin-button {
       text-decoration: none;
       color: rgb(255, 224, 189);
       font-size: 18px;
-
     }
   }
 }
