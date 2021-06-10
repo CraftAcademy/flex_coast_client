@@ -19,5 +19,14 @@ describe('User can visit Flex Coast landing page', () => {
     )
     cy.get('[data-cy=get-started]').should('contain', 'Get Started').click()
     cy.url().should('contain', '/inquiry')
+
+    // cy.get('[data-cy=footer]').within(() => {
+    //   cy.get('[data-cy=footer-header]').should('contain', 'Flex Coast')
+    //   cy.get('[data-cy=footer-categories]').within(() => {
+    //     cy.get('[data-cy=footer-about]').should('contain.text')
+    //     cy.get('[data-cy=footer-contact]').should('contain.text')
+    //     cy.get('[data-cy=links]').should('be.visible')
+    //   })
+    // })
   })
 })
