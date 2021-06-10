@@ -1,4 +1,10 @@
 @import 'globals';
+$bg-image1: url('../assets/social-bg-1.jpg');
+$bg-image2: url('../assets/social-bg-2.jpg');
+$bg-image3: url('../assets/social-bg-3.jpg');
+$person1: url('../assets/social-img-1.jpg');
+$person2: url('../assets/social-img-2.jpg');
+$person3: url('../assets/social-img-3.jpg');
 
 .hero-section {
   background-image: $hero-img;
@@ -29,7 +35,6 @@
 
     h1 {
       padding-bottom: 35px;
-      text-shadow: 0 0 3px rgb(42, 41, 41);
       padding-right: 10px;
       font-size: 45px;
       max-width: 600px;
@@ -45,6 +50,125 @@
 }
 
 .testimonials-container {
-  height: 50vh;
+  display: flex;
+  width: 100%;
+  padding-top: 75px;
+  flex-direction: column;
+  align-items: center;
   background-color: $secondaryColorLowOpacity;
+
+  .testimonial-subtitle {
+    max-width: 1280px;
+    width: 100%;
+    font-size: 16px;
+    text-align: start;
+    margin-bottom: 25px;
+  }
+
+  .testimonial-title {
+    font-size: 40px;
+    color: #333;
+    max-width: 1280px;
+    margin-bottom: 75px;
+  }
+
+  .illu-container {
+    max-width: 1280px;
+    width: 100%;
+    height: 150px;
+
+    .illustration {
+      height: 100%;
+    }
+  }
+
+  .bg-1 {
+    background-image: $bg-image1;
+  }
+  .bg-2 {
+    background-image: $bg-image2;
+  }
+  .bg-3 {
+    background-image: $bg-image3;
+  }
+
+  .slider-container {
+    border-radius: 4px;
+    display: flex;
+    width: 50%;
+    width: 1280px;
+    height: 750px;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    transition: 1s;
+  }
+  .testimonial-container {
+    margin: 50px;
+    height: 80%;
+    border-radius: 4px;
+    max-width: 400px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    text-align: center;
+    .social-image {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+
+      height: 40%;
+      width: 100%;
+      object-fit: cover;
+      background-size: cover;
+      background-position: center;
+      transition: 1s;
+    }
+    .person-1 {
+      background-image: $person2;
+    }
+    .person-2 {
+      background-image: $person1;
+    }
+    .person-3 {
+      background-image: $person3;
+    }
+    .info-container {
+      margin: 25px;
+      display: flex;
+      height: 50%;
+      flex-direction: column;
+      justify-content: space-between;
+      h4 {
+        font-size: 18px;
+        color: rgb(75, 74, 74);
+        font-style: italic;
+      }
+      .name {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $secondaryColor;
+        font-weight: bold;
+      }
+      .job-title {
+        font-size: 12px;
+        color: $secondaryColor;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .logo-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        button {
+          height: 40px;
+          width: 40px;
+          border-radius: 100%;
+        }
+        .company-logo {
+          max-width: 50%;
+          max-height: 80px;
+          transition: 1s;
+        }
+      }
+    }
+  }
 }
