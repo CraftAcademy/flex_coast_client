@@ -1,258 +1,3 @@
-#root {
-  font-size: 62.5%;
-  background-color: rgba(255, 208, 156, 0.2);
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h2 {
-  font-size: 32px;
-  color: #ffd09c;
-  margin: 50px 0;
-}
-
-@media only screen and (max-width: 700px) {
-  h2 {
-    font-size: 1.2rem;
-    margin: 50px;
-  }
-}
-
-h3 {
-  font-size: 24px;
-  color: #ffd09c;
-  padding-right: 10px;
-  margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 700px) {
-  h3 {
-    font-size: 18px;
-    margin-top: 5px;
-    padding-right: 10px;
-    margin-bottom: 10px;
-  }
-}
-
-@media only screen and (max-width: 520px) {
-  h3 {
-    font-size: 18px;
-    padding-right: 10px;
-  }
-}
-
-.custom-button {
-  height: 50px;
-  cursor: pointer;
-  background-color: rgba(97, 247, 210, 0.9);
-  color: #fff;
-  border-radius: 4px;
-  border: none;
-  padding: 14px 24px;
-  font-size: 18px;
-  text-decoration: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.custom-button:hover {
-  background-color: #61f7d2;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
-
-.custom-button a {
-  font-size: 18px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.MuiSelect-icon {
-  color: white !important;
-}
-
-.MuiInput-root {
-  color: white !important;
-}
-
-.MuiToolbar-root {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.MuiButton-root {
-  border-radius: 20px !important;
-  font-size: 20px !important;
-  color: white !important;
-  background-color: #61f7d2 !important;
-  padding: 10px !important;
-  -ms-flex-item-align: center !important;
-      -ms-grid-row-align: center !important;
-      align-self: center !important;
-}
-
-@media only screen and (max-width: 520px) {
-  .MuiButton-root {
-    font-size: 18px !important;
-  }
-}
-
-.dropdown-container .MuiPaper-root {
-  background-color: rgba(255, 208, 156, 0.7);
-  padding: 0 25%;
-  height: 50%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.dropdown-container .MuiPaper-root button {
-  background-color: transparent;
-  border: 1px solid #fff;
-}
-
-.dropdown-container .MuiPaper-root .MuiInputBase-root {
-  border: 1px solid #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-}
-
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.page-header, .page-header-landing {
-  max-width: 1280px;
-  padding: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 75px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 auto;
-  border-bottom: 1px solid lightgray;
-}
-
-@media only screen and (max-width: 620px) {
-  .page-header, .page-header-landing {
-    margin: 0 20px;
-    padding: 50px 0;
-  }
-}
-
-.page-header button, .page-header-landing button {
-  margin-right: 20px;
-}
-
-.page-header .menu-wrapper, .page-header-landing .menu-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.page-header .menu-wrapper .MuiSelect-select, .page-header-landing .menu-wrapper .MuiSelect-select {
-  color: #61f7d2;
-}
-
-.page-header .dropdown-menu button:first-of-type, .page-header-landing .dropdown-menu button:first-of-type {
-  color: #61f7d2;
-}
-
-.page-header .logo, .page-header-landing .logo {
-  height: 100px;
-}
-
-.page-header-landing {
-  border-bottom: none;
-}
-
-.page-header-landing .menu-wrapper .MuiSelect-select {
-  color: white;
-}
-
-.page-header-landing .dropdown-menu button:first-of-type {
-  color: white;
-}
-
-#menu-language .MuiPaper-root {
-  background-color: #61f7d2;
-  color: white;
-  width: 125px;
-}
-
-@media only screen and (max-width: 620px) {
-  #menu-language .MuiPaper-root {
-    background-color: #ffd09c;
-    position: absolute;
-    left: 50% !important;
-    -webkit-transform: translateX(-50%) !important;
-            transform: translateX(-50%) !important;
-  }
-}
-
-#footer {
-  width: 100vw;
-  margin: 40px 0 40px 0;
-  padding-bottom: 100px;
-}
-
-#footer .footer-header {
-  font-size: 20px;
-  color: #ffd09c;
-  text-align: center;
-  margin: 0 0 20px 0;
-}
-
-#footer .black-br {
-  border: none;
-  height: 1px;
-  background-color: #ffe0bd;
-  margin: 0 5% 0 5%;
-  width: 90%;
-}
-
-#footer .sub-header {
-  color: #ffd09c;
-  text-align: center;
-}
-
-#footer .sub-header h3 {
-  text-decoration: underline;
-}
-
-#footer .sub-header .footer-text {
-  color: #ffe0bd;
-  text-decoration: none;
-  font-size: 18px;
-  margin: 0 40px 0 40px;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-#footer .sub-header .footer-link a,
-#footer .sub-header a:hover,
-#footer .sub-header a:focus,
-#footer .sub-header a:active {
-  text-decoration: none;
-  color: #ffe0bd;
-  font-size: 18px;
-}
-
 .hero-section {
   background-image: url("/src/assets/hero.jpg");
   background-size: cover;
@@ -319,13 +64,12 @@ input[type='number']::-webkit-outer-spin-button {
   min-width: 180px;
 }
 
-.testimonials-container {
+.illu-container {
+  padding: 75px 25px 0 25px;
+  max-width: 1280px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 150px;
-  width: 100%;
-  padding-top: 75px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -333,32 +77,62 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 208, 156, 0.2);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
 }
 
-.testimonials-container .testimonial-subtitle {
+.illu-container .illustration {
+  width: 150px;
+}
+
+.illu-container .testimonial-subtitle {
   max-width: 1280px;
-  width: 100%;
   font-size: 16px;
   text-align: start;
   margin-bottom: 25px;
 }
 
-.testimonials-container .testimonial-title {
+@media only screen and (max-width: 620px) {
+  .illu-container .testimonial-subtitle {
+    font-size: 12px;
+  }
+}
+
+.illu-container .testimonial-title {
   font-size: 40px;
   color: #333;
   max-width: 1280px;
   margin-bottom: 75px;
 }
 
-.testimonials-container .illu-container {
-  max-width: 1280px;
-  width: 100%;
-  height: 150px;
+@media only screen and (max-width: 620px) {
+  .illu-container .testimonial-title {
+    font-size: 25px;
+  }
 }
 
-.testimonials-container .illu-container .illustration {
-  height: 100%;
+.testimonials-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 750px;
+  margin-bottom: 150px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 620px) {
+  .testimonials-container {
+    padding-top: 25px;
+  }
 }
 
 .testimonials-container .bg-1 {
@@ -374,20 +148,19 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .testimonials-container .slider-container {
+  position: absolute;
+  max-width: 1024px;
   border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
-  width: 1280px;
+  width: 100%;
   height: 750px;
   background-size: cover;
   background-position: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .testimonials-container .testimonial-container {
@@ -400,6 +173,12 @@ input[type='number']::-webkit-outer-spin-button {
   text-align: center;
 }
 
+@media only screen and (max-width: 620px) {
+  .testimonials-container .testimonial-container {
+    margin: 50px 15px;
+  }
+}
+
 .testimonials-container .testimonial-container .social-image {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -409,8 +188,6 @@ input[type='number']::-webkit-outer-spin-button {
      object-fit: cover;
   background-size: cover;
   background-position: center;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .testimonials-container .testimonial-container .person-1 {
@@ -480,7 +257,5 @@ input[type='number']::-webkit-outer-spin-button {
 .testimonials-container .testimonial-container .info-container .logo-section .company-logo {
   max-width: 50%;
   max-height: 80px;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 /*# sourceMappingURL=landingPage.css.map */

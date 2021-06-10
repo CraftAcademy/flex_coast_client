@@ -34,36 +34,37 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
   return (
     <div className='answer-container'>
       <h3>{text}</h3>
-      <div>
-        <form onSubmit={(event) => setAnswer(event)}>
-          {type === 'toggle-btn' ? (
-            <CustomRadioButton
-              disabled={filled}
-              value={inputValue}
-              label_1={t('answer.officeLable')}
-              label_2={t('answer.openSpaceLable')}
-              onChange={(event) => {
-                setInputValue(event.target.value)
-              }}
-            />
-          ) : (
-            <input
-              className={'input'}
-              disabled={filled}
-              data-cy='input'
-              type={type}
-              value={inputValue}
-              required
-              onChange={(event) => {
-                setInputValue(event.target.value)
-              }}
-              placeholder={placeholder}
-            />
-          )}
 
-          <CustomIconButton toggle={filled} />
-        </form>
-      </div>
+      <form
+        className='answer-form-container'
+        onSubmit={(event) => setAnswer(event)}>
+        {type === 'toggle-btn' ? (
+          <CustomRadioButton
+            disabled={filled}
+            value={inputValue}
+            label_1={t('answer.officeLable')}
+            label_2={t('answer.openSpaceLable')}
+            onChange={(event) => {
+              setInputValue(event.target.value)
+            }}
+          />
+        ) : (
+          <input
+            className={'input'}
+            disabled={filled}
+            data-cy='input'
+            type={type}
+            value={inputValue}
+            required
+            onChange={(event) => {
+              setInputValue(event.target.value)
+            }}
+            placeholder={placeholder}
+          />
+        )}
+
+        <CustomIconButton toggle={filled} />
+      </form>
     </div>
   )
 }
