@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import LanguageSelect from './LanguageSelect'
 import logo from '../assets/logo.svg'
 import CustomButton from './custom/CustomButton'
@@ -10,15 +11,19 @@ import Drawer from '@material-ui/core/Drawer'
 const LandingHeader = ({ landing }) => {
   const [open, setOpen] = useState(false)
   const isSmall = useMediaQuery('(max-width:620px)')
+  let history = useHistory()
 
   return (
     <div
       data-cy='header'
-      className={landing ? 'page-header-landing' : 'page-header'}
-      >
-      <a href='/'>
-        <img src={logo} alt='logo' className='logo' data-cy='flex-coast' />
-      </a>
+      className={landing ? 'page-header-landing' : 'page-header'}>
+      <img
+        src={logo}
+        alt='logo'
+        className='logo'
+        data-cy='flex-coast'
+        onClick={() => history.push('/')}
+      />
       {isSmall ? (
         <div className='dropdown-menu'>
           <IconButton onClick={() => setOpen(true)}>

@@ -15,21 +15,25 @@ const TestimonialsSection = () => {
   }
 
   return (
-    <div className='testimonials-container'>
+    <>
       <div className='illu-container'>
-        <img className='illustration' src={illustration} alt='illustration' />
+        <div>
+          <img className='illustration' src={illustration} alt='illustration' />
+          <h4 className='testimonial-subtitle'>High end flexibility</h4>
+          <h1 className='testimonial-title'>
+            In the last 12 months, Flex Coast has helped over 100 companies find
+            their new offices - here are some examples
+          </h1>
+        </div>
       </div>
-      <h4 className='testimonial-subtitle'>High end flexibility</h4>
-      <h1 className='testimonial-title'>
-        In the last 12 months, Flex Coast has helped over 100 companies find
-        their new offices - here are some examples
-      </h1>
-      <Testimonial
-        slider={slider}
-        info={testimonials[slider - 1]}
-        sliderHandler={sliderHandler}
-      />
-    </div>
+      <div className='testimonials-container'>
+        <Testimonial
+          slider={slider}
+          info={testimonials[slider - 1]}
+          sliderHandler={sliderHandler}
+        />
+      </div>
+    </>
   )
 }
 

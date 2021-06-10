@@ -1,4 +1,4 @@
-@import 'globals';
+@import './variables';
 
 .form-container {
   display: flex;
@@ -8,7 +8,7 @@
   margin: auto;
   margin-top: 50px;
   padding: 10px 50px 0 50px;
-  border-radius: 20px;
+  border-radius: $borderRadius;
   border: 1px solid lightgray;
   @media only screen and (max-width: $mobile) {
     padding-left: 20px;
@@ -48,7 +48,7 @@
     background-color: $mainColor;
     font-size: 1.4rem;
     padding: 16px;
-    border-radius: 20px;
+    border-radius: $borderRadius;
     @media only screen and (max-width: $mobile) {
       font-size: 18px;
       padding: 20px;
@@ -64,7 +64,13 @@
   margin-bottom: 50px;
   @media only screen and (max-width: $mobile) {
     flex-direction: column;
-    align-items: right;
+    align-items: flex-end;
+
+    .answer-form-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
   h3 {
@@ -74,21 +80,14 @@
     margin-bottom: 10px;
     @media only screen and (max-width: 700px) {
       font-size: 18px;
-      margin-top: 5px;
-      margin-right: 35%;
-      padding-right: 10px;
-      margin-bottom: 10px;
-    }
-    @media only screen and (max-width: 520px) {
-      font-size: 18px;
-
-      padding-right: 10px;
+      padding-right: 65px;
     }
   }
 
   .input {
     font-size: 1.4rem;
-    border-radius: 20px;
+    border-radius: $borderRadius;
+    padding: 0 10px;
     text-align: center;
     height: 55px;
     margin-right: 10px;
@@ -96,9 +95,10 @@
     border: 2px solid $secondaryColor;
     color: $secondaryColor;
     @media only screen and (max-width: $mobile) {
+      width: 100%;
+      font-size: 18px;
       margin-bottom: 10px;
       margin-right: 0px;
-      max-width: 70%;
     }
 
     &::before {
@@ -166,7 +166,7 @@
   }
 
   .radio-group {
-    border-radius: 20px;
+    border-radius: $borderRadius;
     display: inline-block;
 
     input[type='radio'] {
@@ -175,14 +175,19 @@
     }
 
     label {
-      margin-right: 10px;
-      border: 2px solid $secondaryColor;
-      border-radius: 20px;
-      font-size: 22px;
-      color: $secondaryColor;
       display: inline-block;
+      font-size: 1.4rem;
+      color: $secondaryColor;
+      margin-right: 10px;
+      padding: 13px;
+      border: 2px solid $secondaryColor;
+      border-radius: $borderRadius;
       cursor: pointer;
-      padding: 10px;
+      @media only screen and (max-width: $mobile) {
+        margin-right: 0;
+        margin-left: 10px;
+        font-size: 18px;
+      }
     }
 
     input[type='radio']:checked + label {
