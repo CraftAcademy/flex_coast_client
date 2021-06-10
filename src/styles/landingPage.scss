@@ -1,4 +1,10 @@
 @import 'globals';
+$bg-image1: url('../assets/social-bg-1.jpg');
+$bg-image2: url('../assets/social-bg-2.jpg');
+$bg-image3: url('../assets/social-bg-3.jpg');
+$person1: url('../assets/social-img-1.jpg');
+$person2: url('../assets/social-img-2.jpg');
+$person3: url('../assets/social-img-3.jpg');
 
 .hero-section {
   background-image: $hero-img;
@@ -45,6 +51,98 @@
 }
 
 .testimonials-container {
-  height: 50vh;
+  display: flex;
+  padding-top: 75px;
+  justify-content: center;
+
   background-color: $secondaryColorLowOpacity;
+
+  .bg-1 {
+    background-image: $bg-image1;
+  }
+  .bg-2 {
+    background-image: $bg-image2;
+  }
+  .bg-3 {
+    background-image: $bg-image3;
+  }
+  .slider-container {
+    border-radius: 4px;
+    display: flex;
+    flex: 1;
+    max-width: 1280px;
+    height: 750px;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    transition: 1s;
+  }
+  .testimonial-container {
+    margin: 50px;
+    height: 80%;
+    border-radius: 4px;
+    max-width: 400px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    text-align: center;
+    .social-image {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+
+      height: 40%;
+      width: 100%;
+      object-fit: cover;
+      background-size: cover;
+      background-position: center;
+      transition: 1s;
+    }
+    .person-1 {
+      background-image: $person2;
+    }
+    .person-2 {
+      background-image: $person1;
+    }
+    .person-3 {
+      background-image: $person3;
+    }
+    .info-container {
+      padding: 15px;
+      display: flex;
+      height: 55%;
+      flex-direction: column;
+      justify-content: space-between;
+      h4 {
+        font-size: 18px;
+        color: grey;
+        font-style: italic;
+      }
+      .name {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: rgb(160, 98, 6);
+        font-weight: bold;
+      }
+      .job-title {
+        font-size: 12px;
+        color: rgb(160, 98, 6);
+        text-transform: uppercase;
+        font-weight: bold;
+        // margin-bottom: 50px;
+      }
+      .logo-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        button {
+          height: 40px;
+          width: 40px;
+          border-radius: 100%;
+        }
+        .company-logo {
+          height: 80px;
+          transition: 1s;
+        }
+      }
+    }
+  }
 }
