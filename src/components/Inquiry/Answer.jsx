@@ -2,16 +2,21 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import CustomIconButton from '../custom/CustomIconButton'
 import store from '../../state/store/configureStore'
-import { useTranslation } from 'react-i18next'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
 
-const Answer = ({ text, type, placeholder, questionKey }) => {
+const Answer = ({
+  text,
+  type,
+  placeholder,
+  questionKey,
+  labels,
+  dataCys,
+  values, 
+}) => {
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
   )
-  const { t } = useTranslation()
   const filled = useSelector((state) => state.filledAnswers[questionKey])
-
   const setAnswer = (event) => {
     event.preventDefault()
     if (filled) {
@@ -26,7 +31,7 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
       })
       store.dispatch({
         type: 'SET_ANSWERS',
-        payload: { key: questionKey, answer: inputValue },
+        payload: { key: questionKey, answer: inputValue },        
       })
     }
   }
@@ -41,9 +46,10 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
         {type === 'toggle-btn' ? (
           <CustomRadioButton
             disabled={filled}
-            value={inputValue}
-            label_1={t('answer.officeLable')}
-            label_2={t('answer.openSpaceLable')}
+            radio_value={inputValue}
+            values={values}
+            labels={labels}
+            dataCys={dataCys}       
             onChange={(event) => {
               setInputValue(event.target.value)
             }}

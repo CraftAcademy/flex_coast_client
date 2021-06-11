@@ -12,7 +12,10 @@ const InquiryOfficeType = () => {
       <Answer
         text={t('answer.officeType')}
         type='toggle-btn'
-        questionKey='office_type'
+        values={{value_1: 'Office', value_2: 'Open Space'}}
+        labels={{label_1: t('answer.officeLable'), label_2: t('answer.openSpaceLable')}}
+        dataCys={{dataCy_1: 'office', dataCy_2: 'open-space'}}       
+        questionKey='office_type'        
       />
     </div>
   )

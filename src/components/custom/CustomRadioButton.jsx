@@ -1,35 +1,43 @@
 import React from 'react'
 
-const CustomRadioButton = ({ label_1, label_2, disabled, onChange, value }) => {
+const CustomRadioButton = ({
+  labels,
+  dataCys,
+  values,  
+  disabled,
+  onChange,
+  radio_value,
+  
+}) => {
   return (
     <div className='radio-group'>
       <input
         disabled={disabled}
         type='radio'
-        id='office'
-        data-cy='office-btn'
-        value='office'
+        id={dataCys.dataCy_1}
+        data-cy={`${dataCys.dataCy_1}-btn`}
+        value={values.value_1}
         name='selector'
-        checked={value === 'office'}
+        checked={radio_value === values.value_1}
         required
         onChange={onChange}
       />
-      <label data-cy='office-lable' for='office'>
-        {label_1}
+      <label data-cy={`${dataCys.dataCy_1}-lable`} for={dataCys.dataCy_1}>
+        {labels.label_1}
       </label>
       <input
         disabled={disabled}
         type='radio'
-        id='open-space'
-        data-cy='open-space-btn'
-        value='open-space'
+        id={dataCys.dataCy_2}
+        data-cy={`${dataCys.dataCy_2}-btn`}
+        value={values.value_2}
         name='selector'
-        checked={value === 'open-space'}
+        checked={radio_value === values.value_2}
         required
         onChange={onChange}
       />
-      <label data-cy='open-space-lable' for='open-space'>
-        {label_2}
+      <label data-cy={`${dataCys.dataCy_2}-lable`} for={dataCys.dataCy_2}>
+        {labels.label_2}
       </label>
     </div>
   )

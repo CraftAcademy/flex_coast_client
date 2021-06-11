@@ -1,13 +1,17 @@
 const initialState = {
   formData: {
-    email: '',
     size: null,
     office_type: '',
+    email: '',
+    company: '',
+    peers: '',
   },
   filledAnswers: {
-    email: false,
     size: false,
     office_type: false,
+    email: false,
+    company: false,
+    peers: false,
   },
   submitMessage: '',
 }
