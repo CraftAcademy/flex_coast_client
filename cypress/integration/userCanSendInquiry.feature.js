@@ -15,14 +15,6 @@ describe('User can send inquiry', () => {
   describe('Successfully', () => {
     it('is expected to display success message', () => {
       cy.get('[data-cy=submit-btn]').should('not.exist')
-      cy.get('[data-cy=email-container]').within(() => {
-        cy.get('[data-cy=question]').should(
-          'contain',
-          'Where can we reach you?'
-        )
-        cy.get('[data-cy=input]').type('example@mail.com')
-        cy.get('[data-cy=done-btn]').click()
-      })
       cy.get('[data-cy=company-size-container]').within(() => {
         cy.get('[data-cy=question]').should('contain', 'How big is your team?')
         cy.get('[data-cy=input]').type('100')
@@ -38,6 +30,57 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=office-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
       })
+      cy.get('[data-cy=email-container]').within(() => {
+        cy.get('[data-cy=question]').should(
+          'contain',
+          'Where can we reach you?'
+        )
+        cy.get('[data-cy=input]').type('example@mail.com')
+        cy.get('[data-cy=done-btn]').click()
+      })
+      cy.get('[data-cy=company-name-container]').within(() => {
+        cy.get('[data-cy=question]').should(
+          'contain',
+          'What is the name of your company?'
+        )
+        cy.get('[data-cy=input]').type('Cyberdyne Systems')
+        cy.get('[data-cy=done-btn]').click()
+      })
+      cy.get('[data-cy=peer-question-container]').within(() => {
+        cy.get('[data-cy=question]').should(
+          'contain',
+          'Would you like to share office with peer companies?'
+        )
+        cy.get('[data-cy=positive-lable]').should('be.visible')
+        cy.get('[data-cy=negative-lable]').should('be.visible')
+        cy.get('[data-cy=positive-btn]').click({ force: true })
+        cy.get('[data-cy=done-btn]').click()
+      })
+      cy.window()
+        .its('store')
+        .invoke('getState')
+        .its('formData.size')
+        .should('equal', '100')
+      cy.window()
+        .its('store')
+        .invoke('getState')
+        .its('formData.office_type')
+        .should('equal', 'Office')
+      cy.window()
+        .its('store')
+        .invoke('getState')
+        .its('formData.email')
+        .should('equal', 'example@mail.com')
+      cy.window()
+        .its('store')
+        .invoke('getState')
+        .its('formData.company')
+        .should('equal', 'Cyberdyne Systems')
+      cy.window()
+        .its('store')
+        .invoke('getState')
+        .its('formData.peers')
+        .should('equal', 'Yes')
       cy.get('[data-cy=submit-btn]').click()
       cy.get('[data-cy=on-submit-message]').should(
         'contain',

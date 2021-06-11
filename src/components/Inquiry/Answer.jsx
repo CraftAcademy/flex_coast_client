@@ -5,13 +5,23 @@ import store from '../../state/store/configureStore'
 import { useTranslation } from 'react-i18next'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
 
-const Answer = ({ text, type, placeholder, questionKey }) => {
+const Answer = ({
+  text,
+  type,
+  placeholder,
+  questionKey,
+  label_1,
+  label_2,
+  dataCy_1,
+  dataCy_2,
+  value_1,
+  value_2,
+}) => {
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
   )
   const { t } = useTranslation()
   const filled = useSelector((state) => state.filledAnswers[questionKey])
-
   const setAnswer = (event) => {
     event.preventDefault()
     if (filled) {
@@ -41,9 +51,13 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
         {type === 'toggle-btn' ? (
           <CustomRadioButton
             disabled={filled}
-            value={inputValue}
-            label_1={t('answer.officeLable')}
-            label_2={t('answer.openSpaceLable')}
+            radio_value={inputValue}
+            value_1={value_1}
+            value_2={value_2}
+            label_1={label_1}
+            dataCy_1={dataCy_1}
+            label_2={label_2}
+            dataCy_2={dataCy_2}
             onChange={(event) => {
               setInputValue(event.target.value)
             }}

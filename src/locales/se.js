@@ -12,6 +12,8 @@ const se = {
       email: 'Hur kan vi kontakta dig?',
       size: 'Hur stort är ditt team?',
       officeType: 'Vilken typ av kontor letar du efter?',
+      name: 'Vad är namnet på erat företag?',
+      peer: 'Whould you like to share office with peer companies?'
     },
 
     answer: {
@@ -20,6 +22,9 @@ const se = {
       officeType: 'Vi behöver: ',
       officeLable: 'Kontor',
       openSpaceLable: 'Öppet utrymme',
+      name: 'Det heter: ',
+      peersNegative: 'Nej',
+      peersPositive: 'Ja'
     },
     submitButton: 'Skicka in',
   },
