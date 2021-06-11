@@ -1,0 +1,48 @@
+@import './variables';
+
+#footer {
+  padding-top: 50px;
+  width: 100%;
+  padding-bottom: 100px;
+
+  .footer-header {
+    font-size: 20px;
+    color: $secondaryColor;
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+  .black-br {
+    border: none;
+    height: 2px;
+    background-color: rgb(255, 224, 189);
+    text-align: center;
+    margin: 0 5%;
+  }
+
+  .sub-header {
+    color: $secondaryColor;
+    text-align: center;
+
+    h3 {
+      text-decoration: underline;
+    }
+
+    .footer-text {
+      color: rgb(255, 224, 189);
+      text-decoration: none;
+      font-size: 18px;
+      margin: 0 40px 0 40px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .footer-link a,
+    a:hover,
+    a:focus,
+    a:active {
+      text-decoration: none;
+      color: rgb(255, 224, 189);
+      font-size: 18px;
+    }
+  }
+}
