@@ -6,6 +6,7 @@ const initialState = {
     company: '',
     peers: '',
     locations: [],
+    flexible: '',
   },
   filledAnswers: {
     size: false,
@@ -14,6 +15,7 @@ const initialState = {
     company: false,
     peers: false,
     locations: false,
+    flexible: false,
   },
   submitMessage: '',
 }

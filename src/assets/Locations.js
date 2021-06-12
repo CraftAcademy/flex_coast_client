@@ -2,7 +2,7 @@
  
  const locations = [
   {
-    value: 'null',
+    value: 'All',
     text: 'Any',
     markup: <MultiSelectOptionMarkup text='Any' />,
   },

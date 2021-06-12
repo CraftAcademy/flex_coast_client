@@ -21,13 +21,13 @@ const CustomSelectInput = ({ locationValue, setInputValue, disabled }) => {
   useEffect(() => {
     if (i18n.language === 'Svenska') {
       locations[0] = {
-        value: 'null',
+        value: 'All',
         text: 'Alla',
         markup: <MultiSelectOptionMarkup text='Alla' />,
       }
     } else {
       locations[0] = {
-        value: 'null',
+        value: 'All',
         text: 'Any',
         markup: <MultiSelectOptionMarkup text='Any' />,
       }

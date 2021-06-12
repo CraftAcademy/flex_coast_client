@@ -27,7 +27,7 @@ const Answer = ({
         type: 'SWITCH_ANSWER_FILLED_STATUS',
         payload: { key: questionKey, filled: false },
       });
-    } else {
+    } else {      
       animateScroll.scrollMore(isSmall ? 280 : 200);
       store.dispatch({
         type: 'SWITCH_ANSWER_FILLED_STATUS',

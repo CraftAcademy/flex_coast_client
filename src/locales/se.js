@@ -21,6 +21,7 @@ const se = {
       name: 'Vad är namnet på erat företag?',
       peers: 'Vill du dela kontor med andra från din bransch?',
       location: 'Vilka områden är du intresserad av?',
+      workingHours: '-------------------------------------------'
     },
 
     answer: {
@@ -34,7 +35,10 @@ const se = {
       peersNegative: 'Nej',
       peersPositive: 'Ja',
       location: 'Vi är intresserade av',
-      locationAll: 'Alla'
+      locationAll: 'Alla',
+      workingHours: '------------------',
+      fullTimeLable: '--------------------',
+      flexibleLable: '---------------------',
     },
     submitButton: 'Skicka in',
   },
