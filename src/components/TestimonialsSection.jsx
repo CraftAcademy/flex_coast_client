@@ -1,36 +1,47 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Testimonial from './Testimonial'
-import illustration from '../assets/office-illu.png'
 import { testimonials } from '../assets/testimonials'
 
 const TestimonialsSection = () => {
   const [slider, setSlider] = useState(1)
+  const [timeoutActive, setTimeoutActive] = useState(true)
+
   const sliderHandler = (number) => {
-    setSlider(slider + number)
     if (slider + number === 4) {
       setSlider(1)
     } else if (slider + number === 0) {
       setSlider(3)
+    } else {
+      setSlider(slider + number)
     }
   }
 
+  let slideShow = undefined
+
+  const stopTimer = () => {
+    setTimeoutActive(false)
+    clearTimeout(slideShow)
+  }
+
+  const startTimer = () => {
+    slideShow = setTimeout(() => {
+      sliderHandler(1)
+    }, 4000)
+  }
+
+  useEffect(() => {    
+    timeoutActive && startTimer()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [slider, timeoutActive])
+
   return (
     <>
-      <div className='illu-container'>
-        <div>
-          <img className='illustration' src={illustration} alt='illustration' />
-          <h4 className='testimonial-subtitle'>High end flexibility</h4>
-          <h1 className='testimonial-title'>
-            In the last 12 months, Flex Coast has helped over 100 companies find
-            their new offices - here are some examples
-          </h1>
-        </div>
-      </div>
       <div className='testimonials-container'>
         <Testimonial
           slider={slider}
           info={testimonials[slider - 1]}
           sliderHandler={sliderHandler}
+          stopTimer={stopTimer}
         />
       </div>
     </>

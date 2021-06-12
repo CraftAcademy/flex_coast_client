@@ -53,7 +53,7 @@
   display: flex;
   width: 100%;
   height: 750px;
-  margin-bottom: 150px;
+  margin: 150px 0 150px 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -101,8 +101,8 @@
   margin: 50px;
   height: 80%;
   border-radius: 4px;
-  max-width: 400px;
-  background-color: whitesmoke;
+  width: 400px;
+  background-color: white;
   border-radius: 4px;
   text-align: center;
 }
@@ -137,41 +137,64 @@
 }
 
 .testimonials-container .testimonial-container .info-container {
-  margin: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 50%;
+  height: 60%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.testimonials-container .testimonial-container .info-container .testimonial-text {
+  height: 50%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  background-color: whitesmoke;
+}
+
+.testimonials-container .testimonial-container .info-container .MuiIconButton-root {
+  background-color: #ffd09c;
+  color: white;
 }
 
 .testimonials-container .testimonial-container .info-container h4 {
+  margin: 10px;
   font-size: 18px;
-  color: #4b4a4a;
+  color: #666;
   font-style: italic;
+}
+
+.testimonials-container .testimonial-container .info-container .testimonial-person {
+  margin-top: 10px;
 }
 
 .testimonials-container .testimonial-container .info-container .name {
   font-size: 12px;
   text-transform: uppercase;
-  color: #ffd09c;
+  color: #333;
   font-weight: bold;
 }
 
 .testimonials-container .testimonial-container .info-container .job-title {
   font-size: 12px;
-  color: #ffd09c;
+  color: #333;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 .testimonials-container .testimonial-container .info-container .logo-section {
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
