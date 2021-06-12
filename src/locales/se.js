@@ -5,6 +5,12 @@ const se = {
       startButton: 'Hitta Kontor',
     },
 
+    footer: {
+      subHeader1: 'Om Oss',
+      subHeader2: 'Kontakta Oss',
+      subHeader3: 'Hitta Oss',
+    },
+
     welcomeMessage:
       'Hej! För att att hitta bästa möjliga kontor, behöver vi ställa lite frågor.',
 

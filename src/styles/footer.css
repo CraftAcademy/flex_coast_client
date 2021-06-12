@@ -1,20 +1,21 @@
 #footer {
+  background-color: #ffd09c;
   padding-top: 50px;
   width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 #footer .footer-header {
   font-size: 20px;
-  color: #ffd09c;
+  color: #f7f5f5;
   text-align: center;
   margin: 0 0 20px 0;
 }
 
-#footer .black-br {
+#footer .top-hr {
   border: none;
   height: 2px;
-  background-color: #ffe0bd;
+  background-color: #f2ecec;
   text-align: center;
   margin: 0 5%;
 }
@@ -22,19 +23,20 @@
 #footer .sub-header {
   color: #ffd09c;
   text-align: center;
+  padding-bottom: 30px;
 }
 
 #footer .sub-header h3 {
   text-decoration: underline;
+  color: #f7f5f5;
 }
 
 #footer .sub-header .footer-text {
-  color: #ffe0bd;
+  color: #f7f5f5;
   text-decoration: none;
   font-size: 18px;
   margin: 0 40px 0 40px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 0 20px 15px 20px;
 }
 
 #footer .sub-header .footer-link a,
@@ -42,6 +44,52 @@
 #footer .sub-header a:focus,
 #footer .sub-header a:active {
   text-decoration: none;
-  color: #ffe0bd;
+  color: #f7f5f5;
   font-size: 18px;
+}
+
+#footer .sub-header .sub-hr {
+  border: none;
+  height: 2px;
+  background-color: #f2ecec;
+  text-align: center;
+  margin: 10px 5%;
+}
+
+@media (min-width: 599px) {
+  #footer .sub-header .sub-hr {
+    display: none;
+  }
+}
+
+#footer .sub-header .custom-button {
+  background-color: #fff;
+  margin: 15px;
+}
+
+#footer .sub-header .custom-button:hover {
+  opacity: 70%;
+  -webkit-transform: none;
+          transform: none;
+}
+
+#footer .sub-header .custom-button a {
+  color: #ffd09c;
+}
+
+#footer .sub-header .custom-button:nth-last-child(1) {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#footer .sub-header .icon {
+  color: white !important;
+  margin: 10px;
+}
+
+.logo {
+  height: 100px;
+  color: white;
+  padding-bottom: 40px;
 }
