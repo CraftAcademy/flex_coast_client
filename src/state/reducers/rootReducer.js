@@ -1,7 +1,10 @@
 import initialState from '../store/initialState'
+import { animateScroll } from 'react-scroll'
+
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'SET_ANSWERS':
+      animateScroll.scrollMore(200)
       let newData = state.formData
       newData[action.payload.key] = action.payload.answer
       return {

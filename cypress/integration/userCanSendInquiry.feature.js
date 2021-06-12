@@ -2,7 +2,7 @@ describe('User can send inquiry', () => {
   beforeEach(() => {
     cy.intercept(
       'POST',
-      'https://flex-coast-development.herokuapp.com/api/inquiries',
+      'https://flex-coast-api-development.herokuapp.com/api/inquiries',
       {
         body: {
           message:
@@ -20,6 +20,7 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=input]').type('100')
         cy.get('[data-cy=done-btn]').click()
       })
+
       cy.get('[data-cy=office-type-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
@@ -30,6 +31,7 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=office-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
       })
+
       cy.get('[data-cy=email-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
@@ -38,6 +40,7 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=input]').type('example@mail.com')
         cy.get('[data-cy=done-btn]').click()
       })
+
       cy.get('[data-cy=company-name-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
@@ -46,6 +49,7 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=input]').type('Cyberdyne Systems')
         cy.get('[data-cy=done-btn]').click()
       })
+
       cy.get('[data-cy=peer-question-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
@@ -56,18 +60,32 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=positive-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
       })
+      cy.get('[data-cy=location-question-container]').within(() => {
+        cy.get('[data-cy=question]').should(
+          'contain',
+          'Where would you like to be situated?'
+        )
+        cy.get('[data-testID=locations]').click()
+      })
+      cy.get('[data-testID=rrs-option_locations_1]').click()
+      cy.get('[data-testID=rrs-option_locations_2]').click()
+      cy.get('[data-testID=rrs-option_locations_3]').click().click()
+      cy.get('[data-cy=location-question-container]')
+        .find('[data-cy=done-btn]')
+        .click()
       const expectedOutcome = {
         size: '100',
         office_type: 'Office',
         email: 'example@mail.com',
         company: 'Cyberdyne Systems',
         peers: 'Yes',
+        locations: ['Lindholmen', 'Gamlestaden'],
       }
       cy.window()
         .its('store')
         .invoke('getState')
         .its('formData')
-        .should('deep.equal', expectedOutcome)      
+        .should('deep.equal', expectedOutcome)
       cy.get('[data-cy=submit-btn]').click()
       cy.get('[data-cy=on-submit-message]').should(
         'contain',

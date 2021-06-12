@@ -5,6 +5,7 @@ const initialState = {
     email: '',
     company: '',
     peers: '',
+    locations: [],
   },
   filledAnswers: {
     size: false,
@@ -12,6 +13,7 @@ const initialState = {
     email: false,
     company: false,
     peers: false,
+    locations: false,
   },
   submitMessage: '',
 }
