@@ -18,16 +18,16 @@ const TestimonialSlider = ({ slider, info, sliderHandler }) => {
         <div className='testimonial-container'>
           <div className={`social-image person-${slider}`}></div>
           <div className='info-container'>
-            <h4>{info.review}</h4>
-            <Divider light />
-            <div>
+            <div className='testimonial-text'>
+              <h4>{info.review}</h4>
+            </div>
+            <div className='testimonial-person'>
               <p className='name'>{info.name}</p>
               <p className='job-title'>{info.company}</p>
             </div>
-
             <div className='logo-section'>
               <IconButton onClick={() => sliderHandler(-1)}>
-                <ChevronLeftIcon fontSize='large' />
+                <ChevronLeftIcon className='slider-button' fontSize='large' />
               </IconButton>
               <img
                 className='company-logo'
@@ -35,7 +35,7 @@ const TestimonialSlider = ({ slider, info, sliderHandler }) => {
                 alt='company-logo'
               />
               <IconButton onClick={() => sliderHandler(1)}>
-                <ChevronRightIcon fontSize='large' />
+                <ChevronRightIcon className='slider-button' fontSize='large' />
               </IconButton>
             </div>
           </div>

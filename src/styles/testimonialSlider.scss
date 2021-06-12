@@ -70,8 +70,8 @@
     margin: 50px;
     height: 80%;
     border-radius: 4px;
-    max-width: 400px;
-    background-color: whitesmoke;
+    width: 400px;
+    background-color: white;
     border-radius: 4px;
     text-align: center;
     @media only screen and (max-width: $mobile) {
@@ -97,29 +97,52 @@
       background-image: $person3;
     }
     .info-container {
-      margin: 25px;
       display: flex;
-      height: 50%;
+      height: 60%;
       flex-direction: column;
-      justify-content: space-between;
+
+      .testimonial-text {
+        height: 50%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: whitesmoke;
+      }
+
+      .MuiIconButton-root {
+        background-color: $secondaryColor;
+        color: white;
+      }
+
       h4 {
+        margin: 10px;
         font-size: 18px;
-        color: rgb(75, 74, 74);
+        color: #666;
         font-style: italic;
       }
+
+      .testimonial-person {
+        margin-top: 10px;
+      }
+
       .name {
         font-size: 12px;
         text-transform: uppercase;
-        color: $secondaryColor;
+        color: #333;
         font-weight: bold;
       }
+
       .job-title {
         font-size: 12px;
-        color: $secondaryColor;
+        color: #333;
         text-transform: uppercase;
         font-weight: bold;
       }
+
       .logo-section {
+        padding: 20px;
         display: flex;
         justify-content: space-around;
         align-items: center;
