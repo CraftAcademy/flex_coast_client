@@ -13,7 +13,8 @@ const se = {
       size: 'Hur stort är ditt team?',
       officeType: 'Vilken typ av kontor letar du efter?',
       name: 'Vad är namnet på erat företag?',
-      peers: 'Vill du dela kontor med andra från din bransch?'
+      peers: 'Vill du dela kontor med andra från din bransch?',
+      location: 'Var vill du vara belägen?'
     },
 
     answer: {

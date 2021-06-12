@@ -9984,6 +9984,13 @@ react-refresh@^0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
+react-responsive-select@^7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/react-responsive-select/-/react-responsive-select-7.0.2.tgz#c93d453d31ceccda9ebf44db6be6b60343e163d6"
+  integrity sha512-+4/GxhHwDckrywI3DYw8Mcg0BN8cgvKxHfs/cySHDyFqm0OPogrSnvYowCVgLuOK2wXYIcHsjiI4dWfPeR5yGg==
+  dependencies:
+    singleline "^2.0.0"
+
 react-router-dom@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.2.0.tgz#9e65a4d0c45e13289e66c7b17c7e175d0ea15662"
@@ -10867,6 +10874,11 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+singleline@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/singleline/-/singleline-2.0.0.tgz#38e200abe11a4cfccd4fef9e318305ca97849622"
+  integrity sha512-PJr/kx5KBJEvQ8g7+lO2P1YwCta9yx7h8vot4IcCCZJ96ucNBKJnQZKYxEtamRwmOEUN11fJe5r/3/mNFMyoOQ==
 
 sisteransi@^1.0.5:
   version "1.0.5"

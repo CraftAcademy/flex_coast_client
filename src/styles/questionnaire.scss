@@ -200,3 +200,75 @@
     }
   }
 }
+
+.location-question-container {
+  .answer-form-container {
+    display: flex;
+
+    .rrs__multiselect-label__badge {
+      font-size: 14px;
+      color: $secondaryColor;
+      border-color: $secondaryColor;
+    }
+    
+    .location-filled {
+      .rrs__button {
+        background-color: $secondaryColor;
+        color: white;
+        .rrs__multiselect-label__badge {
+          color: #fff;
+          border: 2px solid;
+        }
+      }
+      svg {
+        fill: #fff;
+      }
+    }
+
+    .rrs {
+      font-size: 1.4rem;
+      width: 300px;
+      margin-right: 13px;
+      color: $secondaryColor;
+    }
+
+    .rrs__button {
+      background-color: #fff;
+      color: $secondaryColor;
+      border-radius: $borderRadius;
+      outline: none;
+      border: 2px solid $secondaryColor;
+      box-shadow: none;
+      height: 55px;
+
+      svg {
+        fill: $secondaryColor;
+      }
+    }
+
+    .rrs--has-changed .rrs__label {
+      color: $secondaryColor;
+    }
+    .rrs__option:hover {
+      color: orange;
+    }
+    .rrs__option.rrs__option--next-selection {
+      color: $secondaryColor;
+    }
+    .rrs__option.rrs__option--selected {
+      color: $mainColor;
+
+      .checkbox {
+        border-color: $mainColor;
+      }
+
+      svg {
+        fill: $mainColor;
+      }
+    }
+  }
+}
+
+// .MuiCheckbox-colorSecondary.Mui-checked {
+//   color: $mainColor !important;
+// }

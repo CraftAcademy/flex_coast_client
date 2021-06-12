@@ -11,7 +11,8 @@ const en = {
       size: 'How big is your team?',
       officeType: 'What type of office are you looking for?',
       name: 'What is the name of your company?',
-      peers: 'Would you like to share office with others from your industry?'
+      peers: 'Would you like to share office with others from your industry?',
+      location: 'Where would you like to be situated?'
     },
     answer: {
       email: 'My email is: ',

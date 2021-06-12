@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import CustomIconButton from '../custom/CustomIconButton'
 import store from '../../state/store/configureStore'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
+import CustomSelectInput from '../custom/CustomSelectInput'
 
 const Answer = ({
   text,
@@ -11,7 +12,7 @@ const Answer = ({
   questionKey,
   labels,
   dataCys,
-  values, 
+  values,
 }) => {
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
@@ -31,30 +32,37 @@ const Answer = ({
       })
       store.dispatch({
         type: 'SET_ANSWERS',
-        payload: { key: questionKey, answer: inputValue },        
+        payload: { key: questionKey, answer: inputValue },
       })
     }
   }
 
-  return (
-    <div className='answer-container'>
-      <h3>{text}</h3>
-
-      <form
-        className='answer-form-container'
-        onSubmit={(event) => setAnswer(event)}>
-        {type === 'toggle-btn' ? (
+  const chooseInputType = (type) => {
+    switch (type) {
+      case 'toggle-btn':
+        return (
           <CustomRadioButton
             disabled={filled}
             radio_value={inputValue}
             values={values}
             labels={labels}
-            dataCys={dataCys}       
+            dataCys={dataCys}
             onChange={(event) => {
               setInputValue(event.target.value)
             }}
           />
-        ) : (
+        )
+      case 'multi-select':
+        return (
+          <CustomSelectInput
+            disabled={filled}
+            locationValue={inputValue}
+            setInputValue={setInputValue}
+          />
+        )
+
+      default:
+        return (
           <input
             className={'input'}
             disabled={filled}
@@ -67,7 +75,18 @@ const Answer = ({
             }}
             placeholder={placeholder}
           />
-        )}
+        )
+    }
+  }
+
+  return (
+    <div className='answer-container'>
+      <h3>{text}</h3>
+
+      <form
+        className='answer-form-container'
+        onSubmit={(event) => setAnswer(event)}>
+        {chooseInputType(type)}
 
         <CustomIconButton toggle={filled} />
       </form>
