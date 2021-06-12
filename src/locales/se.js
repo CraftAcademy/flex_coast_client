@@ -5,6 +5,9 @@ const se = {
       startButton: 'Hitta Kontor',
     },
 
+    compellingText:
+      'Hallå där! Om du letar efter att hyra flexibla kortvariga kontor i Göteborg har du hittat rätt plats. Kanske har du precis startat ett nytt företag eller behöver du bara ett tillfälligt kontor att arbeta i?',
+    
     footer: {
       subHeader1: 'Om Oss',
       subHeader2: 'Kontakta Oss',
@@ -21,6 +24,7 @@ const se = {
       name: 'Vad är namnet på erat företag?',
       peers: 'Vill du dela kontor med andra från din bransch?',
       location: 'Vilka områden är du intresserad av?',
+
     },
 
     answer: {
