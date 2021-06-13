@@ -16,13 +16,15 @@ describe('User can send inquiry', () => {
     it('is expected to display success message', () => {
       cy.get('[data-cy=submit-btn]').should('not.exist')
       cy.get('[data-cy=wizard]').within(() => {
-
         cy.get('[data-cy=company-size-container]').within(() => {
-          cy.get('[data-cy=question]').should('contain', 'How big is your team?')
+          cy.get('[data-cy=question]').should(
+            'contain',
+            'How big is your team?'
+          )
           cy.get('[data-cy=input]').type('100')
           cy.get('[data-cy=done-btn]').click()
         })
-      });
+      })
 
       cy.get('[data-cy=office-type-container]').within(() => {
         cy.get('[data-cy=question]').should(
@@ -75,7 +77,7 @@ describe('User can send inquiry', () => {
       cy.get('[data-testID=rrs-option_locations_3]').click().click()
       cy.get('[data-cy=location-question-container]')
         .find('[data-cy=done-btn]')
-        .click()
+        .click({ force: true })
 
       cy.get('[data-cy=flexible-question-container]').within(() => {
         cy.get('[data-cy=question]').should(

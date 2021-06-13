@@ -1,7 +1,7 @@
 @import './variables';
 
 #footer {
-  background-color: $secondaryColor;
+  background-color: $mainColor;
   padding-top: 50px;
   width: 100%;
   padding-bottom: 50px;
@@ -26,6 +26,7 @@
     padding-bottom: 30px;
     h3 {
       text-decoration: underline;
+      text-transform: uppercase;
       color: rgb(247, 245, 245);
     }
 
@@ -51,7 +52,7 @@
       height: 2px;
       background-color: rgb(242, 236, 236);
       text-align: center;
-      margin: 10px 5% ;
+      margin: 10px 5%;
       @media (min-width: 599px) {
         display: none;
       }
@@ -64,7 +65,7 @@
         transform: none;
       }
       a {
-        color: $secondaryColor;
+        color: $mainColor;
       }
     }
     .custom-button:nth-last-child(1) {
@@ -77,10 +78,9 @@
       margin: 10px;
     }
   }
-}
-
-.logo {
-  height: 100px;
-  color: white;
-  padding-bottom: 40px;
+  .logo {
+    height: 120px;
+    color: white;
+    padding-bottom: 40px;
+  }
 }

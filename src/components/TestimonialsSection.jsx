@@ -36,7 +36,10 @@ const TestimonialsSection = () => {
 
   return (
     <>
-      <div className='testimonials-container'>
+    <div className='testimonials-header'>
+      <h1>In the last 12 months, we helped over 100 companies find their new offices - here are some examples</h1>
+    </div>    
+      <div className='testimonials-container'>        
         <Testimonial
           slider={slider}
           info={testimonials[slider - 1]}

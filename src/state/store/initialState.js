@@ -1,8 +1,6 @@
-
-
 const initialState = {
   formData: {
-    size: null,
+    size: undefined,
     office_type: '',
     email: '',
     company: '',
@@ -20,7 +18,7 @@ const initialState = {
     flexible: false,
   },
   submitMessage: '',
-  language: 'English'
+  language: 'English',
 }
 
 export default initialState

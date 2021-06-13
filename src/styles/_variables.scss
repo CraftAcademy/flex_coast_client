@@ -1,7 +1,12 @@
 $mainColor: rgb(97, 247, 210);
 $secondaryColor: rgb(255, 208, 156);
-$secondaryColorMedOpacity: rgba(255, 208, 156, 0.7);
-$secondaryColorLowOpacity: rgba(255, 208, 156, 0.2);
+$secondaryColorMedOpacity: rgba(223, 183, 130, 0.924);
+$gradientTeal: linear-gradient(
+  0deg,
+  rgba(20, 75, 85, 0.698),
+  rgb(97, 247, 210)
+);
+$secondaryColorLowOpacity: rgba(255, 208, 156, 0.1);
 
 $borderRadius: 10px;
 
@@ -15,5 +20,3 @@ $bg-image3: url('../assets/social-bg-3.jpg');
 $person1: url('../assets/social-img-1.jpg');
 $person2: url('../assets/social-img-2.jpg');
 $person3: url('../assets/social-img-3.jpg');
-
-

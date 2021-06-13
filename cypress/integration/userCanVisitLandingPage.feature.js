@@ -4,8 +4,7 @@ describe('User can visit Flex Coast landing page', () => {
   })
 
   it('shows the main landing page', () => {
-    cy.get('.hero-section')
-      .should('have.css', 'background')
+    cy.get('.hero-section').should('have.css', 'background')
     cy.get('[data-cy=header]').within(() => {
       cy.get('[data-cy=phone-number]').should('contain', '08-123 456 78')
       cy.get('[data-cy=language-dropdown]').should('be.visible')
@@ -14,7 +13,7 @@ describe('User can visit Flex Coast landing page', () => {
 
     cy.get('[data-cy=welcome-text]').should(
       'contain',
-      'Flexible short term office leasing in lovely Gothenburg'
+      'Flexible office spaces in beautiful Gothenburg'
     )
 
     cy.get('[data-cy=footer]').within(() => {
@@ -25,13 +24,6 @@ describe('User can visit Flex Coast landing page', () => {
         cy.get('[data-cy=links]').first().should('contain', 'Find Us')
         cy.get('[data-cy=link-grid]').children().should('have.length', 3)
       })
-    })
-  })
-
-  it('compelling story', () => {
-    cy.get('[data-cy=compelling-container]').within(() => {
-      cy.get('[data-cy=compelling-avatar]').should('exist')
-      cy.get('[data-cy=compelling-text]').should('be.visible')
     })
   })
 })
