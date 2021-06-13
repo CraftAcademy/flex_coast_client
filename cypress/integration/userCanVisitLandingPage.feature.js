@@ -5,8 +5,7 @@ describe('User can visit Flex Coast landing page', () => {
 
   it('shows the main landing page', () => {
     cy.get('.hero-section')
-      .should('have.css', 'background-image')
-      .and('include', 'hero')
+      .should('have.css', 'background')
     cy.get('[data-cy=header]').within(() => {
       cy.get('[data-cy=phone-number]').should('contain', '08-123 456 78')
       cy.get('[data-cy=language-dropdown]').should('be.visible')
@@ -27,9 +26,6 @@ describe('User can visit Flex Coast landing page', () => {
         cy.get('[data-cy=link-grid]').children().should('have.length', 3)
       })
     })
-
-    cy.get('[data-cy=get-started-1]').should('contain', 'Get Started').click()
-    cy.url().should('contain', '/inquiry')
   })
 
   it('compelling story', () => {

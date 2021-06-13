@@ -10,7 +10,7 @@
   border-bottom: 1px solid lightgray;
   @media only screen and (max-width: $mobile) {
     margin: 0 20px;
-    padding: 50px 0;
+    padding: 15px 0;
   }
 
   button {
@@ -34,6 +34,9 @@
   .logo {
     height: 100px;
     cursor: pointer;
+    @media only screen and (max-width: $mobile) {
+      height: 75px;
+    }
   }
 
   &-landing {

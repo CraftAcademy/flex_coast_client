@@ -10,16 +10,19 @@ describe('User can send inquiry', () => {
         },
       }
     )
-    cy.visit('/inquiry')
+    cy.visit('/')
   })
   describe('Successfully', () => {
     it('is expected to display success message', () => {
       cy.get('[data-cy=submit-btn]').should('not.exist')
-      cy.get('[data-cy=company-size-container]').within(() => {
-        cy.get('[data-cy=question]').should('contain', 'How big is your team?')
-        cy.get('[data-cy=input]').type('100')
-        cy.get('[data-cy=done-btn]').click()
-      })
+      cy.get('[data-cy=wizard]').within(() => {
+
+        cy.get('[data-cy=company-size-container]').within(() => {
+          cy.get('[data-cy=question]').should('contain', 'How big is your team?')
+          cy.get('[data-cy=input]').type('100')
+          cy.get('[data-cy=done-btn]').click()
+        })
+      });
 
       cy.get('[data-cy=office-type-container]').within(() => {
         cy.get('[data-cy=question]').should(

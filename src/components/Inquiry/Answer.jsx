@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { animateScroll } from 'react-scroll'
 import CustomIconButton from '../custom/CustomIconButton'
 import store from '../../state/store/configureStore'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
 import CustomSelectInput from '../custom/CustomSelectInput'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-
 const Answer = ({
   text,
   type,
@@ -15,12 +12,12 @@ const Answer = ({
   labels,
   dataCys,
   values,
+  ref,
 }) => {
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
   )
   const filled = useSelector((state) => state.filledAnswers[questionKey])
-  const isSmall = useMediaQuery('(max-width:620px)')
   const setAnswer = (event) => {
     event.preventDefault()
 
@@ -30,7 +27,6 @@ const Answer = ({
         payload: { key: questionKey, filled: false },
       })
     } else {
-      animateScroll.scrollMore(isSmall ? 280 : 200)
       store.dispatch({
         type: 'SWITCH_ANSWER_FILLED_STATUS',
         payload: { key: questionKey, filled: true },
@@ -41,6 +37,16 @@ const Answer = ({
       })
     }
   }
+
+  const scroll = () => {
+    let container = document.getElementById('wizard-container')
+    container.scrollBy({ top: container.offsetHeight, behavior: 'smooth' })
+  }
+
+  useEffect(() => {
+    scroll()
+  }, [])
+
   const chooseInputType = (type) => {
     switch (type) {
       case 'toggle-btn':
