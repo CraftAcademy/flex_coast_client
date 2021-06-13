@@ -18,6 +18,7 @@ const en = {
       name: 'What is the name of your company?',
       peers: 'Would you like to share office with others from your industry?',
       location: 'Where would you like to be situated?',
+      workingHours: 'Do you plan to work full-time or flexible hours?'
     },
     answer: {
       email: 'My email is ',
@@ -31,6 +32,9 @@ const en = {
       peersPositive: 'Yes',
       location: "We're interested in",
       locationAll: 'Any',
+      workingHours: 'It will be ',
+      fullTimeLable: 'Full Time',
+      flexibleLable: 'Flexible',
     },
     submitButton: 'Submit',
   },

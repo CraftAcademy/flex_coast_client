@@ -1,39 +1,39 @@
-import React, { useEffect } from 'react'
-import 'react-responsive-select/dist/react-responsive-select.css'
-import locations from '../../assets/Locations'
-import i18n from '../../i18n'
+import React, { useEffect } from 'react';
+import 'react-responsive-select/dist/react-responsive-select.css';
+import locations from '../../assets/Locations';
+import i18n from '../../i18n';
 import {
   Select,
   CaretIcon,
   MultiSelectOptionMarkup,
   ModalCloseButton,
-} from 'react-responsive-select'
+} from 'react-responsive-select';
 
 const CustomSelectInput = ({ locationValue, setInputValue, disabled }) => {
   const handleChange = (newValue) => {
-    if (newValue.options[0].value) {
-      setInputValue(newValue.options.map((location) => location.value))
+    if (newValue.options[0].value === 'All') {
+      setInputValue(locations.slice(1).map((location) => location.value));
     } else {
-      setInputValue(locations.slice(1).map((location) => location.value))
+      setInputValue(newValue.options.map((location) => location.value));
     }
-  }
+  };
 
   useEffect(() => {
     if (i18n.language === 'Svenska') {
       locations[0] = {
-        value: 'null',
+        value: 'All',
         text: 'Alla',
         markup: <MultiSelectOptionMarkup text='Alla' />,
-      }
+      };
     } else {
       locations[0] = {
-        value: 'null',
+        value: 'All',
         text: 'Any',
         markup: <MultiSelectOptionMarkup text='Any' />,
-      }
+      };
     }
     // eslint-disable-next-line
-  }, [i18n.language])
+  }, [i18n.language]);
 
   return (
     <>
@@ -64,9 +64,7 @@ const CustomSelectInput = ({ locationValue, setInputValue, disabled }) => {
         />
       )}
     </>
-  )
-}
+  );
+};
 
-export default CustomSelectInput
-
-
+export default CustomSelectInput;
