@@ -1,8 +1,8 @@
- import {MultiSelectOptionMarkup} from 'react-responsive-select'
- 
- const locations = [
+import { MultiSelectOptionMarkup } from 'react-responsive-select';
+
+const locations = [
   {
-    value: 'null',
+    value: 'All',
     text: 'Any',
     markup: <MultiSelectOptionMarkup text='Any' />,
   },
@@ -61,6 +61,6 @@
     text: 'Eriksberg',
     markup: <MultiSelectOptionMarkup text='Eriksberg' />,
   },
-]
+];
 
-export default locations
+export default locations;

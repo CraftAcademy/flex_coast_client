@@ -11,6 +11,7 @@ import InquiryCompanyName from '../components/Inquiry/InquiryCompanyName'
 import InquiryPeers from '../components/Inquiry/InquiryPeers'
 import Header from '../components/Header'
 import InquiryLocation from '../components/Inquiry/InquiryLocation'
+import InquiryWorkingHours from '../components/Inquiry/InquiryWorkingHours'
 
 const QuestionaryForm = () => {
   const { submitMessage, formData } = useSelector((state) => state)
@@ -30,12 +31,13 @@ const QuestionaryForm = () => {
         {formData.email && <InquiryCompanyName />}
         {formData.company && <InquiryPeers />}
         {formData.peers && <InquiryLocation />}
+        {formData.locations[0] && <InquiryWorkingHours />}
         {submitMessage ? (
           <>
             <Question dataCy='on-submit-message' text={submitMessage} />
           </>
         ) : (
-          formData.locations[0] && (
+          formData.flexible && (
             <CustomButton
               dataCy='submit-btn'
               onClick={() => Inquiries.create(formData)}>

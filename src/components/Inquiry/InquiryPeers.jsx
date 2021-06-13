@@ -15,7 +15,6 @@ const InquiryPeers = () => {
         labels={{label_1: t('answer.peersNegative'), label_2: t('answer.peersPositive')}}
         dataCys={{dataCy_1: 'negative', dataCy_2: 'positive'}}
         questionKey='peers'
-        label_1={t('answer.peersNegative')}        
       />
     </div>
   )
