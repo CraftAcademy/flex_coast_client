@@ -59,7 +59,7 @@
 
 .dropdown-container {
   .MuiPaper-root {
-    background-color: $secondaryColorMedOpacity;
+    background: rgba(69, 163, 140, 0.774);
     padding: 0 25%;
     height: 50%;
     align-items: center;
@@ -87,10 +87,10 @@ input[type='number']::-webkit-outer-spin-button {
 #menu-language {
   .MuiPaper-root {
     background-color: $mainColor;
-    color: white;
+    color: #222;
     width: 125px;
     @media only screen and (max-width: $mobile) {
-      background-color: $secondaryColor;
+      background-color: $mainColor;
       position: absolute;
       left: 50% !important;
       transform: translateX(-50%) !important;

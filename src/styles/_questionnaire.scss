@@ -44,6 +44,7 @@
     height: 60px;
     align-self: center;
     margin-right: 10px;
+    border-radius: 100%;
   }
 
   p {
@@ -236,7 +237,7 @@
     }
 
     .rrs__button {
-      background-color: #fff;
+      background-color: transparent;
       color: $secondaryColor;
       border-radius: $borderRadius;
       outline: none;

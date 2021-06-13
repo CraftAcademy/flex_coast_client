@@ -1,0 +1,58 @@
+@import './variables';
+
+.compelling-container {
+  height: 600px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media only screen and (max-width: $mobile) {
+    height: auto;
+    padding: 50px 20px 50px 20px;
+  }
+  .offer-title {
+    display: flex;
+    margin: 0 auto;
+    align-items: flex-end;
+    max-width: 1280px;
+    text-align: center;
+    h1 {
+      font-size: 30px;
+    }
+  }
+  .offer-container {
+    max-width: 1280px;
+    margin: 30px auto;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    @media only screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
+    .offer {
+      padding: 10px 30px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: center;
+      img {
+        height: 170px;
+        @media only screen and (max-width: $mobile) {
+          height: 120px;
+        }
+      }
+      h3 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+    div:nth-of-type(3) {
+      img {
+        margin-top: 20px;
+        margin-bottom: -20px;
+      }
+    }
+  }
+}
