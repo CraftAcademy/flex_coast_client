@@ -4,7 +4,7 @@ import MenuItem from '@material-ui/core/MenuItem'
 import i18n from '../i18n'
 
 const LanguageSelect = () => {
-  const [language, setLanguage] = useState('English')
+  const [language, setLanguage] = useState(i18n.language)
   const handleChange = (event) => {
     setLanguage(event.target.value)
     i18n.changeLanguage(event.target.value)

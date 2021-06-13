@@ -11,23 +11,23 @@ import {
 
 const CustomSelectInput = ({ locationValue, setInputValue, disabled }) => {
   const handleChange = (newValue) => {
-    if (newValue.options[0].value) {
-      setInputValue(newValue.options.map((location) => location.value))
-    } else {
+    if (newValue.options[0].value === 'All') {
       setInputValue(locations.slice(1).map((location) => location.value))
+    } else {
+      setInputValue(newValue.options.map((location) => location.value))
     }
   }
 
   useEffect(() => {
     if (i18n.language === 'Svenska') {
       locations[0] = {
-        value: 'null',
+        value: 'All',
         text: 'Alla',
         markup: <MultiSelectOptionMarkup text='Alla' />,
       }
     } else {
       locations[0] = {
-        value: 'null',
+        value: 'All',
         text: 'Any',
         markup: <MultiSelectOptionMarkup text='Any' />,
       }
@@ -68,5 +68,3 @@ const CustomSelectInput = ({ locationValue, setInputValue, disabled }) => {
 }
 
 export default CustomSelectInput
-
-
