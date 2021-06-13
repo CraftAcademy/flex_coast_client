@@ -12,7 +12,7 @@ const InquiryCompanySize = () => {
       <Answer
         text={t('answer.size')}
         type='number'
-        placeholder='100'
+        placeholder='5'
         questionKey='size'
       />
     </div>

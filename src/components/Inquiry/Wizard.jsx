@@ -16,8 +16,6 @@ const Wizard = () => {
   const { submitMessage, formData } = useSelector((state) => state)
   const { t } = useTranslation()
 
-  
-
   return (
     <div className='wizard-container' id='wizard-container' data-cy='wizard'>
       <InquiryCompanySize />
@@ -33,11 +31,14 @@ const Wizard = () => {
         </>
       ) : (
         formData.flexible && (
-          <CustomButton
-            dataCy='submit-btn'
-            onClick={() => Inquiries.create(formData)}>
-            {t('submitButton')}
-          </CustomButton>
+          <div className='submit-container'>
+            <CustomButton
+              submit
+              dataCy='submit-btn'
+              onClick={() => Inquiries.create(formData)}>
+              {t('submitButton')}
+            </CustomButton>
+          </div>
         )
       )}
     </div>
