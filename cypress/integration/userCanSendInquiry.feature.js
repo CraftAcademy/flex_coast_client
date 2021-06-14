@@ -23,6 +23,13 @@ describe('User can send inquiry', () => {
           )
           cy.get('[data-cy=input]').type('100')
           cy.get('[data-cy=done-btn]').click()
+          cy.wait('@eventRequest')
+            // .its('request.body')
+            // .should(
+            //   'have.property',
+            //   'properties["question"]',
+            //   'size'
+            // )
         })
       })
 
