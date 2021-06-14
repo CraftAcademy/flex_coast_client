@@ -15,15 +15,18 @@ const Testimonial2 = () => {
   return (
     <Swiper
       breakpoints={{
-        640: {
-          width: 640,
+        460: {
+          width: 460,
           slidesPerView: 1,
         },
-        1280: {
-          maxWidth: 1280,
-          slidesPerView: 4,
+        720: {
+          slidesPerView: 1.5,
+        },
+        960: {
+          slidesPerView: 3,
         },
       }}
+      spaceBetween={30}
       grabCursor={true}
       centeredSlides={true}
       navigation={true}
