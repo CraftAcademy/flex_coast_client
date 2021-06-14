@@ -1,7 +1,7 @@
 const en = {
   translation: {
     landingPage: {
-      introText: 'Flexible short term office leasing in lovely Gothenburg',
+      introText: 'Flexible office spaces in beautiful Gothenburg',
       startButton: 'Get Started',
     },
 
@@ -12,12 +12,23 @@ const en = {
       subHeader1: 'About Us',
       subHeader2: 'Contact',
       subHeader3: 'Find Us',
-      aboutUsText: 'We provide high end office spaces in Gothenburg with flexible conditions and short term contracts.',
+      aboutUsText:
+        'We provide high end office spaces in Gothenburg with flexible conditions and short term contracts.',
+    },
+
+    fantasticOffer: {
+      offerTitle: 'Flexible workspace where and how you need it',
+      offer1Sub: 'Any size space',
+      offer1: 'From a single desk, all the way up to configured offices.',
+      offer2Sub: 'On your terms',
+      offer2: 'Month, quarter or longer periods.',
+      offer3Sub: 'Best Locations',
+      offer3: 'Choose places from the most beautiful parts of Gothenburg.',
     },
 
     welcomeMessage:
       "Hi! Let's talk requirements, so we can provide personalised suggestions for your company.",
-      
+
     question: {
       email: 'Where can we reach you?',
       size: 'How big is your team?',
@@ -25,7 +36,7 @@ const en = {
       name: 'What is the name of your company?',
       peers: 'Would you like to share office with others from your industry?',
       location: 'Where would you like to be situated?',
-      workingHours: 'Do you plan to work full-time or flexible hours?'
+      workingHours: 'Do you plan to work full-time or flexible hours?',
     },
     answer: {
       email: 'My email is ',

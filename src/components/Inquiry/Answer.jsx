@@ -12,7 +12,6 @@ const Answer = ({
   labels,
   dataCys,
   values,
-  ref,
 }) => {
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
@@ -77,6 +76,7 @@ const Answer = ({
             disabled={filled}
             data-cy='input'
             type={type}
+            id='input'
             value={inputValue}
             required
             onChange={(event) => {

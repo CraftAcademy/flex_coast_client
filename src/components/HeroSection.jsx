@@ -12,7 +12,6 @@ const HeroSection = () => {
         <h1>{t('landingPage.introText')}</h1>
         <Wizard />
       </div>
-        
     </div>
   )
 }

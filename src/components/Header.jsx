@@ -38,7 +38,7 @@ const LandingHeader = ({ landing }) => {
               <CustomButton dataCy='phone-number'>
                 <a href='tel:+46812345678'>08-123 456 78</a>
               </CustomButton>
-              <LanguageSelect />
+              <LanguageSelect setOpen={()=>setOpen()}/>
             </>
           </Drawer>
         </div>
