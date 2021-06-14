@@ -3,11 +3,10 @@ import React from 'react'
 const CustomRadioButton = ({
   labels,
   dataCys,
-  values,  
+  values,
   disabled,
   onChange,
   radio_value,
-  
 }) => {
   return (
     <div className='radio-group'>

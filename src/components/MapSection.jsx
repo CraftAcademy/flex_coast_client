@@ -38,6 +38,9 @@ const MapSection = () => {
     streetViewControl: false,
     mapTypeControl: false,
     styles: mapStyles,
+    gestureHandling: "none",
+    zoomControl: false,
+    fullscreenControl: false
   };
 
   const { isLoaded } = useJsApiLoader({
