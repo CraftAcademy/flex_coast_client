@@ -6,7 +6,6 @@ import App from './App'
 import axios from 'axios'
 import './i18n'
 import reportWebVitals from './reportWebVitals'
-import { BrowserRouter as Router } from 'react-router-dom'
 
 axios.defaults.baseURL = 'https://flex-coast-api-development.herokuapp.com/api'
 axios.defaults.baseURL =
@@ -15,11 +14,9 @@ axios.defaults.baseURL =
     : 'https://flex-coast-api-development.herokuapp.com/api'
 
 ReactDOM.render(
-  <Router>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </Router>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 )
 
