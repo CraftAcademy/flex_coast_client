@@ -176,7 +176,7 @@ describe('User can switch between languages', () => {
       cy.get('[data-cy=person-text]').should('contain', 'SE-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
       cy.get('[data-cy=person-position]').should(
         'contain',
-        'Chefredaktör av Some News'
+        'Fastighetsspecialist på FlexCost',
       )
     })
     cy.get('[data-cy=person-3-container]').within(() => {
@@ -190,7 +190,7 @@ describe('User can switch between languages', () => {
       cy.get('[data-cy=person-text]').should('contain', 'SE-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
       cy.get('[data-cy=person-position]').should(
         'contain',
-        'Chefredaktör av Some News'
+        'Fastighetsspecialist på FlexCost',
       )
     })
 
@@ -214,7 +214,7 @@ describe('User can switch between languages', () => {
       cy.get('[data-cy=person-text]').should('contain', 'EN-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
       cy.get('[data-cy=person-position]').should(
         'contain',
-        'Chief Editor at Some News'
+        'Real estate specialist at FlexCost'
       )
     })
     cy.get('[data-cy=person-3-container]').within(() => {
@@ -228,7 +228,7 @@ describe('User can switch between languages', () => {
       cy.get('[data-cy=person-text]').should('contain', 'EN-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
       cy.get('[data-cy=person-position]').should(
         'contain',
-        'Chief Editor at Some News'
+        'Real estate specialist at FlexCost'
       )
     })
 

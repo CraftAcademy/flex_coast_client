@@ -13,30 +13,35 @@ const PersonsSection = () => {
   const { t } = useTranslation()
 
   const listOfPersonCards = persons.map((person, index) => (
-    <SwiperSlide data-cy={`person-${index}-container`}>
-      <div className='swiper-container'>
-        <div className='swiper-wrapper'>
-          <div className='swiper-slide'>
-            <div className='testimonialBox'>
-              <div className='details'>
-                <img
-                  className='profile-image'
-                  src={person.image}
-                  alt='profile'
-                />
-                <h3>{person.name}</h3>
-                <h4 data-cy='person-position'>
-                  {t(`persons.id_${index}.position`)}
-                </h4>
-              </div>
-              <div className='content'>
-                <p data-cy='person-text'>{t(`persons.id_${index}.text`)}</p>
+    <>
+      <SwiperSlide data-cy={`person-${index}-container`}>
+        <div className='swiper-container'>
+          <div className='swiper-wrapper'>
+            <div className='swiper-slide'>
+              <div
+                className={
+                  person.employee ? 'testimonialBox-employee' : 'testimonialBox'
+                }>
+                <div className='details'>
+                  <img
+                    className='profile-image'
+                    src={person.image}
+                    alt='profile'
+                  />
+                  <h3>{person.name}</h3>
+                  <h4 data-cy='person-position'>
+                    {t(`persons.id_${index}.position`)}
+                  </h4>
+                </div>
+                <div className='content'>
+                  <p data-cy='person-text'>{t(`persons.id_${index}.text`)}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </SwiperSlide>
+      </SwiperSlide>
+    </>
   ))
 
   SwiperCore.use([EffectCoverflow, Pagination, Navigation])
@@ -45,15 +50,18 @@ const PersonsSection = () => {
       <div className='testimonials-container'>
         <Swiper
           breakpoints={{
-            640: {
-              width: 640,
+            460: {
+              width: 460,
               slidesPerView: 1,
             },
-            1280: {
-              maxWidth: 1280,
-              slidesPerView: 4,
+            720: {
+              slidesPerView: 1.5,
+            },
+            960: {
+              slidesPerView: 3,
             },
           }}
+          spaceBetween={30}
           grabCursor={true}
           centeredSlides={true}
           navigation={true}
