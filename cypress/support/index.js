@@ -18,3 +18,8 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+beforeEach(()=> {
+  cy.intercept('**/api/ahoy/visits', {})
+  cy.intercept('**/api/ahoy/events', {}).as('eventRequest')
+})
