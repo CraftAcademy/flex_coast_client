@@ -1023,13 +1023,8 @@ section {
   overflow: hidden;
 }
 
-.testimonialBox {
+.testimonialBox, .testimonialBox-employee {
   border: 1px solid #f0e4e4;
-}
-
-.swiper-container {
-  max-width: 1920px;
-  height: 100%;
 }
 
 .swiper-wrapper {
@@ -1053,27 +1048,49 @@ section {
   background-color: rgba(250, 245, 245, 0.541);
 }
 
-:root {
-  --swiper-theme-color: #b4c4da !important;
+.testimonialBox, .testimonialBox-employee {
+  background: #ddd;
+  border: 5px solid #ddd;
+  border-radius: 5px;
 }
 
-.content {
-  margin: 30px;
+.testimonialBox h3, .testimonialBox-employee h3 {
+  color: white;
 }
 
-p {
+.testimonialBox-employee {
+  background: #ffd09c;
+  border: 5px solid #ffd09c;
+  border-radius: 5px;
+}
+
+.swiper-container {
+  max-width: 1920px;
+  height: 100%;
+}
+
+.swiper-container p {
   font-size: 20px;
+  color: #333;
 }
 
-h3 {
+.swiper-container h3 {
   margin-top: 10px;
   font-size: 25px;
 }
 
-h4 {
-  font-size: 15px;
-  color: #ffd09c;
+.swiper-container h4 {
+  font-size: 20px;
+  color: white;
   margin-bottom: 10px;
+}
+
+.swiper-container .content {
+  margin-bottom: 30px;
+}
+
+:root {
+  --swiper-theme-color: #b4c4da !important;
 }
 
 .profile-image {
