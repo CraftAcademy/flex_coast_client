@@ -7,13 +7,14 @@ const InquiryCompanySize = () => {
   const { t } = useTranslation()
 
   return (
-    <div data-cy='company-size-container'>
+    <div  data-cy='company-size-container'>
       <Question text={t('question.size')} />
       <Answer
         text={t('answer.size')}
         type='number'
         placeholder='5'
         questionKey='size'
+        data-section="company-size"
       />
     </div>
   )
