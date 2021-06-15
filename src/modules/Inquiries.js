@@ -2,7 +2,11 @@ import axios from 'axios'
 import store from '../state/store/configureStore'
 
 const Inquiries = {
-  async create(formData) {
+  async create(formData, setLoading) {
+    setLoading(true)
+    setTimeout(() => {
+      return
+    }, 1000000000)
     try {
       let params = { inquiry: formData }
       let response = await axios.post('/inquiries', params)
@@ -11,6 +15,7 @@ const Inquiries = {
         payload: response.data.message,
       })
     } catch (error) {}
+    setLoading(false)
   },
 }
 
