@@ -70,10 +70,12 @@ const se = {
     },
 
     question: {
+      greeting:
+        'Välkommen till Flex Coast! Låt oss hjälpa dig att hitta din drömarbetsyta genom att fylla i sex snabba frågor',
       email: 'Hur kan vi kontakta dig?',
       size: 'Hur stort är ditt team?',
       officeType: 'Vilken typ av kontor letar du efter?',
-      name: 'Vad är namnet på erat företag?',
+      phone: 'Slutligen ange ditt nummer så att vi enkelt kan nå dig.',
       peers: 'Vill du dela kontor med andra från din bransch?',
       location: 'Vilka områden är du intresserad av?',
       workingHours:
@@ -81,20 +83,22 @@ const se = {
     },
 
     answer: {
+      interesting: 'Låter bra!',
       email: 'Min email är ',
       size: 'Vi är en grupp av ',
       officeType: 'Vi behöver ',
-      officeLable: 'Kontor',
-      openSpaceLable: 'Öppet utrymme',
-      name: 'Det heter ',
-      companyPlaceholder: 'Flex Coast',
+      officeLabel: 'Kontor',
+      openSpaceLabel: 'Öppet utrymme',
+      combinedLabel: 'Kombinerad',
+      phone: 'Mitt nummer är',
       peersNegative: 'Nej',
       peersPositive: 'Ja',
       location: 'Vi är intresserade av',
       locationAll: 'Alla',
       workingHours: 'Vi kommer vara',
-      fullTimeLable: 'Heltid',
-      flexibleLable: 'Flexibel',
+      fullTimeLabel: 'Heltid',
+      flexibleLabel: 'Flexibel',
+      mixedLabel: 'En mix',
     },
     submitButton: 'Skicka in',
   },

@@ -5,14 +5,15 @@ import store from '../../state/store/configureStore'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
 import CustomSelectInput from '../custom/CustomSelectInput'
 import ahoy from '../../modules/analytics'
+
 const Answer = ({
+  first,
   text,
   type,
   placeholder,
   questionKey,
-  labels,
-  dataCys,
-  values,
+  radioData,
+  className,
 }) => {
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
@@ -41,6 +42,7 @@ const Answer = ({
 
   const scroll = () => {
     let container = document.getElementById('wizard-container')
+    // !first &&
     container.scrollBy({ top: container.offsetHeight, behavior: 'smooth' })
   }
 
@@ -51,7 +53,8 @@ const Answer = ({
   }
 
   useEffect(() => {
-    scroll();
+    scroll()
+    // eslint-disable-next-line
   }, [])
 
 
@@ -61,10 +64,8 @@ const Answer = ({
         return (
           <CustomRadioButton
             disabled={filled}
-            radio_value={inputValue}
-            values={values}
-            labels={labels}
-            dataCys={dataCys}
+            inputValue={inputValue}
+            data={radioData}
             onChange={(event) => {
               setInputValue(event.target.value)
             }}
@@ -81,7 +82,7 @@ const Answer = ({
       default:
         return (
           <input
-            className={'input'}
+            className={`input ${className}`}
             disabled={filled}
             data-cy='input'
             type={type}
