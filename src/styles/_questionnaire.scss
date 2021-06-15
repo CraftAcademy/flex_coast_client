@@ -128,13 +128,13 @@
     &:disabled {
       @extend .input;
       background-color: $secondaryColor;
-      color: white;
+      color: #333;
     }
 
     &-filled {
       @extend .input;
       background-color: $secondaryColor;
-      color: white;
+      color: #333;
     }
   }
 
@@ -150,7 +150,7 @@
     &:hover {
       background-color: $secondaryColor;
       .icon {
-        color: white;
+        color: #333;
       }
     }
     &-filled {
@@ -162,7 +162,7 @@
       color: $secondaryColor;
       &-filled {
         @extend .icon;
-        color: white;
+        color: #333;
       }
     }
   }
@@ -178,6 +178,7 @@
 
     label {
       display: inline-block;
+      color: #333;
       min-width: 45px;
       text-align: center;
       font-size: 1.4rem;
@@ -194,7 +195,7 @@
     }
 
     input[type='radio']:checked + label {
-      color: lighten(white, 60%);
+      color: #333;
       background: $secondaryColor;
     }
 
@@ -206,8 +207,8 @@
 
 .location-question-container {
   .answer-form-container {
-    display: flex;
 
+    display: flex;
     .rrs__multiselect-label__badge {
       margin-left: 15px;
       font-size: 14px;
@@ -218,14 +219,14 @@
     .location-filled {
       .rrs__button {
         background-color: $secondaryColor;
-        color: white;
+        color: #333;
         .rrs__multiselect-label__badge {
-          color: #fff;
+          color: #333;
           border: 2px solid;
         }
       }
       svg {
-        fill: #fff;
+        fill: #333;
       }
     }
 

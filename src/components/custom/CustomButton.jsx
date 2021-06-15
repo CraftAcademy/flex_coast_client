@@ -1,13 +1,10 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 
 const CustomButton = ({
   children,
   dataCy = 'button',
   submit = false,
   onClick,
-  link = false,
-  to,
 }) => {
   const scroll = () => {
     let container = document.getElementById('wizard-container')
@@ -27,7 +24,7 @@ const CustomButton = ({
     </button>
   )
 
-  return <>{link ? <Link to={to}>{button}</Link> : button}</>
+  return <>{button}</>
 }
 
 export default CustomButton
