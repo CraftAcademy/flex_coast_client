@@ -1,11 +1,24 @@
-import React from 'react';
+import React from 'react'
+import QuestionaryForm from './views/QuestionaryForm'
+import './styles/globals.css'
+import { Route, Switch } from 'react-router-dom'
+import LandingPage from './views/LandingPage'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
     <>
-      <h1>Hello Flex Coast</h1>
+      <Switch>
+        <Route exact path='/'>
+          <LandingPage />
+        </Route>
+        <Route exact path='/inquiry'>
+          <QuestionaryForm />
+        </Route>
+      </Switch>
+      <Footer />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App

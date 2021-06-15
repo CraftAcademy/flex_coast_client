@@ -1,0 +1,86 @@
+@import './variables';
+
+#footer {
+  background-color: #333;
+  padding-top: 50px;
+  width: 100%;
+  padding-bottom: 50px;
+
+  .footer-header {
+    font-size: 20px;
+    color: $secondaryColor;
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+  .top-hr {
+    border: none;
+    height: 2px;
+    background-color: $secondaryColor;
+    text-align: center;
+    margin: 0 5%;
+  }
+
+  .sub-header {
+    color: $secondaryColor;
+    text-align: center;
+    padding-bottom: 30px;
+    h3 {
+      text-decoration: underline;
+      text-transform: uppercase;
+      color: $secondaryColor;
+    }
+
+    .footer-text {
+      color: $secondaryColor;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 0 40px 0 40px;
+      padding: 0 20px 15px 20px;
+    }
+
+    .footer-link a,
+    a:hover,
+    a:focus,
+    a:active {
+      text-decoration: none;
+      color: rgb(247, 245, 245);
+      font-size: 18px;
+    }
+
+    .sub-hr {
+      border: none;
+      height: 2px;
+      background-color: rgb(242, 236, 236);
+      text-align: center;
+      margin: 10px 5%;
+      @media (min-width: 599px) {
+        display: none;
+      }
+    }
+    .custom-button {
+      background-color: $secondaryColor;
+      margin: 15px;
+      &:hover {
+        opacity: 70%;
+        transform: none;
+      }
+      a {
+        color: #333;
+      }
+    }
+    .custom-button:nth-last-child(1) {
+      background-color: transparent;
+      border: 2px solid $secondaryColor;
+      color: $secondaryColor;
+    }
+    .icon {
+      color: $secondaryColor !important;
+      margin: 10px;
+    }
+  }
+  .logo {
+    height: 120px;
+    color: $secondaryColor;
+    padding-bottom: 40px;
+  }
+}

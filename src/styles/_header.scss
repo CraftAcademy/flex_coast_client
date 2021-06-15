@@ -1,0 +1,106 @@
+@import './variables';
+
+.page-header {
+  max-width: 1280px;
+  padding: 50px;
+  display: flex;
+  height: 75px;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  @media only screen and (max-width: $mobile) {
+    margin: 0 20px;
+    padding: 15px 0;
+  }
+
+  button {
+    margin-right: 20px;
+  }
+
+  .menu-wrapper {
+    display: flex;
+    align-items: center;
+    .MuiSelect-select {
+      color: $mainColor;
+    }
+  }
+
+  .dropdown-menu {
+    button:first-of-type {
+      color: $mainColor;
+    }
+  }
+
+  .logo {
+    height: 100px;
+    margin-top: 50px;
+    cursor: pointer;
+    @media only screen and (max-width: $mobile) {
+      margin-top: 25px;
+      height: 75px;
+    }
+  }
+
+  &-landing {
+    @extend .page-header;
+    border-bottom: none;
+
+    .menu-wrapper {
+      .MuiSelect-select {
+        color: white;
+      }
+    }
+
+    .dropdown-menu {
+      button:first-of-type {
+        color: white;
+      }
+    }
+  }
+}
+
+.dropdown-container {
+  .MuiPaper-root {
+    background: rgba(69, 163, 140, 0.774);
+    padding: 0 25%;
+    height: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+
+    button {
+      background-color: transparent;
+      border: 1px solid #fff;
+    }
+
+    .MuiInputBase-root {
+      border: 1px solid #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
+  }
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#menu-language {
+  .MuiPaper-root {
+    background-color: $mainColor;
+    color: '#222';
+    width: 125px;
+    @media only screen and (max-width: $mobile) {
+      background-color: $mainColor;
+      position: absolute;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+  }
+}
+
+.MuiSelect-icon {
+  color: white !important;
+}

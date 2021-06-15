@@ -1,0 +1,85 @@
+@import './fantasticOffer.scss', './footer.scss', './header.scss', './hero.scss',
+  './mapSection.scss', './questionnaire.scss', './testimonialSlider.scss',
+  'testimonialSlider2.scss', './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+#root {
+  font-size: 62.5%;
+  background-color: whitesmoke;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito', sans-serif !important;
+}
+
+h2 {
+  font-size: 32px;
+  color: $secondaryColor;
+  margin: 50px 0;
+  @media only screen and (max-width: 700px) {
+    font-size: 1.2rem;
+    margin: 50px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  color: $secondaryColor;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  @media only screen and (max-width: 700px) {
+    font-size: 18px;
+    margin-top: 5px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+  @media only screen and (max-width: 520px) {
+    font-size: 18px;
+    padding-right: 10px;
+  }
+}
+
+.custom-button {
+  height: 50px;
+  cursor: pointer;
+  background-color: rgba(97, 247, 210, 0.9);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 14px 24px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $mainColor;
+    transform: translateY(-5px);
+  }
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #222;
+  }
+}
+
+.MuiInput-root {
+  color: white !important;
+}
+
+.MuiToolbar-root {
+  justify-content: flex-end;
+}
+
+.MuiButton-root {
+  border-radius: 20px !important;
+  font-size: 20px !important;
+  color: white !important;
+  background-color: $mainColor !important;
+  padding: 10px !important;
+  align-self: center !important;
+  @media only screen and (max-width: 520px) {
+    font-size: 18px !important;
+  }
+}

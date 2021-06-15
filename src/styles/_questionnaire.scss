@@ -1,0 +1,278 @@
+@import './variables';
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px 50px 50px 50px;
+  border-radius: $borderRadius;
+  border: 1px solid lightgray;
+  @media only screen and (max-width: $mobile) {
+    border: none;
+    margin-top: 0;
+    padding: 0 20px 0 20px;
+  }
+
+  .custom-button {
+    width: 200px;
+    margin: 0 auto;
+  }
+}
+
+.welcomeMessage {
+  color: #333;
+  padding-bottom: 30px;
+  border-bottom: 3px solid $secondaryColor;
+  @media only screen and (max-width: $mobile) {
+    margin: 20px 20px 50px 20px;
+  }
+}
+
+.question-container {
+  margin-top: 20px;
+  display: flex;
+  margin-bottom: 50px;
+  @media only screen and (max-width: $mobile) {
+    justify-content: left;
+    margin-bottom: 30px;
+  }
+
+  img {
+    height: 60px;
+    align-self: center;
+    margin-right: 10px;
+    border-radius: 100%;
+  }
+
+  p {
+    color: rgb(51, 51, 51);
+    background-color: $mainColor;
+    font-size: 1.4rem;
+    padding: 16px;
+    border-radius: $borderRadius;
+    @media only screen and (max-width: $mobile) {
+      font-size: 18px;
+      padding: 20px;
+    }
+  }
+}
+
+.answer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  @media only screen and (max-width: $mobile) {
+    flex-direction: column;
+    align-items: flex-end;
+
+    .answer-form-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    color: $secondaryColor;
+    font-weight: 500;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    @media only screen and (max-width: 700px) {
+      font-size: 18px;
+      padding-right: 65px;
+    }
+  }
+
+  .input {
+    font-size: 1.4rem;
+    border-radius: $borderRadius;
+    padding: 0 10px;
+    text-align: center;
+    height: 55px;
+    margin-right: 10px;
+    outline: none;
+    border: 2px solid $secondaryColor;
+    color: $secondaryColor;
+    background-color: rgba(0, 0, 0, 0);
+    @media only screen and (max-width: $mobile) {
+      width: 100%;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    &::before {
+      outline: none;
+      border: none;
+    }
+
+    &:focus {
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &::placeholder {
+      color: $secondaryColor;
+    }
+
+    &[type='number'] {
+      width: 100px;
+    }
+
+    &:disabled {
+      @extend .input;
+      background-color: $secondaryColor;
+      color: white;
+    }
+
+    &-filled {
+      @extend .input;
+      background-color: $secondaryColor;
+      color: white;
+    }
+  }
+
+  .done-btn {
+    border-radius: 100%;
+    margin-bottom: 10px;
+    height: 55px;
+    width: 55px;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid $secondaryColor;
+    transition: 0.3s;
+    &:hover {
+      background-color: $secondaryColor;
+      .icon {
+        color: white;
+      }
+    }
+    &-filled {
+      @extend .done-btn;
+      background-color: $secondaryColor;
+    }
+
+    .icon {
+      color: $secondaryColor;
+      &-filled {
+        @extend .icon;
+        color: white;
+      }
+    }
+  }
+
+  .radio-group {
+    border-radius: $borderRadius;
+    display: inline-block;
+
+    input[type='radio'] {
+      visibility: hidden;
+      display: none;
+    }
+
+    label {
+      display: inline-block;
+      min-width: 45px;
+      text-align: center;
+      font-size: 1.4rem;
+      color: $secondaryColor;
+      margin-right: 10px;
+      padding: 13px;
+      border: 2px solid $secondaryColor;
+      border-radius: $borderRadius;
+      cursor: pointer;
+      @media only screen and (max-width: $mobile) {
+        margin-left: 10px;
+        font-size: 18px;
+      }
+    }
+
+    input[type='radio']:checked + label {
+      color: lighten(white, 60%);
+      background: $secondaryColor;
+    }
+
+    label + input[type='radio'] + label {
+      border-left: 2px solid $secondaryColor;
+    }
+  }
+}
+
+.location-question-container {
+  .answer-form-container {
+    display: flex;
+
+    .rrs__multiselect-label__badge {
+      margin-left: 15px;
+      font-size: 14px;
+      color: $secondaryColor;
+      border-color: $secondaryColor;
+    }
+
+    .location-filled {
+      .rrs__button {
+        background-color: $secondaryColor;
+        color: white;
+        .rrs__multiselect-label__badge {
+          color: #fff;
+          border: 2px solid;
+        }
+      }
+      svg {
+        fill: #fff;
+      }
+    }
+
+    .rrs {
+      font-size: 1.4rem;
+      width: 300px;
+      margin-right: 10px;
+      color: $secondaryColor;
+    }
+
+    .rrs__button {
+      background-color: transparent;
+      color: $secondaryColor;
+      border-radius: $borderRadius;
+      outline: none;
+      border: 2px solid $secondaryColor;
+      box-shadow: none;
+      height: 55px;
+
+      svg {
+        fill: $secondaryColor;
+      }
+    }
+
+    .rrs--has-changed .rrs__label {
+      color: $secondaryColor;
+    }
+    .rrs__option:hover {
+      color: orange;
+    }
+    .rrs__option.rrs__option--next-selection {
+      color: $secondaryColor;
+    }
+    .rrs__option.rrs__option--selected {
+      color: $mainColor;
+
+      .checkbox {
+        border-color: $mainColor;
+      }
+
+      svg {
+        fill: $mainColor;
+      }
+    }
+  }
+}
+
+// .MuiCheckbox-colorSecondary.Mui-checked {
+//   color: $mainColor !important;
+// }
