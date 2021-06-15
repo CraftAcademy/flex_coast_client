@@ -16,7 +16,7 @@ const HeroSection = () => {
       <div className='phone-number-button'>
         <p>{t('landingPage.phoneCallUsText')}</p>
         <CustomButton dataCy='phone-number'>
-          <a href='tel:+46812345678'>08-123 456 78</a>
+          <a href='tel:+46311234567'>031-123 45 67</a>
         </CustomButton>
       </div>
     </div>

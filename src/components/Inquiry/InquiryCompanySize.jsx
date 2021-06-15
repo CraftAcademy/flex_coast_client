@@ -10,6 +10,7 @@ const InquiryCompanySize = () => {
     <div data-cy='company-size-container'>
       <Question text={t('question.size')} />
       <Answer
+        first
         text={t('answer.size')}
         type='number'
         placeholder='5'

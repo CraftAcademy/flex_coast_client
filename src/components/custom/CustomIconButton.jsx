@@ -8,6 +8,7 @@ const CustomIconButton = ({ toggle }) => {
     <IconButton
       className={toggle ? 'done-btn-filled' : 'done-btn'}
       type='submit'
+      onClick={() => document.getElementById('wizard-container').focus()}
       data-cy='done-btn'>
       {toggle ? (
         <EditIcon className={toggle ? 'icon-filled' : 'icon'} />
