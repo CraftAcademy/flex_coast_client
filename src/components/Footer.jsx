@@ -31,8 +31,8 @@ const Footer = () => {
       </Grid>
       <Grid data-cy='footer-categories' container alignItems='flex-start'>
         <Grid data-cy='footer-about' className='sub-header' item sm={4}>
-          <h3>{t('footer.subHeader1')}</h3>
-          <p className='footer-text'>{t('footer.aboutUsText')}</p>
+          <h3 data-cy='footer-about-header'>{t('footer.subHeader1')}</h3>
+          <p data-cy='footer-about-us' className='footer-text'>{t('footer.aboutUsText')}</p>
           <hr className='sub-hr' />
         </Grid>
         <Grid
@@ -41,17 +41,17 @@ const Footer = () => {
           item
           xs={12}
           sm={4}>
-          <h3>{t('footer.subHeader2')}</h3>
+          <h3 data-cy='footer-contact-header'>{t('footer.subHeader2')}</h3>
           <CustomButton dataCy='phone-number'>
             <a href='tel:+46812345678'>08-123 456 78</a>
           </CustomButton>
-          <CustomButton dataCy='get-started' onClick={scrollToTop}>
-            {t('landingPage.startButton')}
+          <CustomButton dataCy='get-started' link to='/inquiry'>
+            {t('footer.startButton')}
           </CustomButton>
           <hr className='sub-hr' />
         </Grid>
         <Grid data-cy='links' className='sub-header' item xs={12} sm={4}>
-          <h3>{t('footer.subHeader3')}</h3>
+          <h3 data-cy='footer-find-us-header'>{t('footer.subHeader3')}</h3>
           <Grid data-cy='link-grid'>
             <IconButton>
               <FacebookIcon className='icon' fontSize='large' />

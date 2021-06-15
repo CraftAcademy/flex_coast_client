@@ -9,7 +9,7 @@ const HeroSection = () => {
     <div className='hero-section' data-cy='hero-section'>
       <Header landing />
       <div data-cy='welcome-text' className='welcome-text'>
-        <h1>{t('landingPage.introText')}</h1>
+        <h1 data-cy='welcome-message'>{t('landingPage.introText')}</h1>
         <Wizard />
       </div>
     </div>
