@@ -6,18 +6,23 @@ import { useTranslation } from 'react-i18next'
 const InquiryOfficeType = () => {
   const { t } = useTranslation()
 
+  const radioButtonData = [
+    { value: 'office', label: t('answer.officeLabel'), dataCy: 'office' },
+    {
+      value: 'open_space',
+      label: t('answer.openSpaceLabel'),
+      dataCy: 'open-space',
+    },
+    { value: 'combined', label: t('answer.combinedLabel'), dataCy: 'combined' },
+  ]
+
   return (
     <div data-cy='office-type-container'>
       <Question text={t('question.officeType')} />
       <Answer
         text={t('answer.officeType')}
         type='toggle-btn'
-        values={{ value_1: 'office', value_2: 'open_space' }}
-        labels={{
-          label_1: t('answer.officeLable'),
-          label_2: t('answer.openSpaceLable'),
-        }}
-        dataCys={{ dataCy_1: 'office', dataCy_2: 'open-space' }}
+        radioData={radioButtonData}
         questionKey='office_type'
       />
     </div>

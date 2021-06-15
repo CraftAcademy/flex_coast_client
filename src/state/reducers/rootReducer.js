@@ -3,6 +3,11 @@ import locations from '../../assets/Locations'
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
+    case 'START_WIZARD':
+      return {
+        ...state,
+        started: true,
+      }
     case 'SET_ANSWERS':
       let newData = state.formData
       newData[action.payload.key] = action.payload.answer

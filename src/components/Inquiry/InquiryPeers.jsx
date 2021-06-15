@@ -6,14 +6,21 @@ import { useTranslation } from 'react-i18next'
 const InquiryPeers = () => {
   const { t } = useTranslation()
 
+  const radioButtonData = [
+    { value: 'no', label: t('answer.peersNegative'), dataCy: 'negative' },
+    {
+      value: 'yes',
+      label: t('answer.peersPositive'),
+      dataCy: 'positive',
+    },
+  ]
+
   return (
     <div data-cy='peer-question-container'>
       <Question text={t('question.peers')} />
       <Answer
         type='toggle-btn'
-        values={{value_1: 'No', value_2: 'Yes'}}
-        labels={{label_1: t('answer.peersNegative'), label_2: t('answer.peersPositive')}}
-        dataCys={{dataCy_1: 'negative', dataCy_2: 'positive'}}
+        radioData={radioButtonData}
         questionKey='peers'
       />
     </div>

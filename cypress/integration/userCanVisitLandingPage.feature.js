@@ -6,7 +6,7 @@ describe('User can visit Flex Coast landing page', () => {
   it('shows the main landing page', () => {
     cy.get('.hero-section').should('have.css', 'background')
     cy.get('[data-cy=header]').within(() => {
-      cy.get('[data-cy=phone-number]').should('contain', '08-123 456 78')
+      cy.get('[data-cy=phone-question]').should('contain', '08-123 456 78')
       cy.get('[data-cy=language-dropdown]').should('be.visible')
       cy.get('[data-cy=flex-coast]').should('be.visible')
     })

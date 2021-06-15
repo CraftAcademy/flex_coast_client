@@ -4,6 +4,7 @@ describe('User can edit inquiry', () => {
   })
   describe('Successfully', () => {
     it('is expected to edit input field', () => {
+      cy.get('[data-cy=sounds-good-btn]').find('button').click()
       cy.get('[data-cy=input]').type('100')
       cy.get('[data-cy=done-btn]').click()
       cy.get('[data-cy=input]').should('be.disabled')

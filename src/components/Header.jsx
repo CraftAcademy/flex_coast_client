@@ -16,7 +16,7 @@ const LandingHeader = ({ landing }) => {
         <LanguageSelect />
       ) : (
         <div className='menu-wrapper'>
-          <CustomButton dataCy='phone-number'>
+          <CustomButton dataCy='phone-question'>
             <a href='tel:+46812345678'>08-123 456 78</a>
           </CustomButton>
           <LanguageSelect />
