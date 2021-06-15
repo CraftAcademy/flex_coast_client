@@ -3,6 +3,8 @@ const se = {
   translation: {
     landingPage: {
       introText: 'Flexibla kontor i vackra Göteborg',
+      startButton: 'Hitta Kontor',
+      phoneCallUsText: 'Eller varför inte slå oss en pling',
     },
     testimonials: {
       id_1: {
@@ -66,9 +68,6 @@ const se = {
       offer3Sub: 'Bästa lägena',
       offer3: 'Välj bland dem bästa lägena i Göteborg',
     },
-
-    welcomeMessage:
-      'Hej! För att att hitta bästa möjliga kontor, behöver vi ställa lite frågor.',
 
     question: {
       email: 'Hur kan vi kontakta dig?',

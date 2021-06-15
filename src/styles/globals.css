@@ -266,29 +266,6 @@
   color: white;
 }
 
-.dropdown-container .MuiPaper-root {
-  background: rgba(69, 163, 140, 0.774);
-  padding: 0 25%;
-  height: 50%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.dropdown-container .MuiPaper-root button {
-  background-color: transparent;
-  border: 1px solid #fff;
-}
-
-.dropdown-container .MuiPaper-root .MuiInputBase-root {
-  border: 1px solid #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-}
-
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -299,16 +276,6 @@ input[type='number']::-webkit-outer-spin-button {
   background-color: #61f7d2;
   color: '#222';
   width: 125px;
-}
-
-@media only screen and (max-width: 620px) {
-  #menu-language .MuiPaper-root {
-    background-color: #61f7d2;
-    position: absolute;
-    left: 50% !important;
-    -webkit-transform: translateX(-50%) !important;
-            transform: translateX(-50%) !important;
-  }
 }
 
 .MuiSelect-icon {
@@ -414,6 +381,37 @@ input[type='number']::-webkit-outer-spin-button {
     font-size: 38px;
     padding: 20px;
   }
+}
+
+.hero-section .phone-number-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 130px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 620px) {
+  .hero-section .phone-number-button {
+    display: none;
+  }
+}
+
+.hero-section .phone-number-button p {
+  text-align: center;
+  margin: 15px 0;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 26px;
 }
 
 .form-container {

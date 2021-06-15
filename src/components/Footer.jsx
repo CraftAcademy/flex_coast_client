@@ -14,9 +14,9 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
-    });
-  };
+      behavior: 'smooth',
+    })
+  }
 
   return (
     <Grid data-cy='footer' id='footer' container alignItems='center'>

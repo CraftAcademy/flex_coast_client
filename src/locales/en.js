@@ -4,6 +4,8 @@ const en = {
   translation: {
     landingPage: {
       introText: 'Flexible office spaces in beautiful Gothenburg',
+      startButton: 'Get Started',
+      phoneCallUsText: 'Or if you want, just call us',
     },
     testimonials: {
       id_1: {
@@ -67,9 +69,6 @@ const en = {
       offer3Sub: 'Best Locations',
       offer3: 'Choose places from the most beautiful parts of Gothenburg.',
     },
-
-    welcomeMessage:
-      "Hi! Let's talk requirements, so we can provide personalised suggestions for your company.",
 
     question: {
       email: 'Where can we reach you?',
