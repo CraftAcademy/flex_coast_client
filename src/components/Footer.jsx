@@ -10,6 +10,14 @@ import IconButton from '@material-ui/core/IconButton'
 
 const Footer = () => {
   const { t } = useTranslation()
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <Grid data-cy='footer' id='footer' container alignItems='center'>
       <Grid className='footer-header' item xs={12}>
@@ -37,7 +45,7 @@ const Footer = () => {
           <CustomButton dataCy='phone-number'>
             <a href='tel:+46812345678'>08-123 456 78</a>
           </CustomButton>
-          <CustomButton dataCy='get-started' link to='/inquiry'>
+          <CustomButton dataCy='get-started' onClick={scrollToTop}>
             {t('landingPage.startButton')}
           </CustomButton>
           <hr className='sub-hr' />
