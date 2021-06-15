@@ -153,7 +153,7 @@
 #footer .sub-header .sub-hr {
   border: none;
   height: 2px;
-  background-color: #f2ecec;
+  background-color: #ffd09c;
   text-align: center;
   margin: 10px 5%;
 }
@@ -166,6 +166,7 @@
 
 #footer .sub-header .custom-button {
   background-color: #ffd09c;
+  color: #333;
   margin: 15px;
 }
 
@@ -180,7 +181,6 @@
 }
 
 #footer .sub-header .custom-button:nth-last-child(1) {
-  background-color: transparent;
   border: 2px solid #ffd09c;
   color: #ffd09c;
 }
@@ -485,7 +485,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .question-container p {
-  color: #333333;
+  color: #333;
   background-color: #61f7d2;
   font-size: 1.4rem;
   padding: 16px;
@@ -616,12 +616,12 @@ input[type='number']::-webkit-outer-spin-button {
 
 .answer-container .input:disabled, .answer-container .input-filled:disabled {
   background-color: #ffd09c;
-  color: white;
+  color: #333;
 }
 
 .answer-container .input-filled {
   background-color: #ffd09c;
-  color: white;
+  color: #333;
 }
 
 .answer-container .done-btn, .answer-container .done-btn-filled {
@@ -641,7 +641,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .answer-container .done-btn:hover .icon, .answer-container .done-btn-filled:hover .icon, .answer-container .done-btn:hover .icon-filled, .answer-container .done-btn-filled:hover .icon-filled {
-  color: white;
+  color: #333;
 }
 
 .answer-container .done-btn-filled {
@@ -653,7 +653,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .answer-container .done-btn .icon-filled, .answer-container .done-btn-filled .icon-filled {
-  color: white;
+  color: #333;
 }
 
 .answer-container .radio-group {
@@ -668,6 +668,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 .answer-container .radio-group label {
   display: inline-block;
+  color: #333;
   min-width: 45px;
   text-align: center;
   font-size: 1.4rem;
@@ -687,7 +688,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .answer-container .radio-group input[type='radio']:checked + label {
-  color: white;
+  color: #333;
   background: #ffd09c;
 }
 
@@ -710,16 +711,16 @@ input[type='number']::-webkit-outer-spin-button {
 
 .location-question-container .answer-form-container .location-filled .rrs__button {
   background-color: #ffd09c;
-  color: white;
+  color: #333;
 }
 
 .location-question-container .answer-form-container .location-filled .rrs__button .rrs__multiselect-label__badge {
-  color: #fff;
+  color: #333;
   border: 2px solid;
 }
 
 .location-question-container .answer-form-container .location-filled svg {
-  fill: #fff;
+  fill: #333;
 }
 
 .location-question-container .answer-form-container .rrs {
@@ -1031,21 +1032,8 @@ section {
   height: 100%;
 }
 
-@media only screen and (min-width: 620px) {
-  .swiper-container .swiper-container {
-    width: 460px;
-    margin-left: 10px;
-  }
-}
-
 .swiper-wrapper {
   margin-top: 20px;
-}
-
-@media only screen and (max-width: 1280px) {
-  .swiper-wrapper {
-    margin-left: 50px;
-  }
 }
 
 .pagination {
@@ -1070,7 +1058,7 @@ section {
 }
 
 .content {
-  margin-bottom: 30px;
+  margin: 30px;
 }
 
 p {
@@ -1107,13 +1095,20 @@ h4 {
   background-image: none !important;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (max-width: 460px) {
   .swiper-container {
-    width: 640px;
+    width: 100%;
+    margin-left: 50px;
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media only screen and (max-width: 1280px) {
+  .swiper-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
   .swiper-container {
     width: 100%;
   }
@@ -1170,7 +1165,7 @@ h3 {
   height: 50px;
   cursor: pointer;
   background-color: rgba(97, 247, 210, 0.9);
-  color: #fff;
+  color: #333;
   border-radius: 4px;
   border: none;
   padding: 14px 24px;
