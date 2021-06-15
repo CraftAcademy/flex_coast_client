@@ -7,7 +7,9 @@ const rootReducer = (state = initialState, action) => {
       let newData = state.formData
       newData[action.payload.key] = action.payload.answer
       if (action.payload.key === 'locations' && !action.payload.answer[0]) {
-        newData[action.payload.key] = locations.slice(1)
+        newData[action.payload.key] = locations.slice(1).map((location) => {
+          return location.value
+        })
       }
       return {
         ...state,

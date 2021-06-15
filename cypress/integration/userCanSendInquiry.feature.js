@@ -23,6 +23,7 @@ describe('User can send inquiry', () => {
           )
           cy.get('[data-cy=input]').type('100')
           cy.get('[data-cy=done-btn]').click()
+          cy.wait('@eventRequest')
         })
       })
 
@@ -35,6 +36,7 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=office-lable]').should('be.visible')
         cy.get('[data-cy=office-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
+        cy.wait('@eventRequest')
       })
 
       cy.get('[data-cy=email-container]').within(() => {
@@ -44,6 +46,7 @@ describe('User can send inquiry', () => {
         )
         cy.get('[data-cy=input]').type('example@mail.com')
         cy.get('[data-cy=done-btn]').click()
+        cy.wait('@eventRequest')
       })
 
       cy.get('[data-cy=company-name-container]').within(() => {
@@ -53,6 +56,7 @@ describe('User can send inquiry', () => {
         )
         cy.get('[data-cy=input]').type('Cyberdyne Systems')
         cy.get('[data-cy=done-btn]').click()
+        cy.wait('@eventRequest')
       })
 
       cy.get('[data-cy=peer-question-container]').within(() => {
@@ -64,6 +68,7 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=negative-lable]').should('be.visible')
         cy.get('[data-cy=positive-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
+        cy.wait('@eventRequest')
       })
       cy.get('[data-cy=location-question-container]').within(() => {
         cy.get('[data-cy=question]').should(
@@ -71,6 +76,7 @@ describe('User can send inquiry', () => {
           'Where would you like to be situated?'
         )
         cy.get('[data-testID=locations]').click()
+        cy.wait('@eventRequest')
       })
       cy.get('[data-testID=rrs-option_locations_1]').click()
       cy.get('[data-testID=rrs-option_locations_2]').click()
