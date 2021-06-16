@@ -2,8 +2,8 @@ import React from 'react'
 import HeroSection from '../components/HeroSection'
 import TestimonialsSection from '../components/TestimonialsSection'
 import MapSection from '../components/MapSection'
+import PersonsSection from '../components/PersonsSection'
 import FantasticOffer from '../components/FantasticOffer'
-import Testimonial2 from '../components/Testimonial2'
 
 const LandingPage = () => {
   return (
@@ -11,7 +11,7 @@ const LandingPage = () => {
       <HeroSection />
       <TestimonialsSection />
       <FantasticOffer />
-      <Testimonial2 />
+      <PersonsSection/>
       <MapSection />
     </>
   )

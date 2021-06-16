@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Testimonial from './Testimonial'
 import { testimonials } from '../assets/testimonials'
+import { useTranslation } from 'react-i18next'
 
 const TestimonialsSection = () => {
   const [slider, setSlider] = useState(1)
   const [timeoutActive, setTimeoutActive] = useState(true)
+  const { t } = useTranslation()
 
   const sliderHandler = (number) => {
     if (slider + number === 4) {
@@ -37,7 +39,7 @@ const TestimonialsSection = () => {
   return (
     <>
     <div className='testimonials-header'>
-      <h1>Your focus is to build an awesome company. Our focus is to find the best office for you and your team.</h1>
+      <h1 data-cy='pitch-message'>{t('pitchMessage')}</h1>
     </div>    
       <div className='testimonials-container'>        
         <Testimonial
