@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import { useTranslation } from 'react-i18next'
 import Wizard from './Inquiry/Wizard'
+import CustomButton from './custom/CustomButton'
 
 const HeroSection = () => {
   const { t } = useTranslation()
@@ -9,8 +10,14 @@ const HeroSection = () => {
     <div className='hero-section' data-cy='hero-section'>
       <Header landing />
       <div data-cy='welcome-text' className='welcome-text'>
-        <h1>{t('landingPage.introText')}</h1>
+        <h1 data-cy='welcome-message'>{t('landingPage.introText')}</h1>
         <Wizard />
+      </div>
+      <div className='phone-number-button'>
+        <p>{t('landingPage.phoneCallUsText')}</p>
+        <CustomButton dataCy='phone-number'>
+          <a href='tel:+46311234567'>031-123 45 67</a>
+        </CustomButton>
       </div>
     </div>
   )

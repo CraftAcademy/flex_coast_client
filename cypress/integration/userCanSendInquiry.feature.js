@@ -23,6 +23,7 @@ describe('User can send inquiry', () => {
           )
           cy.get('[data-cy=input]').type('100')
           cy.get('[data-cy=done-btn]').click()
+          cy.wait('@eventRequest')
         })
       })
 
@@ -31,10 +32,12 @@ describe('User can send inquiry', () => {
           'contain',
           'What type of office are you looking for?'
         )
-        cy.get('[data-cy=open-space-lable]').should('be.visible')
-        cy.get('[data-cy=office-lable]').should('be.visible')
-        cy.get('[data-cy=office-btn]').click({ force: true })
+        cy.get('[data-cy=open-space-label]').should('be.visible')
+        cy.get('[data-cy=office-label]').should('be.visible')
+        cy.get('[data-cy=combined-label]').should('be.visible')
+        cy.get('[data-cy=combined-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
+        cy.wait('@eventRequest')
       })
 
       cy.get('[data-cy=email-container]').within(() => {
@@ -44,15 +47,7 @@ describe('User can send inquiry', () => {
         )
         cy.get('[data-cy=input]').type('example@mail.com')
         cy.get('[data-cy=done-btn]').click()
-      })
-
-      cy.get('[data-cy=company-name-container]').within(() => {
-        cy.get('[data-cy=question]').should(
-          'contain',
-          'What is the name of your company?'
-        )
-        cy.get('[data-cy=input]').type('Cyberdyne Systems')
-        cy.get('[data-cy=done-btn]').click()
+        cy.wait('@eventRequest')
       })
 
       cy.get('[data-cy=peer-question-container]').within(() => {
@@ -60,10 +55,11 @@ describe('User can send inquiry', () => {
           'contain',
           'Would you like to share office with others from your industry?'
         )
-        cy.get('[data-cy=positive-lable]').should('be.visible')
-        cy.get('[data-cy=negative-lable]').should('be.visible')
+        cy.get('[data-cy=positive-label]').should('be.visible')
+        cy.get('[data-cy=negative-label]').should('be.visible')
         cy.get('[data-cy=positive-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
+        cy.wait('@eventRequest')
       })
       cy.get('[data-cy=location-question-container]').within(() => {
         cy.get('[data-cy=question]').should(
@@ -71,6 +67,7 @@ describe('User can send inquiry', () => {
           'Where would you like to be situated?'
         )
         cy.get('[data-testID=locations]').click()
+        cy.wait('@eventRequest')
       })
       cy.get('[data-testID=rrs-option_locations_1]').click()
       cy.get('[data-testID=rrs-option_locations_2]').click()
@@ -84,20 +81,30 @@ describe('User can send inquiry', () => {
           'contain',
           'Do you plan to work full-time or flexible hours?'
         )
-        cy.get('[data-cy=full-time-lable]').should('be.visible')
-        cy.get('[data-cy=flexible-lable]').should('be.visible')
-        cy.get('[data-cy=flexible-btn]').click({ force: true })
+        cy.get('[data-cy=full-time-label]').should('be.visible')
+        cy.get('[data-cy=flexible-label]').should('be.visible')
+        cy.get('[data-cy=mixed-label]').should('be.visible')
+        cy.get('[data-cy=mixed-btn]').click({ force: true })
+        cy.get('[data-cy=done-btn]').click()
+      })
+
+      cy.get('[data-cy=phone-question-container]').within(() => {
+        cy.get('[data-cy=question]').should(
+          'contain',
+          'Finally, please provide your number so that we can easily reach you.'
+        )
+        cy.get('[data-cy=input]').type('0713371337')
         cy.get('[data-cy=done-btn]').click()
       })
 
       const expectedOutcome = {
         size: '100',
-        office_type: 'office',
+        office_type: 'combined',
         email: 'example@mail.com',
-        company: 'Cyberdyne Systems',
-        peers: 'Yes',
+        peers: 'yes',
         locations: ['Lindholmen', 'Gamlestaden'],
-        flexible: 'true',
+        flexible: 'mixed',
+        phone: '0713371337',
       }
       cy.window()
         .its('store')
