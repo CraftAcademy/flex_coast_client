@@ -46,10 +46,6 @@
       }
       &:focus-within {
         max-height: 405px;
-
-        .hero-section & {
-          height: 100vh;
-        }
       }
       &:focus-visible {
         outline: none;

@@ -5,6 +5,7 @@ import store from '../../state/store/configureStore'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
 import CustomSelectInput from '../custom/CustomSelectInput'
 import ahoy from '../../modules/analytics'
+import { motion } from 'framer-motion'
 
 const Answer = ({
   first,
@@ -36,7 +37,7 @@ const Answer = ({
         type: 'SET_ANSWERS',
         payload: { key: questionKey, answer: inputValue },
       })
-      ahoyTracking();
+      ahoyTracking()
     }
   }
 
@@ -46,16 +47,15 @@ const Answer = ({
   }
 
   const ahoyTracking = () => {
-    const properties = {question: questionKey, value: inputValue}
+    const properties = { question: questionKey, value: inputValue }
     properties[questionKey] = inputValue
-    ahoy.track(`answer`, properties);
+    ahoy.track(`answer`, properties)
   }
 
   useEffect(() => {
     scroll()
     // eslint-disable-next-line
   }, [])
-
 
   const chooseInputType = (type) => {
     switch (type) {
@@ -97,7 +97,14 @@ const Answer = ({
     }
   }
   return (
-    <div className='answer-container'>
+    <motion.div
+      className='answer-container'
+      initial={{ opacity: 0, x: -25 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{
+        duration: 1,
+        delay: 0.5,
+      }}>
       <h3>{text}</h3>
       <form
         className='answer-form-container'
@@ -105,7 +112,7 @@ const Answer = ({
         {chooseInputType(type)}
         <CustomIconButton toggle={filled} />
       </form>
-    </div>
+    </motion.div>
   )
 }
 export default Answer
