@@ -8,6 +8,7 @@ const Inquiries = {
       return
     }, 500)
     try {
+
       let params = { inquiry: formData }
       let response = await axios.post('/inquiries', params)
       store.dispatch({
@@ -15,6 +16,7 @@ const Inquiries = {
         payload: response.data.message,
       })
     } catch (error) {}
+
     setLoading(false)
   },
 }

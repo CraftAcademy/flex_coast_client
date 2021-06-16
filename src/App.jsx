@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import ahoy from './modules/analytics'
 
 const App = () => {
+  
   useEffect(() => {
     ahoy.trackView()
   }, [])
