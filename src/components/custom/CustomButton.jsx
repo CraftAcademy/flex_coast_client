@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 const CustomButton = ({
   children,
   dataCy = 'button',
   submit = false,
   onClick,
-  link = false,
-  to,
+  loading = false,
+  color,
 }) => {
   const scroll = () => {
     let container = document.getElementById('wizard-container')
@@ -23,11 +23,11 @@ const CustomButton = ({
 
   const button = (
     <button className='custom-button' data-cy={dataCy} onClick={onClick}>
-      {children}
+      {loading ? <CircularProgress size={25} /> : children}
     </button>
   )
 
-  return <>{link ? <Link to={to}>{button}</Link> : button}</>
+  return <>{button}</>
 }
 
 export default CustomButton

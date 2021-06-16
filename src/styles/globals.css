@@ -108,7 +108,7 @@
 
 #footer .footer-header {
   font-size: 20px;
-  color: #ffd09c;
+  color: #fff;
   text-align: center;
   margin: 0 0 20px 0;
 }
@@ -122,13 +122,12 @@
 }
 
 #footer .sub-header {
-  color: #ffd09c;
+  color: #fff;
   text-align: center;
   padding-bottom: 30px;
 }
 
 #footer .sub-header h3 {
-  text-decoration: underline;
   text-transform: uppercase;
   color: #ffd09c;
 }
@@ -153,7 +152,7 @@
 #footer .sub-header .sub-hr {
   border: none;
   height: 2px;
-  background-color: #f2ecec;
+  background-color: #ffd09c;
   text-align: center;
   margin: 10px 5%;
 }
@@ -166,6 +165,7 @@
 
 #footer .sub-header .custom-button {
   background-color: #ffd09c;
+  color: #333;
   margin: 15px;
 }
 
@@ -180,7 +180,6 @@
 }
 
 #footer .sub-header .custom-button:nth-last-child(1) {
-  background-color: transparent;
   border: 2px solid #ffd09c;
   color: #ffd09c;
 }
@@ -266,29 +265,6 @@
   color: white;
 }
 
-.dropdown-container .MuiPaper-root {
-  background: rgba(69, 163, 140, 0.774);
-  padding: 0 25%;
-  height: 50%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.dropdown-container .MuiPaper-root button {
-  background-color: transparent;
-  border: 1px solid #fff;
-}
-
-.dropdown-container .MuiPaper-root .MuiInputBase-root {
-  border: 1px solid #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-}
-
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -301,16 +277,6 @@ input[type='number']::-webkit-outer-spin-button {
   width: 125px;
 }
 
-@media only screen and (max-width: 620px) {
-  #menu-language .MuiPaper-root {
-    background-color: #61f7d2;
-    position: absolute;
-    left: 50% !important;
-    -webkit-transform: translateX(-50%) !important;
-            transform: translateX(-50%) !important;
-  }
-}
-
 .MuiSelect-icon {
   color: white !important;
 }
@@ -321,7 +287,7 @@ input[type='number']::-webkit-outer-spin-button {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 80vh;
+  height: 730px;
 }
 
 @media only screen and (max-width: 620px) {
@@ -340,7 +306,7 @@ input[type='number']::-webkit-outer-spin-button {
           flex-direction: column;
   color: white;
   margin: 0 auto;
-  padding: 50px;
+  padding: 20px 50px;
   text-align: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -355,7 +321,7 @@ input[type='number']::-webkit-outer-spin-button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 50px 0 0 0;
+    margin: 0;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -367,10 +333,12 @@ input[type='number']::-webkit-outer-spin-button {
   max-width: 800px;
   background-color: rgba(0, 0, 0, 0.301);
   margin: 10px 15px;
-  padding: 20px 10px;
+  padding: 10px 10px;
   border-radius: 5px;
   max-height: 240px;
   overflow-y: scroll;
+  -webkit-transition: 1s;
+  transition: 1s;
   -ms-overflow-style: none;
   /* for Internet Explorer, Edge */
   scrollbar-width: none;
@@ -382,11 +350,27 @@ input[type='number']::-webkit-outer-spin-button {
   /* for Chrome, Safari, and Opera */
 }
 
+.hero-section .welcome-text .wizard-container:focus-within {
+  max-height: 405px;
+}
+
+.hero-section .hero-section .welcome-text .wizard-container:focus-within {
+  height: 100vh;
+}
+
+.hero-section .welcome-text .wizard-container:focus-visible {
+  outline: none;
+}
+
 @media only screen and (max-width: 620px) {
   .hero-section .welcome-text .wizard-container {
-    padding: 0px 10px;
+    max-height: 260px;
+    padding: 10px 10px;
     margin: 0;
     border-radius: 0;
+  }
+  .hero-section .welcome-text .wizard-container:focus-within {
+    max-height: 250px;
   }
 }
 
@@ -397,7 +381,7 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 25px 0;
+  margin: 0 0;
 }
 
 .hero-section .welcome-text h1 {
@@ -410,10 +394,41 @@ input[type='number']::-webkit-outer-spin-button {
 @media only screen and (max-width: 620px) {
   .hero-section .welcome-text h1 {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 0;
     font-size: 38px;
     padding: 20px;
   }
+}
+
+.hero-section .phone-number-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 130px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 620px) {
+  .hero-section .phone-number-button {
+    display: none;
+  }
+}
+
+.hero-section .phone-number-button p {
+  text-align: center;
+  margin: 10px 0;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 26px;
 }
 
 .form-container {
@@ -459,11 +474,10 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .question-container {
-  margin-top: 20px;
+  margin: 20px 50px 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 620px) {
@@ -472,7 +486,12 @@ input[type='number']::-webkit-outer-spin-button {
         -ms-flex-pack: left;
             justify-content: left;
     margin-bottom: 30px;
+    margin-right: 0;
   }
+}
+
+.question-container.hero {
+  margin-bottom: 10px;
 }
 
 .question-container img {
@@ -485,7 +504,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .question-container p {
-  color: #333333;
+  color: #333;
   background-color: #61f7d2;
   font-size: 1.4rem;
   padding: 16px;
@@ -616,12 +635,12 @@ input[type='number']::-webkit-outer-spin-button {
 
 .answer-container .input:disabled, .answer-container .input-filled:disabled {
   background-color: #ffd09c;
-  color: white;
+  color: #333;
 }
 
 .answer-container .input-filled {
   background-color: #ffd09c;
-  color: white;
+  color: #333;
 }
 
 .answer-container .done-btn, .answer-container .done-btn-filled {
@@ -641,7 +660,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .answer-container .done-btn:hover .icon, .answer-container .done-btn-filled:hover .icon, .answer-container .done-btn:hover .icon-filled, .answer-container .done-btn-filled:hover .icon-filled {
-  color: white;
+  color: #333;
 }
 
 .answer-container .done-btn-filled {
@@ -653,7 +672,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .answer-container .done-btn .icon-filled, .answer-container .done-btn-filled .icon-filled {
-  color: white;
+  color: #333;
 }
 
 .answer-container .radio-group {
@@ -668,6 +687,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 .answer-container .radio-group label {
   display: inline-block;
+  color: #333;
   min-width: 45px;
   text-align: center;
   font-size: 1.4rem;
@@ -681,13 +701,14 @@ input[type='number']::-webkit-outer-spin-button {
 
 @media only screen and (max-width: 620px) {
   .answer-container .radio-group label {
-    margin-left: 10px;
+    padding: 8px;
     font-size: 18px;
+    margin: 6px 2px;
   }
 }
 
 .answer-container .radio-group input[type='radio']:checked + label {
-  color: white;
+  color: #333;
   background: #ffd09c;
 }
 
@@ -710,16 +731,16 @@ input[type='number']::-webkit-outer-spin-button {
 
 .location-question-container .answer-form-container .location-filled .rrs__button {
   background-color: #ffd09c;
-  color: white;
+  color: #333;
 }
 
 .location-question-container .answer-form-container .location-filled .rrs__button .rrs__multiselect-label__badge {
-  color: #fff;
+  color: #333;
   border: 2px solid;
 }
 
 .location-question-container .answer-form-container .location-filled svg {
-  fill: #fff;
+  fill: #333;
 }
 
 .location-question-container .answer-form-container .rrs {
@@ -766,6 +787,14 @@ input[type='number']::-webkit-outer-spin-button {
 
 .location-question-container .answer-form-container .rrs__option.rrs__option--selected svg {
   fill: #61f7d2;
+}
+
+input.phone {
+  width: 250px !important;
+}
+
+.MuiCircularProgress-svg {
+  color: #fff;
 }
 
 .illu-container {
@@ -1022,30 +1051,12 @@ section {
   overflow: hidden;
 }
 
-.testimonialBox {
+.testimonialBox, .testimonialBox-employee {
   border: 1px solid #f0e4e4;
-}
-
-.swiper-container {
-  max-width: 1920px;
-  height: 100%;
-}
-
-@media only screen and (min-width: 620px) {
-  .swiper-container .swiper-container {
-    width: 460px;
-    margin-left: 10px;
-  }
 }
 
 .swiper-wrapper {
   margin-top: 20px;
-}
-
-@media only screen and (max-width: 1280px) {
-  .swiper-wrapper {
-    margin-left: 50px;
-  }
 }
 
 .pagination {
@@ -1065,27 +1076,49 @@ section {
   background-color: rgba(250, 245, 245, 0.541);
 }
 
-:root {
-  --swiper-theme-color: #b4c4da !important;
+.testimonialBox, .testimonialBox-employee {
+  background: #ddd;
+  border: 5px solid #ddd;
+  border-radius: 5px;
 }
 
-.content {
-  margin-bottom: 30px;
+.testimonialBox h3, .testimonialBox-employee h3 {
+  color: white;
 }
 
-p {
+.testimonialBox-employee {
+  background: #ffd09c;
+  border: 5px solid #ffd09c;
+  border-radius: 5px;
+}
+
+.swiper-container {
+  max-width: 1920px;
+  height: 100%;
+}
+
+.swiper-container p {
   font-size: 20px;
+  color: #333;
 }
 
-h3 {
+.swiper-container h3 {
   margin-top: 10px;
   font-size: 25px;
 }
 
-h4 {
-  font-size: 15px;
-  color: #ffd09c;
+.swiper-container h4 {
+  font-size: 20px;
+  color: white;
   margin-bottom: 10px;
+}
+
+.swiper-container .content {
+  margin-bottom: 30px;
+}
+
+:root {
+  --swiper-theme-color: #b4c4da !important;
 }
 
 .profile-image {
@@ -1107,13 +1140,20 @@ h4 {
   background-image: none !important;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (max-width: 460px) {
   .swiper-container {
-    width: 640px;
+    width: 100%;
+    margin-left: 50px;
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media only screen and (max-width: 1280px) {
+  .swiper-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
   .swiper-container {
     width: 100%;
   }
@@ -1170,7 +1210,7 @@ h3 {
   height: 50px;
   cursor: pointer;
   background-color: rgba(97, 247, 210, 0.9);
-  color: #fff;
+  color: #333;
   border-radius: 4px;
   border: none;
   padding: 14px 24px;
