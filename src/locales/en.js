@@ -1,9 +1,52 @@
+import { testimonials, persons } from '../assets/testimonials'
+
 const en = {
   translation: {
     landingPage: {
       introText: 'Flexible office spaces in beautiful Gothenburg',
       startButton: 'Get Started',
+      phoneCallUsText: 'Or if you want, just call us',
     },
+    testimonials: {
+      id_1: {
+        text: testimonials[0].review_en,
+        position: testimonials[0].position_en,
+      },
+      id_2: {
+        text: testimonials[1].review_en,
+        position: testimonials[1].position_en,
+      },
+      id_3: {
+        text: testimonials[2].review_en,
+        position: testimonials[2].position_en,
+      },
+    },
+
+    persons: {
+      id_0: {
+        text: persons[0].text_en,
+        position: persons[0].position_en,
+      },
+      id_1: {
+        text: persons[1].text_en,
+        position: persons[1].position_en,
+      },
+      id_2: {
+        text: persons[2].text_en,
+        position: persons[2].position_en,
+      },
+      id_3: {
+        text: persons[3].text_en,
+        position: persons[3].position_en,
+      },
+      id_4: {
+        text: persons[4].text_en,
+        position: persons[4].position_en,
+      },
+    },
+
+    pitchMessage:
+      'Your focus is to build an awesome company. Our focus is to find the best office for you and your team.',
 
     compellingText:
       ' Hey there! If you are looking for leasing flexible short term offices in Gothenburg you have found the right place. Maybe you just started up a new company or you just need some temporary office space to work in?',
@@ -14,6 +57,7 @@ const en = {
       subHeader3: 'Find Us',
       aboutUsText:
         'We provide high end office spaces in Gothenburg with flexible conditions and short term contracts.',
+      startButton: 'Get Started',
     },
 
     fantasticOffer: {
@@ -26,35 +70,35 @@ const en = {
       offer3: 'Choose places from the most beautiful parts of Gothenburg.',
     },
 
-    welcomeMessage:
-      "Hi! Let's talk requirements, so we can provide personalised suggestions for your company.",
-
     question: {
       email: 'Where can we reach you?',
       size: 'How big is your team?',
       officeType: 'What type of office are you looking for?',
-      name: 'What is the name of your company?',
+      phone:
+        'Finally, please provide your number so that we can easily reach you.',
       peers: 'Would you like to share office with others from your industry?',
       location: 'Where would you like to be situated?',
       workingHours: 'Do you plan to work full-time or flexible hours?',
     },
     answer: {
+      interesting: 'Sounds interesting!',
       email: 'My email is ',
       size: 'We are a group of ',
       officeType: 'We need an ',
-      officeLable: 'Office',
-      openSpaceLable: 'Open space',
-      name: 'It is called',
-      companyPlaceholder: 'MyCoolCompany',
+      officeLabel: 'Office',
+      openSpaceLabel: 'Open space',
+      combinedLabel: 'Combined',
+      phone: 'My number is',
       peersNegative: 'No',
       peersPositive: 'Yes',
       location: "We're interested in",
       locationAll: 'Any',
       workingHours: 'It will be ',
-      fullTimeLable: 'Full Time',
-      flexibleLable: 'Flexible',
+      fullTimeLabel: 'Full Time',
+      flexibleLabel: 'Flexible',
+      mixedLabel: 'Mixed',
     },
-    submitButton: 'Submit',
+    submitButton: 'Send',
   },
 }
 

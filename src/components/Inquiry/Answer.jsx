@@ -4,14 +4,16 @@ import CustomIconButton from '../custom/CustomIconButton'
 import store from '../../state/store/configureStore'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
 import CustomSelectInput from '../custom/CustomSelectInput'
+import ahoy from '../../modules/analytics'
+
 const Answer = ({
+  first,
   text,
   type,
   placeholder,
   questionKey,
-  labels,
-  dataCys,
-  values,
+  radioData,
+  className,
 }) => {
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
@@ -34,6 +36,7 @@ const Answer = ({
         type: 'SET_ANSWERS',
         payload: { key: questionKey, answer: inputValue },
       })
+      ahoyTracking();
     }
   }
 
@@ -42,9 +45,17 @@ const Answer = ({
     container.scrollBy({ top: container.offsetHeight, behavior: 'smooth' })
   }
 
+  const ahoyTracking = () => {
+    const properties = {question: questionKey, value: inputValue}
+    properties[questionKey] = inputValue
+    ahoy.track(`answer`, properties);
+  }
+
   useEffect(() => {
     scroll()
+    // eslint-disable-next-line
   }, [])
+
 
   const chooseInputType = (type) => {
     switch (type) {
@@ -52,10 +63,8 @@ const Answer = ({
         return (
           <CustomRadioButton
             disabled={filled}
-            radio_value={inputValue}
-            values={values}
-            labels={labels}
-            dataCys={dataCys}
+            inputValue={inputValue}
+            data={radioData}
             onChange={(event) => {
               setInputValue(event.target.value)
             }}
@@ -72,7 +81,7 @@ const Answer = ({
       default:
         return (
           <input
-            className={'input'}
+            className={`input ${className}`}
             disabled={filled}
             data-cy='input'
             type={type}
