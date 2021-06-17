@@ -1,8 +1,8 @@
 @import './variables';
 
 .hero-section {
-  // background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
-  //   $hero-img;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
+    $hero-img;
 
   background-size: cover;
   background-position: center;
@@ -28,7 +28,7 @@
       align-items: flex-start;
     }
 
-    .wizard-container {
+    #wizard-container {
       width: 100%;
       max-width: 800px;
       background-color: rgba(0, 0, 0, 0.301);
@@ -42,6 +42,9 @@
       scrollbar-width: none; /* for Firefox */
       &::-webkit-scrollbar {
         display: none; /* for Chrome, Safari, and Opera */
+      }
+      &:focus {
+        max-height: 405px;
       }
       &:focus-within {
         max-height: 405px;
