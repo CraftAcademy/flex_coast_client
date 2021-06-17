@@ -99,6 +99,7 @@ const se = {
       mixedLabel: 'En mix',
     },
     submitButton: 'Skicka in',
+    submitMessage: 'Tack för dina svar! Vi återkommer så snart som möjligt med dem bästa resultaten!'
   },
 }
 

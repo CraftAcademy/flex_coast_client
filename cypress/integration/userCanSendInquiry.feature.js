@@ -111,10 +111,12 @@ describe('User can send inquiry', () => {
         .invoke('getState')
         .its('formData')
         .should('deep.equal', expectedOutcome)
+
       cy.get('[data-cy=submit-btn]').click()
+      cy.get('[data-cy=wizard]').should('not.exist')
       cy.get('[data-cy=on-submit-message]').should(
         'contain',
-        'Thank you for your inquiry! We will be in touch with lovely offices soon.'
+        'Thank you for your answers! I will get to work as soon as possible. Be in touch soon!'
       )
     })
   })

@@ -308,9 +308,6 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0 auto;
   padding: 20px 50px;
   text-align: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   max-width: 900px;
 }
 
@@ -354,10 +351,6 @@ input[type='number']::-webkit-outer-spin-button {
   max-height: 405px;
 }
 
-.hero-section .hero-section .welcome-text .wizard-container:focus-within {
-  height: 100vh;
-}
-
 .hero-section .welcome-text .wizard-container:focus-visible {
   outline: none;
 }
@@ -398,6 +391,10 @@ input[type='number']::-webkit-outer-spin-button {
     font-size: 38px;
     padding: 20px;
   }
+}
+
+.hero-section .submit-message-container {
+  width: 75%;
 }
 
 .hero-section .phone-number-button {
@@ -1255,4 +1252,38 @@ h3 {
   .MuiButton-root {
     font-size: 18px !important;
   }
+}
+
+.loading-screen {
+  position: absolute;
+  z-index: 10000;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loading-screen .loading-screen-logo {
+  height: 150px;
+  margin-bottom: 25px;
+}
+
+.loading-screen h1 {
+  margin-bottom: 25px;
+}
+
+.loading-screen .MuiCircularProgress-svg {
+  color: #61f7d2;
 }
