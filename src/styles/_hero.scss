@@ -20,7 +20,6 @@
     margin: 0 auto;
     padding: 20px 50px;
     text-align: left;
-    align-items: center;
     max-width: 900px;
     @media only screen and (max-width: $mobile) {
       padding: 0;
@@ -46,10 +45,6 @@
       }
       &:focus-within {
         max-height: 405px;
-
-        .hero-section & {
-          height: 100vh;
-        }
       }
       &:focus-visible {
         outline: none;
@@ -84,6 +79,10 @@
         padding: 20px;
       }
     }
+  }
+
+  .submit-message-container {
+    width: 75%;
   }
 
   .phone-number-button {
