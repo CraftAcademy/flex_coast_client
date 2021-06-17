@@ -8,15 +8,30 @@ const resources = {
   English: en,
 }
 
-i18n.use(initReactI18next).init({
-  resources,
-  fallbackLng: 'English',
-  interpolation: {
-    escapeValue: false,
-  },
-  react: {
-    useSuspense: true,
-  },
-})
+let fallbackLng = undefined
+if (navigator.language.includes('sv')) {
+  fallbackLng = 'Svenska'
+} else {
+  fallbackLng = 'English'
+}
+
+const options = {
+  order: ['querystring', 'navigator'],
+  lookupQuerystring: 'lng',
+}
+
+i18n
+  .use(initReactI18next)
+  .init({
+    detection: options,
+    resources,
+    fallbackLng: fallbackLng,
+    interpolation: {
+      escapeValue: false,
+    },
+    react: {
+      useSuspense: true,
+    },
+  })
 
 export default i18n

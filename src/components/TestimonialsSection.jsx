@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Testimonial from './Testimonial'
 import { testimonials } from '../assets/testimonials'
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 
 const TestimonialsSection = () => {
   const [slider, setSlider] = useState(1)
@@ -38,17 +39,33 @@ const TestimonialsSection = () => {
 
   return (
     <>
-    <div className='testimonials-header'>
-      <h1 data-cy='pitch-message'>{t('pitchMessage')}</h1>
-    </div>    
-      <div className='testimonials-container'>        
+      <div className='testimonials-header'>
+        <motion.h1
+          initial={{ opacity: 0, x: 25 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            delay: 1.3,
+            duration: 0.5,
+          }}
+          data-cy='pitch-message'>
+          {t('pitchMessage')}
+        </motion.h1>
+      </div>
+      <motion.div
+        initial={{ opacity: 0, x: 25 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{
+          delay: 1.3,
+          duration: 0.5,
+        }}
+        className='testimonials-container'>
         <Testimonial
           slider={slider}
           info={testimonials[slider - 1]}
           sliderHandler={sliderHandler}
           stopTimer={stopTimer}
         />
-      </div>
+      </motion.div>
     </>
   )
 }
