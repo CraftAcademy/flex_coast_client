@@ -7,7 +7,6 @@ import CustomSelectInput from '../custom/CustomSelectInput'
 import ahoy from '../../modules/analytics'
 
 const Answer = ({
-  first,
   text,
   type,
   placeholder,
@@ -36,7 +35,7 @@ const Answer = ({
         type: 'SET_ANSWERS',
         payload: { key: questionKey, answer: inputValue },
       })
-      ahoyTracking();
+      ahoyTracking()
     }
   }
 
@@ -46,16 +45,15 @@ const Answer = ({
   }
 
   const ahoyTracking = () => {
-    const properties = {question: questionKey, value: inputValue}
+    const properties = { question: questionKey, value: inputValue }
     properties[questionKey] = inputValue
-    ahoy.track(`answer`, properties);
+    ahoy.track(`answer`, properties)
   }
 
   useEffect(() => {
     scroll()
     // eslint-disable-next-line
   }, [])
-
 
   const chooseInputType = (type) => {
     switch (type) {
