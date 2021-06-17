@@ -10,6 +10,7 @@ import InquiryPhoneNumber from './InquiryPhoneNumber'
 import InquiryPeers from './InquiryPeers'
 import InquiryLocation from './InquiryLocation'
 import InquiryWorkingHours from './InquiryWorkingHours'
+import InquiryStartDate from './InquiryStartDate'
 import { useTranslation } from 'react-i18next'
 
 const Wizard = () => {
@@ -29,7 +30,8 @@ const Wizard = () => {
       {formData.email && <InquiryPeers />}
       {formData.peers && <InquiryLocation />}
       {formData.locations[0] && <InquiryWorkingHours />}
-      {formData.flexible && <InquiryPhoneNumber />}
+      {formData.flexible && <InquiryStartDate />}
+      {formData.start_date && <InquiryPhoneNumber />}
 
       {submitMessage ? (
         <Question dataCy='on-submit-message' text={submitMessage} />

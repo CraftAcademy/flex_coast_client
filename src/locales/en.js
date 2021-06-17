@@ -79,6 +79,7 @@ const en = {
       peers: 'Would you like to share office with others from your industry?',
       location: 'Where would you like to be situated?',
       workingHours: 'Do you plan to work full-time or flexible hours?',
+      start_date: 'When do you plan to move in?'
     },
     answer: {
       interesting: 'Sounds interesting!',
@@ -97,6 +98,9 @@ const en = {
       fullTimeLabel: 'Full Time',
       flexibleLabel: 'Flexible',
       mixedLabel: 'Mixed',
+      start_dateNow: 'ASAP',
+      start_dateQuarter: 'In two month',
+      start_dateUnsure: 'Not Sure'
     },
     submitButton: 'Send',
   },
