@@ -52,7 +52,7 @@ const PersonsSection = () => {
     <>
       <div className='testimonials-container-persons'>
         <Swiper
-          slidesPerView={isPhone ? 1 : isTablet ? 2 : isBig ? 4 : 6}
+          slidesPerView={isPhone ? 1 : isTablet ? 2 : isBig ? 4 : 5}
           spaceBetween={30}
           grabCursor={true}
           navigation={true}

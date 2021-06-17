@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import './styles/globals.css'
-import LandingPage from './views/LandingPage'
-import Footer from './components/Footer'
 import ahoy from './modules/analytics'
+import LoadingScreen from './views/LoadingScreen'
+const LandingPage = React.lazy(() => import('./views/LandingPage'))
+const Footer = React.lazy(() => import('./components/Footer'))
 
 const App = () => {
   useEffect(() => {
@@ -11,8 +12,10 @@ const App = () => {
 
   return (
     <>
-      <LandingPage />
-      <Footer />
+      <Suspense fallback={<LoadingScreen />}>
+        <LandingPage />
+        <Footer />
+      </Suspense>
     </>
   )
 }

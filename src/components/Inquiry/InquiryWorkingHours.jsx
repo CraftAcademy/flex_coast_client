@@ -7,9 +7,9 @@ const InquiryOfficeType = () => {
   const { t } = useTranslation()
 
   const radioButtonData = [
-    { value: 'false', label: t('answer.fullTimeLabel'), dataCy: 'full-time' },
+    { value: 'no', label: t('answer.fullTimeLabel'), dataCy: 'full-time' },
     {
-      value: 'true',
+      value: 'yes',
       label: t('answer.flexibleLabel'),
       dataCy: 'flexible',
     },
