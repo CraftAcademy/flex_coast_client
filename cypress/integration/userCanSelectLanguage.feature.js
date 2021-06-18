@@ -173,7 +173,7 @@ describe('User can switch between languages', () => {
       )
       cy.get('[data-cy=person-position]').should(
         'contain',
-        'Fastighetsspecialist på FlexCost'
+        'Fastighetsspecialist på FlexCoast'
       )
     })
     cy.get('[data-cy=person-3-container]').within(() => {
@@ -193,7 +193,7 @@ describe('User can switch between languages', () => {
       )
       cy.get('[data-cy=person-position]').should(
         'contain',
-        'Fastighetsspecialist på FlexCost'
+        'Fastighetsspecialist på FlexCoast'
       )
     })
 
@@ -220,7 +220,7 @@ describe('User can switch between languages', () => {
       )
       cy.get('[data-cy=person-position]').should(
         'contain',
-        'Real estate specialist at FlexCost'
+        'Real estate specialist at FlexCoast'
       )
     })
     cy.get('[data-cy=person-3-container]').within(() => {
@@ -240,7 +240,7 @@ describe('User can switch between languages', () => {
       )
       cy.get('[data-cy=person-position]').should(
         'contain',
-        'Real estate specialist at FlexCost'
+        'Real estate specialist at FlexCoast'
       )
     })
   })

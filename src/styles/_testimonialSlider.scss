@@ -29,6 +29,9 @@
   color: $fontColor;
   margin: 50px auto 50px auto;
   max-width: 1050px;
+  @media (max-width: 1000px) {
+    padding: 0 50px;
+  }
   @media only screen and (max-width: $mobile) {
     font-size: 14px;
     padding: 0 20px;
