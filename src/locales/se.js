@@ -51,9 +51,9 @@ const se = {
       'Hallå där! Om du letar efter att hyra flexibla kortvariga kontor i Göteborg har du hittat rätt plats. Kanske har du precis startat ett nytt företag eller behöver du bara ett tillfälligt kontor att arbeta i?',
 
     footer: {
-      subHeader1: 'Om Oss',
-      subHeader2: 'Kontakta Oss',
-      subHeader3: 'Hitta Oss',
+      subHeader1: 'Om tjänsten',
+      subHeader2: 'Prata med en människa',
+      subHeader3: 'Följ oss gärna!',
       aboutUsText:
         'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och kortvariga kontrakt.',
       startButton: 'Hitta Kontor',
@@ -78,7 +78,7 @@ const se = {
       location: 'Vilka områden är du intresserad av?',
       workingHours:
         'Kommer ni jobba heltid på plats eller var lite mer flexibel?',
-      start_date: 'När behöver du flytta in?'
+      start_date: 'När behöver du flytta in?',
     },
 
     answer: {
@@ -100,10 +100,11 @@ const se = {
       mixedLabel: 'En mix',
       start_dateNow: 'Idag',
       start_dateQuarter: 'Inom 2 månader',
-      start_dateUnsure: 'Osäker'
+      start_dateUnsure: 'Osäker',
     },
     submitButton: 'Skicka in',
-    submitMessage: 'Tack för dina svar! Vi återkommer så snart som möjligt med dem bästa resultaten!'
+    submitMessage:
+      'Tack för dina svar! Vi återkommer så snart som möjligt med dem bästa resultaten!',
   },
 }
 

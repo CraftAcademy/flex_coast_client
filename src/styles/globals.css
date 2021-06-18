@@ -102,28 +102,30 @@
 }
 
 #footer .footer-header {
-  font-size: 20px;
-  color: #fff;
   text-align: center;
   margin: 0 0 20px 0;
 }
 
-#footer .top-hr {
+#footer .sub-hr {
   border: none;
-  height: 2px;
-  background-color: #ffd09c;
+  height: 1px;
+  background-color: rgba(223, 183, 130, 0.124);
   text-align: center;
-  margin: 0 5%;
+  margin: 10px 5%;
+}
+
+@media (min-width: 599px) {
+  #footer .sub-hr {
+    display: none;
+  }
 }
 
 #footer .sub-header {
-  color: #fff;
   text-align: center;
   padding-bottom: 30px;
 }
 
 #footer .sub-header h3 {
-  text-transform: uppercase;
   color: #ffd09c;
 }
 
@@ -131,8 +133,14 @@
   color: #ffd09c;
   text-decoration: none;
   font-size: 18px;
-  margin: 0 40px 0 40px;
+  margin: 0 100px 0 100px;
   padding: 0 20px 15px 20px;
+}
+
+@media (max-width: 600px) {
+  #footer .sub-header .footer-text {
+    margin: 0 50px 0 50px;
+  }
 }
 
 #footer .sub-header .footer-link a,
@@ -142,20 +150,6 @@
   text-decoration: none;
   color: #f7f5f5;
   font-size: 18px;
-}
-
-#footer .sub-header .sub-hr {
-  border: none;
-  height: 2px;
-  background-color: #ffd09c;
-  text-align: center;
-  margin: 10px 5%;
-}
-
-@media (min-width: 599px) {
-  #footer .sub-header .sub-hr {
-    display: none;
-  }
 }
 
 #footer .sub-header .custom-button {
