@@ -263,6 +263,8 @@
 
 .page-header-landing .menu-wrapper .MuiSelect-select {
   color: white;
+  font-size: 18px;
+  padding-bottom: 0;
 }
 
 .page-header-landing .dropdown-menu button:first-of-type {
@@ -333,7 +335,7 @@ input[type='number']::-webkit-outer-spin-button {
 .hero-section .welcome-text #wizard-container {
   width: 100%;
   max-width: 800px;
-  background-color: rgba(0, 0, 0, 0.301);
+  background-color: rgba(0, 0, 0, 0.37);
   margin: 10px 15px;
   padding: 10px 10px;
   border-radius: 5px;
@@ -364,7 +366,7 @@ input[type='number']::-webkit-outer-spin-button {
   .hero-section .welcome-text #wizard-container {
     max-height: 260px;
     padding: 10px 10px;
-    margin: 0;
+    margin: 0 0 40px 0;
     border-radius: 0;
   }
   .hero-section .welcome-text #wizard-container:focus-within {
@@ -383,7 +385,8 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .hero-section .welcome-text h1 {
-  padding: 20px 0 15px 10px;
+  padding: 30px 0 20px 10px;
+  line-height: 1.2;
   font-size: 55px;
   max-width: 800px;
 }
@@ -391,7 +394,7 @@ input[type='number']::-webkit-outer-spin-button {
 @media only screen and (max-width: 620px) {
   .hero-section .welcome-text h1 {
     text-align: center;
-    margin-bottom: 0;
+    margin: 75px 0;
     font-size: 38px;
     padding: 20px;
   }
@@ -399,37 +402,6 @@ input[type='number']::-webkit-outer-spin-button {
 
 .hero-section .submit-message-container {
   width: 75%;
-}
-
-.hero-section .phone-number-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 130px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (min-width: 620px) {
-  .hero-section .phone-number-button {
-    display: none;
-  }
-}
-
-.hero-section .phone-number-button p {
-  text-align: center;
-  margin: 10px 0;
-  color: #fff;
-  font-weight: bolder;
-  font-size: 26px;
 }
 
 .form-container {
@@ -475,10 +447,11 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .question-container {
-  margin: 20px 50px 50px 0;
+  margin: 30px 50px 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 20px;
 }
 
 @media only screen and (max-width: 620px) {
@@ -486,8 +459,8 @@ input[type='number']::-webkit-outer-spin-button {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
-    margin-bottom: 30px;
-    margin-right: 0;
+    margin: 0 0 30px 0;
+    padding: 0;
   }
 }
 
@@ -508,7 +481,7 @@ input[type='number']::-webkit-outer-spin-button {
   color: #333;
   background-color: #61f7d2;
   font-size: 1.4rem;
-  padding: 16px;
+  padding: 16px 32px;
   border-radius: 10px;
 }
 
@@ -527,13 +500,14 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding: 0 20px;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 620px) {
@@ -545,6 +519,7 @@ input[type='number']::-webkit-outer-spin-button {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    padding: 0;
   }
   .answer-container .answer-form-container {
     width: 100%;
@@ -593,6 +568,10 @@ input[type='number']::-webkit-outer-spin-button {
   }
 }
 
+.answer-container .input[type='number'], .answer-container .input-filled[type='number'] {
+  font-size: 1.7rem;
+}
+
 .answer-container .input::before, .answer-container .input:disabled::before, .answer-container .input-filled::before {
   outline: none;
   border: none;
@@ -637,6 +616,24 @@ input[type='number']::-webkit-outer-spin-button {
 .answer-container .input:disabled, .answer-container .input-filled:disabled {
   background-color: #ffd09c;
   color: #333;
+}
+
+.answer-container .input:disabled:hover, .answer-container .input-filled:disabled:hover {
+  background-color: #ffd09c;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: none;
+  transition: none;
+  color: #333;
+}
+
+.answer-container .input:hover, .answer-container .input-filled:hover {
+  background-color: rgba(255, 208, 156, 0.1);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #ffd09c;
 }
 
 .answer-container .input-filled {
@@ -708,6 +705,14 @@ input[type='number']::-webkit-outer-spin-button {
   }
 }
 
+.answer-container .radio-group .radio:hover {
+  background-color: rgba(255, 208, 156, 0.1);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
 .answer-container .radio-group input[type='radio']:checked + label {
   color: #333;
   background: #ffd09c;
@@ -749,6 +754,18 @@ input[type='number']::-webkit-outer-spin-button {
   width: 300px;
   margin-right: 10px;
   color: #ffd09c;
+}
+
+.location-question-container .answer-form-container .rrs .rrs__button + .rrs__options {
+  top: auto;
+  bottom: 100%;
+}
+
+@media only screen and (max-width: 620px) {
+  .location-question-container .answer-form-container .rrs .rrs__button + .rrs__options {
+    top: 60px;
+    bottom: auto;
+  }
 }
 
 .location-question-container .answer-form-container .rrs__button {

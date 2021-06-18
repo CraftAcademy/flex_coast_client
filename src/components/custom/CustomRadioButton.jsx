@@ -20,7 +20,10 @@ const CustomRadioButton = ({ data, disabled, onChange, inputValue }) => {
                 document.getElementById('wizard-container').focus()
               }
             />
-            <label data-cy={`${item.dataCy}-label`} for={item.dataCy}>
+            <label
+              data-cy={`${item.dataCy}-label`}
+              for={item.dataCy}
+              className={!disabled && 'radio'}>
               {item.label}
             </label>
           </div>
