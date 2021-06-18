@@ -1,20 +1,14 @@
-import React, { lazy } from 'react'
+import React from 'react'
 import Header from './Header'
 import { useTranslation } from 'react-i18next'
 import Wizard from './Inquiry/Wizard'
 import CustomButton from './custom/CustomButton'
 import { motion } from 'framer-motion'
-const heroImg = lazy(() => import('../assets/HeroImageMedium.jpg'))
 
 const HeroSection = () => {
   const { t } = useTranslation()
   return (
-    <div
-      className='hero-section'
-      data-cy='hero-section'
-      style={{
-        background: `background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), ${heroImg}`,
-      }}>
+    <div className='hero-section' data-cy='hero-section'>
       <Header landing />
       <div data-cy='welcome-text' className='welcome-text'>
         <motion.h1

@@ -16,6 +16,9 @@ const CustomRadioButton = ({ data, disabled, onChange, inputValue }) => {
               checked={inputValue === item.value}
               required
               onChange={onChange}
+              onClick={() =>
+                document.getElementById('wizard-container').focus()
+              }
             />
             <label data-cy={`${item.dataCy}-label`} for={item.dataCy}>
               {item.label}
