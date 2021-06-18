@@ -6,6 +6,7 @@ const initialState = {
     peers: '',
     locations: [],
     flexible: '',
+    start_date: '',
     phone: '',
   },
   filledAnswers: {
@@ -15,6 +16,7 @@ const initialState = {
     peers: false,
     locations: false,
     flexible: false,
+    start_date: false,
     phone: '',
   },
   submitMessage: '',
