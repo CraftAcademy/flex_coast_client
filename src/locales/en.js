@@ -1,4 +1,4 @@
-import { testimonials, persons } from '../assets/testimonials'
+import { testimonials, persons } from '../data/testimonials'
 
 const en = {
   translation: {
@@ -15,11 +15,7 @@ const en = {
       id_2: {
         text: testimonials[1].review_en,
         position: testimonials[1].position_en,
-      },
-      id_3: {
-        text: testimonials[2].review_en,
-        position: testimonials[2].position_en,
-      },
+      }
     },
 
     persons: {
@@ -52,16 +48,17 @@ const en = {
       ' Hey there! If you are looking for leasing flexible short term offices in Gothenburg you have found the right place. Maybe you just started up a new company or you just need some temporary office space to work in?',
 
     footer: {
-      subHeader1: 'About Us',
-      subHeader2: 'Contact',
-      subHeader3: 'Find Us',
+      subHeader1: 'The service',
+      subHeader2: 'Talk to a human',
+      subHeader3: 'Please follow us!',
       aboutUsText:
         'We provide high end office spaces in Gothenburg with flexible conditions and short term contracts.',
       startButton: 'Get Started',
     },
 
     fantasticOffer: {
-      offerTitle: 'Flexible workspace where and how you need it',
+      offerTitle: 'For lightning fast contact',
+      offerSMS: 'Send an SMS to 031-19 23 42',
       offer1Sub: 'Any size space',
       offer1: 'From a single desk, all the way up to configured offices.',
       offer2Sub: 'On your terms',
@@ -79,31 +76,32 @@ const en = {
       peers: 'Would you like to share office with others from your industry?',
       location: 'Where would you like to be situated?',
       workingHours: 'Do you plan to work full-time or flexible hours?',
-      start_date: 'When do you plan to move in?'
+      start_date: 'When do you plan to move in?',
     },
     answer: {
       interesting: 'Sounds interesting!',
-      email: 'My email is ',
-      size: 'We are a group of ',
-      officeType: 'We need an ',
+      email: '– My email is ',
+      size: '– We are a group of ',
+      officeType: '– We need an ',
       officeLabel: 'Office',
       openSpaceLabel: 'Open space',
       combinedLabel: 'Combined',
-      phone: 'My number is',
+      phone: '– My number is',
       peersNegative: 'No',
       peersPositive: 'Yes',
-      location: "We're interested in",
+      location: "– We're interested in",
       locationAll: 'Any',
-      workingHours: 'It will be ',
+      workingHours: '– It will be ',
       fullTimeLabel: 'Full Time',
       flexibleLabel: 'Flexible',
       mixedLabel: 'Mixed',
       start_dateNow: 'ASAP',
-      start_dateQuarter: 'In two month',
-      start_dateUnsure: 'Not Sure'
+      start_dateQuarter: 'In 2 months',
+      start_dateUnsure: 'Not Sure',
     },
     submitButton: 'Send',
-    submitMessage: 'Thanks for your answers! We will get back to you as soon as possible with the best results!'
+    submitMessage:
+      'Thanks for your answers! We will get back to you as soon as possible with the best results!',
   },
 }
 

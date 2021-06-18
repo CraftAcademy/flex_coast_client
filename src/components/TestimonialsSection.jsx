@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Testimonial from './Testimonial'
-import { testimonials } from '../assets/testimonials'
+import { testimonials } from '../data/testimonials'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
@@ -10,10 +10,10 @@ const TestimonialsSection = () => {
   const { t } = useTranslation()
 
   const sliderHandler = (number) => {
-    if (slider + number === 4) {
+    if (slider + number === 3) {
       setSlider(1)
     } else if (slider + number === 0) {
-      setSlider(3)
+      setSlider(2)
     } else {
       setSlider(slider + number)
     }
