@@ -88,6 +88,18 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=done-btn]').click()
       })
 
+      cy.get('[data-cy=start-date-question-container]').within(() => {
+        cy.get('[data-cy=question]').should(
+          'contain',
+          'When do you plan to move in?'
+        )
+        cy.get('[data-cy=now-label]').should('be.visible')
+        cy.get('[data-cy=quarter-label]').should('be.visible')
+        cy.get('[data-cy=unsure-label]').should('be.visible')
+        cy.get('[data-cy=now-btn]').click({ force: true })
+        cy.get('[data-cy=done-btn]').click()
+      })
+
       cy.get('[data-cy=phone-question-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
@@ -104,6 +116,7 @@ describe('User can send inquiry', () => {
         peers: 'yes',
         locations: ['Lindholmen', 'Gamlestaden'],
         flexible: 'mixed',
+        start_date: 'now',
         phone: '0713371337',
       }
       cy.window()
