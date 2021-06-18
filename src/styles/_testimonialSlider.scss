@@ -29,6 +29,9 @@
   color: $fontColor;
   margin: 50px auto 50px auto;
   max-width: 1050px;
+  @media (max-width: 1000px) {
+    padding: 0 50px;
+  }
   @media only screen and (max-width: $mobile) {
     font-size: 14px;
     padding: 0 20px;
@@ -52,9 +55,6 @@
   }
   .bg-2 {
     background-image: $bg-image2;
-  }
-  .bg-3 {
-    background-image: $bg-image3;
   }
 
   .slider-container {
@@ -89,22 +89,21 @@
       background-position: center;
     }
     .person-1 {
-      background-image: $person2;
+      background-image: $leif;
     }
     .person-2 {
-      background-image: $person1;
-    }
-    .person-3 {
-      background-image: $person3;
+      background-image: $matilda;
     }
     .info-container {
       display: flex;
+      justify-content: space-between;
+
       height: 60%;
       flex-direction: column;
 
       .testimonial-text {
         height: 50%;
-        padding: 10px;
+        padding: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -115,6 +114,14 @@
       .MuiIconButton-root {
         background-color: $secondaryColor;
         color: white;
+        transition: all 0.2s;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+        &:active {
+          transform: scale(0.8);
+        }
       }
 
       h4 {
@@ -147,6 +154,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-bottom: 15px;
         button {
           height: 40px;
           width: 40px;

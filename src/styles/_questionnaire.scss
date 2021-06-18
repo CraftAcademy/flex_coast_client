@@ -32,12 +32,13 @@
 }
 
 .question-container {
-  margin: 20px 50px 50px 0;
+  margin: 30px 50px 40px 0;
   display: flex;
+  padding: 0 20px;
   @media only screen and (max-width: $mobile) {
     justify-content: left;
-    margin-bottom: 30px;
-    margin-right: 0;
+    margin: 0 0 30px 0;
+    padding: 0;
   }
 
   &.hero {
@@ -55,7 +56,7 @@
     color: $fontColor;
     background-color: $mainColor;
     font-size: 1.4rem;
-    padding: 16px;
+    padding: 16px 32px;
     border-radius: $borderRadius;
     @media only screen and (max-width: $mobile) {
       font-size: 18px;
@@ -67,12 +68,14 @@
 .answer-container {
   display: flex;
   flex-direction: row;
+  padding: 0 20px;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   @media only screen and (max-width: $mobile) {
     flex-direction: column;
     align-items: flex-end;
+    padding: 0;
 
     .answer-form-container {
       width: 100%;
@@ -110,6 +113,10 @@
       margin-bottom: 10px;
     }
 
+    &[type='number'] {
+      font-size: 1.7rem;
+    }
+
     &::before {
       outline: none;
       border: none;
@@ -133,6 +140,19 @@
       @extend .input;
       background-color: $secondaryColor;
       color: $fontColor;
+      &:hover {
+        background-color: $secondaryColor;
+        transform: none;
+        transition: none;
+        color: $fontColor;
+      }
+    }
+
+    &:hover {
+      background-color: $secondaryColorLowOpacity;
+      transform: translateY(-3px);
+      transition: all 0.3s;
+      color: $secondaryColor;
     }
 
     &-filled {
@@ -199,6 +219,14 @@
       }
     }
 
+    .radio {
+      &:hover {
+        background-color: $secondaryColorLowOpacity;
+        transform: translateY(-5px);
+        transition: 300ms;
+      }
+    }
+
     input[type='radio']:checked + label {
       color: $fontColor;
       background: $secondaryColor;
@@ -239,6 +267,15 @@
       width: 300px;
       margin-right: 10px;
       color: $secondaryColor;
+
+      .rrs__button + .rrs__options {
+        top: auto;
+        bottom: 100% ;
+        @media only screen and (max-width: $mobile) {
+          top: 60px;
+          bottom: auto;
+        }
+      }
     }
 
     .rrs__button {

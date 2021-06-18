@@ -1,4 +1,6 @@
-import logoPlaceholder from './logoPlaceholder.png'
+import logoPlaceholder from '../assets/logoPlaceholder.png'
+import leifLogo from '../assets/leif_logo.png'
+import matildaLogo from '../assets/matilda_logo.png'
 import profile1 from '../assets/social-img-1.jpg'
 import profile2 from '../assets/social-img-2.jpg'
 import profile3 from '../assets/social-img-3.jpg'
@@ -7,35 +9,24 @@ export const testimonials = [
   {
     id: 1,
     review_en:
-      'EN-testimonial-1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      '"I found my office at Walborg Ventures thanks to the people at FlexCoast. I love the central location and the flexible terms here!"',
     review_se:
-      'SE-testimonial-1 Flex Coast har genom hela processen varit lyhörda till våra behov och snabba i sin respons och sitt arbete. Jag kan starkt rekommendera att ta hjälp från Flex Coast!',
-    name: 'Johnny Cage',
-    position_se: 'CEO av MK',
-    position_en: 'CEO of MK',
-    logo: logoPlaceholder,
+      '"Jag hittade mitt kontor på Walborg Ventures tack vare folket på FlexCoast. Jag älskar det centrala läget och de flexibla villkoren här!"',
+    name: 'Leif Sundström',
+    position_en: 'CEO, Renable AB',
+    position_se: 'VD, Renable AB',
+    logo: leifLogo,
   },
   {
     id: 2,
     review_en:
-      'EN-testimonial-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      '"We are growing at high pace - and we found a private office that really suited our needs."',
     review_se:
-      'SE-testimonial-2 Från första samtalet med Viktor på Flex Coast så har allt fungerat fläckfritt. Alltid tillgänglig, alltid stenkoll och aldrig rädd för att ge det lilla extra.',
-    name: 'Business Luke',
-    position_en: 'CEO of Fake News',
-    position_se: 'CEO av Fake News',
-    logo: logoPlaceholder,
-  },
-  {
-    id: 3,
-    review_en:
-      'EN-testimonial-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    review_se:
-      'SE-testimonial-3 Flex Coast är snabba, professionella och flexibla. De löste problemen snabbt och kändes verkligen som de var på vår sida i kontorsprojektet.',
-    name: 'Mr. Pulitzer',
-    position_en: 'Chief Editor at Some News',
-    position_se: 'Chefredaktör för Some News',
-    logo: logoPlaceholder,
+      '"Vi växer i hög takt - och vi hittade ett privat kontor som verkligen passade våra behov."',
+    name: 'Matilda Lundblad',
+    position_en: 'CEO at InnovDr AB',
+    position_se: 'VD för InnovDr AB',
+    logo: matildaLogo,
   },
 ]
 
@@ -66,9 +57,9 @@ export const persons = [
     id: 3,
     text_en: 'EN-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     text_se: 'SE-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    name: 'Mr. Fake',
-    position_en: 'Real estate specialist at FlexCost',
-    position_se: 'Fastighetsspecialist på FlexCost',
+    name: 'Rick Roll',
+    position_en: 'Real estate specialist at FlexCoast',
+    position_se: 'Fastighetsspecialist på FlexCoast',
     logo: logoPlaceholder,
     image: profile1,
     employee: true,
@@ -77,7 +68,7 @@ export const persons = [
     id: 4,
     text_en: 'EN-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     text_se: 'SE-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    name: 'Mr. Fake',
+    name: 'Jon Doe',
     position_en: 'Chief Editor at Some News',
     position_se: 'Chefredaktör av Some News',
     logo: logoPlaceholder,
@@ -88,9 +79,9 @@ export const persons = [
     id: 5,
     text_en: 'EN-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     text_se: 'SE-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    name: 'Mr. Fake',
-    position_en: 'Real estate specialist at FlexCost',
-    position_se: 'Fastighetsspecialist på FlexCost',
+    name: 'Sven Ljung',
+    position_en: 'Real estate specialist at FlexCoast',
+    position_se: 'Fastighetsspecialist på FlexCoast',
     logo: logoPlaceholder,
     image: profile3,
     employee: true,

@@ -51,7 +51,7 @@ section {
   border: 5px solid #ddd;
   border-radius: 5px;
   h3 {
-    color: white;
+    color: $fontColor;
   }
   &-employee {
     @extend .testimonialBox;
@@ -65,7 +65,8 @@ section {
   height: 100%;
   p {
     font-size: 20px;
-    color: #333;
+    color: $fontColor;
+    margin: 0 50px
   }
   h3 {
     margin-top: 10px;
@@ -73,7 +74,7 @@ section {
   }
   h4 {
     font-size: 20px;
-    color: white;
+    color: $fontColor;
     margin-bottom: 10px;
   }
   .content {
@@ -107,4 +108,8 @@ section {
   .swiper-container {
     width: 100%;
   }
+}
+
+.swiper-button-next:hover,.swiper-button-prev:hover{
+  transform: scale(1.1);
 }
