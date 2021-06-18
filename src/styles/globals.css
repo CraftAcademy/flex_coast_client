@@ -879,10 +879,6 @@ input.phone {
   background-image: url("../assets/social-bg-2.jpg");
 }
 
-.testimonials-container .bg-3 {
-  background-image: url("../assets/social-bg-3.jpg");
-}
-
 .testimonials-container .slider-container {
   position: absolute;
   max-width: 1024px;
@@ -927,21 +923,20 @@ input.phone {
 }
 
 .testimonials-container .testimonial-container .person-1 {
-  background-image: url("../assets/social-img-2.jpg");
+  background-image: url("../assets/leif.jpg");
 }
 
 .testimonials-container .testimonial-container .person-2 {
-  background-image: url("../assets/businessLuke.jpeg");
-}
-
-.testimonials-container .testimonial-container .person-3 {
-  background-image: url("../assets/social-img-3.jpg");
+  background-image: url("../assets/matilda.jpg");
 }
 
 .testimonials-container .testimonial-container .info-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 60%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -951,7 +946,7 @@ input.phone {
 
 .testimonials-container .testimonial-container .info-container .testimonial-text {
   height: 50%;
-  padding: 10px;
+  padding: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -968,6 +963,18 @@ input.phone {
 .testimonials-container .testimonial-container .info-container .MuiIconButton-root {
   background-color: #ffd09c;
   color: white;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.testimonials-container .testimonial-container .info-container .MuiIconButton-root:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.testimonials-container .testimonial-container .info-container .MuiIconButton-root:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .testimonials-container .testimonial-container .info-container h4 {
@@ -1005,6 +1012,7 @@ input.phone {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 15px;
 }
 
 .testimonials-container .testimonial-container .info-container .logo-section button {
