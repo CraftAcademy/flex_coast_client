@@ -52,9 +52,9 @@ const en = {
       ' Hey there! If you are looking for leasing flexible short term offices in Gothenburg you have found the right place. Maybe you just started up a new company or you just need some temporary office space to work in?',
 
     footer: {
-      subHeader1: 'About Us',
-      subHeader2: 'Contact',
-      subHeader3: 'Find Us',
+      subHeader1: 'The service',
+      subHeader2: 'Talk to a human',
+      subHeader3: 'Please follow us!',
       aboutUsText:
         'We provide high end office spaces in Gothenburg with flexible conditions and short term contracts.',
       startButton: 'Get Started',
@@ -79,7 +79,7 @@ const en = {
       peers: 'Would you like to share office with others from your industry?',
       location: 'Where would you like to be situated?',
       workingHours: 'Do you plan to work full-time or flexible hours?',
-      start_date: 'When do you plan to move in?'
+      start_date: 'When do you plan to move in?',
     },
     answer: {
       interesting: 'Sounds interesting!',
@@ -100,10 +100,11 @@ const en = {
       mixedLabel: 'Mixed',
       start_dateNow: 'ASAP',
       start_dateQuarter: 'In 2 months',
-      start_dateUnsure: 'Not Sure'
+      start_dateUnsure: 'Not Sure',
     },
     submitButton: 'Send',
-    submitMessage: 'Thanks for your answers! We will get back to you as soon as possible with the best results!'
+    submitMessage:
+      'Thanks for your answers! We will get back to you as soon as possible with the best results!',
   },
 }
 
