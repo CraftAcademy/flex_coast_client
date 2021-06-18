@@ -10,7 +10,8 @@
   width: 100%;
   height: 730px;
   @media only screen and (max-width: $mobile) {
-    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
   }
 
   .welcome-text {
@@ -31,7 +32,7 @@
     #wizard-container {
       width: 100%;
       max-width: 800px;
-      background-color: rgba(0, 0, 0, 0.301);
+      background-color: rgba(0, 0, 0, 0.37);
       margin: 10px 15px;
       padding: 10px 10px;
       border-radius: 5px;
@@ -53,7 +54,7 @@
       @media only screen and (max-width: $mobile) {
         max-height: 260px;
         padding: 10px 10px;
-        margin: 0;
+        margin: 0 0 40px 0;
         border-radius: 0;
         &:focus-within {
           max-height: 250px;
@@ -68,13 +69,13 @@
     }
 
     h1 {
-      padding-bottom: 35px;
-      padding-right: 30px;
+      padding: 30px 0 20px 10px;
+      line-height: 1.2;
       font-size: 55px;
       max-width: 800px;
       @media only screen and (max-width: $mobile) {
         text-align: center;
-        margin-bottom: 0;
+        margin: 75px 0;
         font-size: 38px;
         padding: 20px;
       }
@@ -83,25 +84,5 @@
 
   .submit-message-container {
     width: 75%;
-  }
-
-  .phone-number-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 130px;
-    flex-direction: column;
-
-    @media (min-width: $mobile) {
-      display: none;
-    }
-
-    p {
-      text-align: center;
-      margin: 10px 0;
-      color: #fff;
-      font-weight: bolder;
-      font-size: 26px;
-    }
   }
 }

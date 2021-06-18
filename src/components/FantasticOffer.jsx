@@ -20,6 +20,9 @@ const FantasticOffer = () => {
     <div className='compelling-container' data-cy='compelling-container'>
       <div className='offer-title'>
         <h1 data-cy='offer-section-header'>{t('fantasticOffer.offerTitle')}</h1>
+        <h2 data-cy='offer-section-header-SMS'>
+          {t('fantasticOffer.offerSMS')}
+        </h2>
       </div>
       <div className='offer-container'>
         <Offer
@@ -29,13 +32,13 @@ const FantasticOffer = () => {
           content={t('fantasticOffer.offer1')}
         />
         <Offer
-        id={2}
+          id={2}
           image={calendar}
           title={t('fantasticOffer.offer2Sub')}
           content={t('fantasticOffer.offer2')}
         />
         <Offer
-        id={3}
+          id={3}
           image={iconCity}
           title={t('fantasticOffer.offer3Sub')}
           content={t('fantasticOffer.offer3')}
