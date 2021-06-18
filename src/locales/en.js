@@ -1,4 +1,4 @@
-import { testimonials, persons } from '../assets/testimonials'
+import { testimonials, persons } from '../data/testimonials'
 
 const en = {
   translation: {
@@ -15,11 +15,7 @@ const en = {
       id_2: {
         text: testimonials[1].review_en,
         position: testimonials[1].position_en,
-      },
-      id_3: {
-        text: testimonials[2].review_en,
-        position: testimonials[2].position_en,
-      },
+      }
     },
 
     persons: {
