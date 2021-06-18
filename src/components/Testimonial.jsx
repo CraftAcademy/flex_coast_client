@@ -5,7 +5,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const TestimonialSlider = ({ slider, info, sliderHandler, stopTimer}) => {
+const TestimonialSlider = ({ slider, info, sliderHandler, stopTimer }) => {
   const { t } = useTranslation()
   return (
     <AnimatePresence initial={false}>
@@ -16,15 +16,19 @@ const TestimonialSlider = ({ slider, info, sliderHandler, stopTimer}) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}>
-        <div className='testimonial-container' data-cy={`testimonial-${info.id}-container`}>
+        <div
+          className='testimonial-container'
+          data-cy={`testimonial-${info.id}-container`}>
           <div className={`social-image person-${slider}`}></div>
-          <div className='info-container'> 
+          <div className='info-container'>
             <div className='testimonial-text' data-cy='testimonial-text'>
               <h4>{t(`testimonials.id_${info.id}.text`)}</h4>
             </div>
             <div className='testimonial-person'>
               <p className='name'>{info.name}</p>
-              <p className='job-title' data-cy='testimonial-position'>{t(`testimonials.id_${info.id}.position`)}</p>
+              <p className='job-title' data-cy='testimonial-position'>
+                {t(`testimonials.id_${info.id}.position`)}
+              </p>
             </div>
             <div className='logo-section'>
               <IconButton

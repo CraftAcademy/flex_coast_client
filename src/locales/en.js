@@ -61,7 +61,8 @@ const en = {
     },
 
     fantasticOffer: {
-      offerTitle: 'Flexible workspace where and how you need it',
+      offerTitle: 'For lightning fast contact',
+      offerSMS: 'Send an SMS to 031-19 23 42',
       offer1Sub: 'Any size space',
       offer1: 'From a single desk, all the way up to configured offices.',
       offer2Sub: 'On your terms',

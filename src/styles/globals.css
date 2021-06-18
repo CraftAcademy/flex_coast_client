@@ -5,6 +5,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 125px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -25,16 +26,26 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 100px auto;
   max-width: 1280px;
   text-align: center;
 }
 
 .compelling-container .offer-title h1 {
-  font-size: 36px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.compelling-container .offer-title h2 {
+  margin: 0;
+  color: #ff9bee;
 }
 
 .compelling-container .offer-container {
@@ -74,10 +85,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 150px;
 }
 
 .compelling-container .offer-container .offer img {
-  height: 170px;
+  height: 120px;
 }
 
 @media only screen and (max-width: 620px) {
@@ -88,10 +100,13 @@
 
 .compelling-container .offer-container .offer h3 {
   font-size: 30px;
+  color: #333;
+  margin-bottom: 25px;
 }
 
 .compelling-container .offer-container .offer p {
   font-size: 17px;
+  padding: 0 30px;
 }
 
 #footer {

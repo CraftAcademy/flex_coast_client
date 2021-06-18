@@ -60,7 +60,8 @@ const se = {
     },
 
     fantasticOffer: {
-      offerTitle: 'Flexibla arbetsplatser när du behöver det',
+      offerTitle: 'För blixtrande snabb kontakt',
+      offerSMS: 'Skicka ett SMS till 031-19 23 42',
       offer1Sub: 'Valfri storlek',
       offer1: 'Från ett öppet landskap till ett eget rum',
       offer2Sub: 'På dina villkor',
