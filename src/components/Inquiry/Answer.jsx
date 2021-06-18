@@ -79,6 +79,7 @@ const Answer = ({
       default:
         return (
           <input
+            //aria-required={true}
             className={`input ${className}`}
             disabled={filled}
             data-cy='input'

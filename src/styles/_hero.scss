@@ -10,7 +10,8 @@
   width: 100%;
   height: 730px;
   @media only screen and (max-width: $mobile) {
-    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
   }
 
   .welcome-text {
