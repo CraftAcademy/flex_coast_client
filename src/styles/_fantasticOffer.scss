@@ -43,6 +43,9 @@
       flex: 1;
       align-items: center;
       margin-bottom: 150px;
+      @media (max-width: 1000px) {
+        padding: 10px 10px;
+      }
       img {
         height: 120px;
         @media only screen and (max-width: $mobile) {
@@ -55,8 +58,9 @@
         margin-bottom: 25px;
       }
       p {
+        text-align: center;
         font-size: 17px;
-        padding: 0 30px;
+        padding: 0 50px;
       }
     }
   }
