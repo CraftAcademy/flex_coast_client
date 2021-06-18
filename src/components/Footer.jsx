@@ -4,7 +4,7 @@ import logo from '../assets/logoWhite.svg'
 import CustomButton from './custom/CustomButton'
 import { useTranslation } from 'react-i18next'
 import InstagramIcon from '@material-ui/icons/Instagram'
-import FacebookIcon from '@material-ui/icons/Facebook'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import IconButton from '@material-ui/core/IconButton'
 import ahoy from '../modules/analytics'
@@ -33,7 +33,9 @@ const Footer = () => {
       <Grid data-cy='footer-categories' container alignItems='flex-start'>
         <Grid data-cy='footer-about' className='sub-header' item sm={4}>
           <h3 data-cy='footer-about-header'>{t('footer.subHeader1')}</h3>
-          <p data-cy='footer-about-us' className='footer-text'>{t('footer.aboutUsText')}</p>
+          <p data-cy='footer-about-us' className='footer-text'>
+            {t('footer.aboutUsText')}
+          </p>
           <hr className='sub-hr' />
         </Grid>
         <Grid
@@ -43,7 +45,9 @@ const Footer = () => {
           xs={12}
           sm={4}>
           <h3 data-cy='footer-contact-header'>{t('footer.subHeader2')}</h3>
-          <CustomButton dataCy='phone-number' onClick={ahoy.track(`phone_button`)}>
+          <CustomButton
+            dataCy='phone-number'
+            onClick={ahoy.track(`phone_button`)}>
             <a href='tel:+46311234567'>031-123 45 67</a>
           </CustomButton>
           <CustomButton dataCy='get-started' onClick={scrollToTop}>
@@ -55,7 +59,7 @@ const Footer = () => {
           <h3 data-cy='footer-find-us-header'>{t('footer.subHeader3')}</h3>
           <Grid data-cy='link-grid'>
             <IconButton>
-              <FacebookIcon className='icon' fontSize='large' />
+              <LinkedInIcon className='icon' fontSize='large' />
             </IconButton>
             <IconButton>
               <InstagramIcon className='icon' fontSize='large' />
