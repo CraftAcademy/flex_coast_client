@@ -10,6 +10,7 @@ import InquiryPhoneNumber from './InquiryPhoneNumber'
 import InquiryPeers from './InquiryPeers'
 import InquiryLocation from './InquiryLocation'
 import InquiryWorkingHours from './InquiryWorkingHours'
+import InquiryStartDate from './InquiryStartDate'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
@@ -20,7 +21,7 @@ const Wizard = () => {
 
   const containerVariants = {
     initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { delay: 0.5, duration: 0.6 } },
+    animate: { opacity: 1, transition: { delay: 0.5, duration: 1 } },
   }
   const submitVariants = {
     initial: { opacity: 0, x: -25 },
@@ -42,32 +43,38 @@ const Wizard = () => {
         </motion.div>
       ) : (
         <motion.div
+          style={{ width: '100%' }}
           variants={containerVariants}
           initial='initial'
           animate='animate'
-          exit='exit'
-          className='wizard-container'
-          id='wizard-container'
-          data-cy='wizard'
-          tabindex='0'>
-          <InquiryCompanySize />
-          {formData.size && <InquiryOfficeType />}
-          {formData.office_type && <InquiryEmail />}
-          {formData.email && <InquiryPeers />}
-          {formData.peers && <InquiryLocation />}
-          {formData.locations[0] && <InquiryWorkingHours />}
-          {formData.flexible && <InquiryPhoneNumber />}
-          {formData.phone && (
-            <motion.div className='submit-container' variants={submitVariants}>
-              <CustomButton
-                loading={loading}
-                submit
-                dataCy='submit-btn'
-                onClick={() => Inquiries.create(formData, setLoading)}>
-                {t('submitButton')}
-              </CustomButton>
-            </motion.div>
-          )}
+          exit='exit'>
+          <div
+            className='wizard-container'
+            id='wizard-container'
+            data-cy='wizard'
+            tabindex='0'>
+            <InquiryCompanySize />
+            {formData.size && <InquiryOfficeType />}
+            {formData.office_type && <InquiryEmail />}
+            {formData.email && <InquiryPeers />}
+            {formData.peers && <InquiryLocation />}
+            {formData.locations[0] && <InquiryWorkingHours />}
+            {formData.flexible && <InquiryStartDate />}
+            {formData.start_date && <InquiryPhoneNumber />}
+            {formData.phone && (
+              <motion.div
+                className='submit-container'
+                variants={submitVariants}>
+                <CustomButton
+                  loading={loading}
+                  submit
+                  dataCy='submit-btn'
+                  onClick={() => Inquiries.create(formData, setLoading)}>
+                  {t('submitButton')}
+                </CustomButton>
+              </motion.div>
+            )}
+          </div>
         </motion.div>
       )}
     </>
