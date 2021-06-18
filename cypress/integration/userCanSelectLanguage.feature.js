@@ -40,16 +40,16 @@ describe('User can switch between languages', () => {
           'Välj bland dem bästa lägena i Göteborg'
         )
       })
-      cy.get('[data-cy=footer-about-header]').should('contain', 'Om Oss')
+      cy.get('[data-cy=footer-about-header]').should('contain', 'Om tjänsten')
       cy.get('[data-cy=footer-about-us]').should(
         'contain',
         'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och kortvariga kontrakt.'
       )
       cy.get('[data-cy=footer-contact-header]').should(
         'contain',
-        'Kontakta Oss'
+        'Prata med en människa'
       )
-      cy.get('[data-cy=footer-find-us-header]').should('contain', 'Hitta Oss')
+      cy.get('[data-cy=footer-find-us-header]').should('contain', 'Följ oss gärna!')
     })
 
     cy.get('[data-cy=language-dropdown]').click()
@@ -85,13 +85,13 @@ describe('User can switch between languages', () => {
           'Choose places from the most beautiful parts of Gothenburg.'
         )
       })
-      cy.get('[data-cy=footer-about-header]').should('contain', 'About Us')
+      cy.get('[data-cy=footer-about-header]').should('contain', 'The service')
       cy.get('[data-cy=footer-about-us]').should(
         'contain',
         'We provide high end office spaces in Gothenburg with flexible conditions and short term contracts.'
       )
-      cy.get('[data-cy=footer-contact-header]').should('contain', 'Contact')
-      cy.get('[data-cy=footer-find-us-header]').should('contain', 'Find Us')
+      cy.get('[data-cy=footer-contact-header]').should('contain', 'Talk to a human')
+      cy.get('[data-cy=footer-find-us-header]').should('contain', 'Please follow us!')
     })
   })
   it('is expected to translate testimonials', () => {

@@ -3,9 +3,8 @@ import Grid from '@material-ui/core/Grid'
 import logo from '../assets/logoWhite.svg'
 import CustomButton from './custom/CustomButton'
 import { useTranslation } from 'react-i18next'
-import InstagramIcon from '@material-ui/icons/Instagram'
+import FacebookIcon from '@material-ui/icons/Facebook'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import TwitterIcon from '@material-ui/icons/Twitter'
 import IconButton from '@material-ui/core/IconButton'
 import ahoy from '../modules/analytics'
 
@@ -28,7 +27,7 @@ const Footer = () => {
           className='logo'
           data-cy='flex-coast-white'
         />
-        <hr className='top-hr' />
+        <hr className='sub-hr' />
       </Grid>
       <Grid data-cy='footer-categories' container alignItems='flex-start'>
         <Grid data-cy='footer-about' className='sub-header' item sm={4}>
@@ -58,14 +57,11 @@ const Footer = () => {
         <Grid data-cy='links' className='sub-header' item xs={12} sm={4}>
           <h3 data-cy='footer-find-us-header'>{t('footer.subHeader3')}</h3>
           <Grid data-cy='link-grid'>
-            <IconButton>
+            <IconButton data-cy='linkedin-button' href={'https://www.linkedin.com/'} >
               <LinkedInIcon className='icon' fontSize='large' />
             </IconButton>
-            <IconButton>
-              <InstagramIcon className='icon' fontSize='large' />
-            </IconButton>
-            <IconButton>
-              <TwitterIcon className='icon' fontSize='large' />
+            <IconButton data-cy='facebook-button' href={'https://www.facebook.com/'} >
+              <FacebookIcon className='icon' fontSize='large' />
             </IconButton>
           </Grid>
         </Grid>
