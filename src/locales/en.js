@@ -99,7 +99,7 @@ const en = {
       flexibleLabel: 'Flexible',
       mixedLabel: 'Mixed',
       start_dateNow: 'ASAP',
-      start_dateQuarter: 'In two month',
+      start_dateQuarter: 'In 2 months',
       start_dateUnsure: 'Not Sure'
     },
     submitButton: 'Send',
