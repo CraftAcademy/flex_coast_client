@@ -47,7 +47,7 @@ const Footer = () => {
           <CustomButton
             dataCy='phone-number'
             onClick={ahoy.track(`phone_button`)}>
-            <a href='tel:+4631192342'>031-19 23 42</a>
+            <a href='tel:+4631192342'>031-767 41 00</a>
           </CustomButton>
           <CustomButton dataCy='get-started' onClick={scrollToTop}>
             {t('footer.startButton')}

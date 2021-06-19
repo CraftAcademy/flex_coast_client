@@ -57,7 +57,7 @@ const se = {
 
     fantasticOffer: {
       offerTitle: 'För blixtrande snabb kontakt',
-      offerSMS: 'Skicka ett SMS till 031-19 23 42',
+      offerSMS: 'Skicka ett SMS till 070-767 41 00',
       offer1Sub: 'Valfri storlek',
       offer1: 'Från ett öppet landskap till ett eget rum',
       offer2Sub: 'På dina villkor',
