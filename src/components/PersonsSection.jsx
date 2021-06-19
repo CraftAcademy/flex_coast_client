@@ -1,7 +1,7 @@
 import React from 'react'
-import { persons } from '../assets/testimonials'
+import { persons } from '../data/testimonials'
 import { useTranslation } from 'react-i18next'
-import SwiperCore, { Pagination, Navigation,Autoplay } from 'swiper/core'
+import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper/core'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import 'swiper/swiper.min.css'
@@ -13,7 +13,6 @@ const PersonsSection = () => {
   const isPhone = useMediaQuery('(max-width:620px)')
   const isTablet = useMediaQuery('(max-width:1280px)')
   const isBig = useMediaQuery('(max-width:1920px)')
-
 
   const listOfPersonCards = persons.map((person, index) => (
     <>
@@ -47,7 +46,7 @@ const PersonsSection = () => {
     </>
   ))
 
-  SwiperCore.use([ Pagination, Navigation,Autoplay])
+  SwiperCore.use([Pagination, Navigation, Autoplay])
   return (
     <>
       <div className='testimonials-container-persons'>
@@ -58,11 +57,10 @@ const PersonsSection = () => {
           navigation={true}
           loop={true}
           autoplay={{
-            "delay": 4000,
-            "disableOnInteraction": false
+            delay: 4000,
+            disableOnInteraction: false,
           }}
-          className='pagination'
-          >
+          className='pagination'>
           <section>{listOfPersonCards}</section>
         </Swiper>
       </div>

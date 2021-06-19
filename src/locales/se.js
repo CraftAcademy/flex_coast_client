@@ -1,4 +1,4 @@
-import { testimonials, persons } from '../assets/testimonials'
+import { testimonials, persons } from '../data/testimonials'
 const se = {
   translation: {
     landingPage: {
@@ -14,10 +14,6 @@ const se = {
       id_2: {
         text: testimonials[1].review_se,
         position: testimonials[1].position_se,
-      },
-      id_3: {
-        text: testimonials[2].review_se,
-        position: testimonials[2].position_se,
       },
     },
 
@@ -51,16 +47,17 @@ const se = {
       'Hallå där! Om du letar efter att hyra flexibla kortvariga kontor i Göteborg har du hittat rätt plats. Kanske har du precis startat ett nytt företag eller behöver du bara ett tillfälligt kontor att arbeta i?',
 
     footer: {
-      subHeader1: 'Om Oss',
-      subHeader2: 'Kontakta Oss',
-      subHeader3: 'Hitta Oss',
+      subHeader1: 'Om tjänsten',
+      subHeader2: 'Prata med en människa',
+      subHeader3: 'Följ oss gärna!',
       aboutUsText:
         'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och kortvariga kontrakt.',
       startButton: 'Hitta Kontor',
     },
 
     fantasticOffer: {
-      offerTitle: 'Flexibla arbetsplatser när du behöver det',
+      offerTitle: 'För blixtrande snabb kontakt',
+      offerSMS: 'Skicka ett SMS till 031-19 23 42',
       offer1Sub: 'Valfri storlek',
       offer1: 'Från ett öppet landskap till ett eget rum',
       offer2Sub: 'På dina villkor',
@@ -78,32 +75,33 @@ const se = {
       location: 'Vilka områden är du intresserad av?',
       workingHours:
         'Kommer ni jobba heltid på plats eller var lite mer flexibel?',
-      start_date: 'När behöver du flytta in?'
+      start_date: 'När behöver du flytta in?',
     },
 
     answer: {
       interesting: 'Låter bra!',
-      email: 'Min email är ',
-      size: 'Vi är en grupp av ',
-      officeType: 'Vi behöver ',
+      email: '– Min email är ',
+      size: '– Vi är en grupp av ',
+      officeType: '– Vi behöver ',
       officeLabel: 'Kontor',
       openSpaceLabel: 'Öppet utrymme',
-      combinedLabel: 'Kombinerad',
-      phone: 'Mitt nummer är',
+      combinedLabel: 'Alla',
+      phone: '– Mitt nummer är',
       peersNegative: 'Nej',
       peersPositive: 'Ja',
-      location: 'Vi är intresserade av',
+      location: '– Vi är intresserade av',
       locationAll: 'Alla',
-      workingHours: 'Vi kommer vara',
+      workingHours: '– Vi kommer vara',
       fullTimeLabel: 'Heltid',
       flexibleLabel: 'Flexibel',
       mixedLabel: 'En mix',
       start_dateNow: 'Idag',
       start_dateQuarter: 'Inom 2 månader',
-      start_dateUnsure: 'Osäker'
+      start_dateUnsure: 'Osäker',
     },
     submitButton: 'Skicka in',
-    submitMessage: 'Tack för dina svar! Vi återkommer så snart som möjligt med dem bästa resultaten!'
+    submitMessage:
+      'Tack för dina svar! Vi återkommer så snart som möjligt med dem bästa resultaten!',
   },
 }
 

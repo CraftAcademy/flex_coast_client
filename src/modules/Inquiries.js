@@ -7,7 +7,7 @@ const Inquiries = {
   async create(formData, setLoading) {
     setLoading(true)
     try {
-      let params = { inquiry: formData }
+      let params = { inquiry: { ...formData, language: setLanguageValue() } }
       await axios.post('/inquiries', params)
       store.dispatch({
         type: 'SET_SUBMIT_MESSAGE',
@@ -21,3 +21,14 @@ const Inquiries = {
 }
 
 export default Inquiries
+
+const setLanguageValue = () => {
+  switch (i18n.language) {
+    case 'English':
+      return 'en'
+    case 'Svenska':
+      return 'se'
+    default:
+      return 'en'
+  }
+}
