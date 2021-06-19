@@ -268,13 +268,20 @@
       margin-right: 10px;
       color: $secondaryColor;
 
-      .rrs__button + .rrs__options {
+      .rrs__button + .rrs__options {        
+        border: none;
+        background-color: #333;
         top: auto;
         bottom: 100% ;
         @media only screen and (max-width: $mobile) {
           top: 60px;
           bottom: auto;
         }
+      }
+
+      .rrs__option.rrs__option--next-selection {
+        background-color: #444 !important;
+        outline: none;
       }
     }
 
@@ -288,7 +295,7 @@
       height: 55px;
 
       svg {
-        fill: $secondaryColor;
+        fill: $secondaryColor;        
       }
     }
 
@@ -297,6 +304,7 @@
     }
     .rrs__option:hover {
       color: orange;
+      background-color: #444;
     }
     .rrs__option.rrs__option--next-selection {
       color: $secondaryColor;

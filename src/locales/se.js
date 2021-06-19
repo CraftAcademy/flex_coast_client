@@ -70,7 +70,7 @@ const se = {
       email: 'Hur kan vi kontakta dig?',
       size: 'Hur stort är ditt team?',
       officeType: 'Vilken typ av kontor letar du efter?',
-      phone: 'Slutligen ange ditt nummer så att vi enkelt kan nå dig.',
+      phone: 'Går det bra om jag ringer dig?',
       peers: 'Vill du dela kontor med andra från din bransch?',
       location: 'Vilka områden är du intresserad av?',
       workingHours:
@@ -86,7 +86,7 @@ const se = {
       officeLabel: 'Kontor',
       openSpaceLabel: 'Öppet utrymme',
       combinedLabel: 'Alla',
-      phone: '– Mitt nummer är',
+      phone: '– Ja, mitt nummer är',
       peersNegative: 'Nej',
       peersPositive: 'Ja',
       location: '– Vi är intresserade av',
