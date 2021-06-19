@@ -1,6 +1,7 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import logo from '../assets/logoWhite.svg'
+import { useSelector } from 'react-redux'
 import CustomButton from './custom/CustomButton'
 import { useTranslation } from 'react-i18next'
 import FacebookIcon from '@material-ui/icons/Facebook'
@@ -9,6 +10,7 @@ import IconButton from '@material-ui/core/IconButton'
 import ahoy from '../modules/analytics'
 
 const Footer = () => {
+  const { consent } = useSelector((state) => state)
   const { t } = useTranslation()
 
   const scrollToTop = () => {
@@ -46,8 +48,8 @@ const Footer = () => {
           <h3 data-cy='footer-contact-header'>{t('footer.subHeader2')}</h3>
           <CustomButton
             dataCy='phone-number'
-            onClick={ahoy.track(`phone_button`)}>
-            <a href='tel:+4631192342'>031-19 23 42</a>
+            onClick={consent && ahoy.track(`phone_button`)}>
+            <a href='tel:+467674100'>031-767 41 00</a>
           </CustomButton>
           <CustomButton dataCy='get-started' onClick={scrollToTop}>
             {t('footer.startButton')}
@@ -57,10 +59,10 @@ const Footer = () => {
         <Grid data-cy='links' className='sub-header' item xs={12} sm={4}>
           <h3 data-cy='footer-find-us-header'>{t('footer.subHeader3')}</h3>
           <Grid data-cy='link-grid'>
-            <IconButton data-cy='linkedin-button' href={'https://www.linkedin.com/'} >
+            <IconButton data-cy='linkedin-button' href={'https://www.linkedin.com/company/flex-coast/'} >
               <LinkedInIcon className='icon' fontSize='large' />
             </IconButton>
-            <IconButton data-cy='facebook-button' href={'https://www.facebook.com/'} >
+            <IconButton data-cy='facebook-button' href={'https://www.facebook.com/flexcoastsweden/'} >
               <FacebookIcon className='icon' fontSize='large' />
             </IconButton>
           </Grid>

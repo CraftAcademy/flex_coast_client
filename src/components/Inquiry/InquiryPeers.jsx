@@ -12,7 +12,12 @@ const InquiryPeers = () => {
       value: 'yes',
       label: t('answer.peersPositive'),
       dataCy: 'positive',
-    },
+    },    
+    {
+      value: 'Open Minded',
+      label: 'Open minded',
+      dataCy: 'open-minded',
+    }
   ]
 
   return (

@@ -40,11 +40,11 @@ describe('User can switch between languages', () => {
       cy.get('[data-cy=footer-about-header]').should('contain', 'Om tjänsten')
       cy.get('[data-cy=footer-about-us]').should(
         'contain',
-        'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och kortvariga kontrakt.'
+        'Vi hjälper entreprenör att hitta kontorslokaler där bra idéer föds och fantastiska företag växer'
       )
       cy.get('[data-cy=footer-contact-header]').should(
         'contain',
-        'Prata med en människa'
+        'Slå oss en pling!'
       )
       cy.get('[data-cy=footer-find-us-header]').should(
         'contain',
@@ -88,11 +88,11 @@ describe('User can switch between languages', () => {
       cy.get('[data-cy=footer-about-header]').should('contain', 'The service')
       cy.get('[data-cy=footer-about-us]').should(
         'contain',
-        'We provide high end office spaces in Gothenburg with flexible conditions and short term contracts.'
+        'We provide high end office spaces in Gothenburg with flexible conditions and contracts.'
       )
       cy.get('[data-cy=footer-contact-header]').should(
         'contain',
-        'Talk to a human'
+        'Give us a buzz!'
       )
       cy.get('[data-cy=footer-find-us-header]').should(
         'contain',
