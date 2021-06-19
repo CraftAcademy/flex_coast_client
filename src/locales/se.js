@@ -48,10 +48,10 @@ const se = {
 
     footer: {
       subHeader1: 'Om tjänsten',
-      subHeader2: 'Prata med en människa',
+      subHeader2: 'Slå oss en pling!',
       subHeader3: 'Följ oss gärna!',
       aboutUsText:
-        'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och kortvariga kontrakt.',
+        'Vi hjälper entreprenör att hitta kontorslokaler där bra idéer föds och fantastiska företag växer',
       startButton: 'Hitta Kontor',
     },
 

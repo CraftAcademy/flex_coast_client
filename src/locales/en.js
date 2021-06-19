@@ -49,10 +49,10 @@ const en = {
 
     footer: {
       subHeader1: 'The service',
-      subHeader2: 'Talk to a human',
+      subHeader2: 'Give us a buzz!',
       subHeader3: 'Please follow us!',
       aboutUsText:
-        'We provide high end office spaces in Gothenburg with flexible conditions and short term contracts.',
+        'We provide high end office spaces in Gothenburg with flexible conditions and contracts.',
       startButton: 'Get Started',
     },
 
