@@ -13,9 +13,9 @@ const Inquiries = {
         type: 'SET_SUBMIT_MESSAGE',
         payload: i18n.t('submitMessage'),
       })
-      ahoy.track(`answer`, { question: 'submit' })
+      let { consent } = store.getState()
+      consent && ahoy.track(`answer`, { question: 'submit' })
     } catch (error) {}
-
     setLoading(false)
   },
 }
