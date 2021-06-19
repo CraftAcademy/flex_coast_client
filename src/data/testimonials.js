@@ -4,6 +4,8 @@ import matildaLogo from '../assets/matilda_logo.png'
 import profile1 from '../assets/social-img-1.jpg'
 import profile2 from '../assets/social-img-2.jpg'
 import profile3 from '../assets/social-img-3.jpg'
+import profile4 from '../assets/social-img-4.jpg'
+import profile5 from '../assets/social-img-5.jpg'
 
 export const testimonials = [
   {
@@ -35,7 +37,7 @@ export const persons = [
     id: 1,
     text_en: 'EN-1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     text_se: 'SE-1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    name: 'Johnny Cage',
+    name: 'Martin Hansson',
     position_en: 'CEO of MK',
     position_se: 'CEO av MK',
     logo: logoPlaceholder,
@@ -46,33 +48,33 @@ export const persons = [
     id: 2,
     text_en: 'EN-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     text_se: 'SE-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    name: 'Bob Kramer',
+    name: 'Joel Sundström',
     position_en: 'CEO of Lenvovo',
     position_se: 'CEO av Lenvovo',
     logo: logoPlaceholder,
-    image: profile3,
+    image: profile2,
     employee: false,
   },
   {
     id: 3,
     text_en: 'EN-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     text_se: 'SE-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    name: 'Rick Roll',
+    name: 'Anders Ek',
     position_en: 'Real estate specialist at FlexCoast',
     position_se: 'Fastighetsspecialist på FlexCoast',
     logo: logoPlaceholder,
-    image: profile1,
+    image: profile3,
     employee: true,
   },
   {
     id: 4,
     text_en: 'EN-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     text_se: 'SE-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    name: 'Jon Doe',
+    name: 'Björn Andersson',
     position_en: 'Chief Editor at Some News',
     position_se: 'Chefredaktör av Some News',
     logo: logoPlaceholder,
-    image: profile2,
+    image: profile4,
     employee: false,
   },
   {
@@ -83,7 +85,7 @@ export const persons = [
     position_en: 'Real estate specialist at FlexCoast',
     position_se: 'Fastighetsspecialist på FlexCoast',
     logo: logoPlaceholder,
-    image: profile3,
+    image: profile5,
     employee: true,
   },
 ]
