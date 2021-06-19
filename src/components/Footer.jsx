@@ -1,6 +1,7 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import logo from '../assets/logoWhite.svg'
+import { useSelector } from 'react-redux'
 import CustomButton from './custom/CustomButton'
 import { useTranslation } from 'react-i18next'
 import FacebookIcon from '@material-ui/icons/Facebook'
@@ -9,6 +10,7 @@ import IconButton from '@material-ui/core/IconButton'
 import ahoy from '../modules/analytics'
 
 const Footer = () => {
+  const { consent } = useSelector((state) => state)
   const { t } = useTranslation()
 
   const scrollToTop = () => {
@@ -46,8 +48,8 @@ const Footer = () => {
           <h3 data-cy='footer-contact-header'>{t('footer.subHeader2')}</h3>
           <CustomButton
             dataCy='phone-number'
-            onClick={ahoy.track(`phone_button`)}>
-            <a href='tel:+46317674100'>031-767 41 00</a>
+            onClick={consent && ahoy.track(`phone_button`)}>
+            <a href='tel:+4631192342'>031-19 23 42</a>
           </CustomButton>
           <CustomButton dataCy='get-started' onClick={scrollToTop}>
             {t('footer.startButton')}

@@ -20,6 +20,11 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         submitMessage: action.payload,
       }
+    case 'ACCEPT_COOKIES':
+      return {
+        ...state,
+        consent: true,
+      }
     case 'SWITCH_ANSWER_FILLED_STATUS':
       let filledAnswers = state.filledAnswers
       filledAnswers[action.payload.key] = action.payload.filled
