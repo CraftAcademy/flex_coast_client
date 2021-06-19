@@ -21,6 +21,7 @@ const initialState = {
   },
   submitMessage: '',
   language: 'English',
+  consent: false,
 }
 
 export default initialState
