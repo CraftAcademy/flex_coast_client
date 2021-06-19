@@ -1,6 +1,7 @@
 describe('User can visit Flex Coast landing page', () => {
   beforeEach(() => {
     cy.visit('/')
+    cy.get('#rcc-confirm-button').click();
   })
 
   it('shows the main landing page', () => {

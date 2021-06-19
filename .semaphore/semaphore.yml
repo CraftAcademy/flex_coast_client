@@ -1,3 +1,4 @@
+
 version: v1.0
 name: Node JS
 agent:
@@ -14,3 +15,5 @@ blocks:
             - checkout
             - yarn install
             - 'yarn cy:integrate'
+      secrets:
+        - name: Env
