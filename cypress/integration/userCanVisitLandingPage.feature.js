@@ -1,12 +1,13 @@
 describe('User can visit Flex Coast landing page', () => {
   beforeEach(() => {
     cy.visit('/')
+    cy.get('#rcc-confirm-button').click();
   })
 
   it('shows the main landing page', () => {
     cy.get('.hero-section').should('have.css', 'background')
     cy.get('[data-cy=header]').within(() => {
-      cy.get('[data-cy=phone-question]').should('contain', '031-123 45 67')
+      cy.get('[data-cy=phone-question]').should('contain', '031-767 41 00')
       cy.get('[data-cy=language-dropdown]').should('be.visible')
       cy.get('[data-cy=flex-coast]').should('be.visible')
     })

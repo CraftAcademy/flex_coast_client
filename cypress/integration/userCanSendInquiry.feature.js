@@ -2,7 +2,7 @@ describe('User can send inquiry', () => {
   beforeEach(() => {
     cy.intercept(
       'POST',
-      'https://flex-coast-api-development.herokuapp.com/inquiries',
+      'https://flex-coast-api-production.herokuapp.com/api/inquiries',
       {
         body: {
           message:
@@ -10,7 +10,9 @@ describe('User can send inquiry', () => {
         },
       }
     )
+    
     cy.visit('/')
+    cy.get('#rcc-confirm-button').click();
   })
   describe('Successfully', () => {
     it('is expected to display success message', () => {
@@ -75,6 +77,7 @@ describe('User can send inquiry', () => {
       cy.get('[data-cy=location-question-container]')
         .find('[data-cy=done-btn]')
         .click({ force: true })
+        cy.wait('@eventRequest')
 
       cy.get('[data-cy=flexible-question-container]').within(() => {
         cy.get('[data-cy=question]').should(
@@ -86,6 +89,7 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=mixed-label]').should('be.visible')
         cy.get('[data-cy=mixed-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
+        cy.wait('@eventRequest')
       })
 
       cy.get('[data-cy=start-date-question-container]').within(() => {
@@ -98,15 +102,17 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=unsure-label]').should('be.visible')
         cy.get('[data-cy=now-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
+        cy.wait('@eventRequest')
       })
 
       cy.get('[data-cy=phone-question-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
-          'Finally, please provide your number so that we can easily reach you.'
+          'Is it ok if I give you a call?'
         )
         cy.get('[data-cy=input]').type('0713371337')
         cy.get('[data-cy=done-btn]').click()
+        cy.wait('@eventRequest')
       })
 
       const expectedOutcome = {
@@ -126,6 +132,7 @@ describe('User can send inquiry', () => {
         .should('deep.equal', expectedOutcome)
 
       cy.get('[data-cy=submit-btn]').click()
+      cy.wait('@eventRequest')
       cy.get('[data-cy=wizard]').should('not.exist')
       cy.get('[data-cy=on-submit-message]').should(
         'contain',
