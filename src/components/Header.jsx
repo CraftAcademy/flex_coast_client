@@ -1,5 +1,6 @@
 import React from 'react'
 import LanguageSelect from './LanguageSelect'
+import { useSelector } from 'react-redux'
 import logo from '../assets/logo.svg'
 import CustomButton from './custom/CustomButton'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
@@ -7,6 +8,7 @@ import ahoy from '../modules/analytics'
 import { motion } from 'framer-motion'
 
 const LandingHeader = ({ landing }) => {
+  const { consent } = useSelector((state) => state)
   const isSmall = useMediaQuery('(max-width:620px)')
 
   return (
@@ -23,7 +25,7 @@ const LandingHeader = ({ landing }) => {
         <div className='menu-wrapper'>
           <CustomButton
             dataCy='phone-question'
-            onClick={ahoy.track(`phone_button`)}>
+            onClick={consent && ahoy.track(`phone_button`)}>
             <a href='tel:+46311234567'>031-123 45 67</a>
           </CustomButton>
           <LanguageSelect />
