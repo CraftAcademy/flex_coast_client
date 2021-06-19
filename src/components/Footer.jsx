@@ -59,7 +59,7 @@ const Footer = () => {
         <Grid data-cy='links' className='sub-header' item xs={12} sm={4}>
           <h3 data-cy='footer-find-us-header'>{t('footer.subHeader3')}</h3>
           <Grid data-cy='link-grid'>
-            <IconButton data-cy='linkedin-button' href={'https://www.linkedin.com/'} >
+            <IconButton data-cy='linkedin-button' href={'https://www.linkedin.com/company/flex-coast/'} >
               <LinkedInIcon className='icon' fontSize='large' />
             </IconButton>
             <IconButton data-cy='facebook-button' href={'https://www.facebook.com/'} >
