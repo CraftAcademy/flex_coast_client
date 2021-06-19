@@ -1,5 +1,5 @@
 import React from 'react'
-import agent from '../../assets/FlexCoastBrokerAvatar2.jpg'
+import agent from '../../assets/FlexCoastBrokerAvatar.png'
 
 const Question = ({ text, dataCy = 'question' }) => {
   return (

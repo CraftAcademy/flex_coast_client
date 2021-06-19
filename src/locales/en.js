@@ -15,7 +15,7 @@ const en = {
       id_2: {
         text: testimonials[1].review_en,
         position: testimonials[1].position_en,
-      }
+      },
     },
 
     persons: {
@@ -49,16 +49,16 @@ const en = {
 
     footer: {
       subHeader1: 'The service',
-      subHeader2: 'Talk to a human',
+      subHeader2: 'Give us a buzz!',
       subHeader3: 'Please follow us!',
       aboutUsText:
-        'We provide high end office spaces in Gothenburg with flexible conditions and short term contracts.',
+        'We provide high end office spaces in Gothenburg with flexible conditions and contracts.',
       startButton: 'Get Started',
     },
 
     fantasticOffer: {
       offerTitle: 'For lightning fast contact',
-      offerSMS: 'Send an SMS to 031-19 23 42',
+      offerSMS: 'Send an SMS to 070-767 41 00',
       offer1Sub: 'Any size space',
       offer1: 'From a single desk, all the way up to configured offices.',
       offer2Sub: 'On your terms',
@@ -71,8 +71,7 @@ const en = {
       email: 'Where can we reach you?',
       size: 'How big is your team?',
       officeType: 'What type of office are you looking for?',
-      phone:
-        'Finally, please provide your number so that we can easily reach you.',
+      phone: 'Is it ok if I give you a call?',
       peers: 'Would you like to share office with others from your industry?',
       location: 'Where would you like to be situated?',
       workingHours: 'Do you plan to work full-time or flexible hours?',
@@ -86,7 +85,7 @@ const en = {
       officeLabel: 'Office',
       openSpaceLabel: 'Open space',
       combinedLabel: 'Combined',
-      phone: '– My number is',
+      phone: '– Yes, my number is',
       peersNegative: 'No',
       peersPositive: 'Yes',
       location: "– We're interested in",

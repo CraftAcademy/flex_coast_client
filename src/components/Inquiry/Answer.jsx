@@ -17,7 +17,9 @@ const Answer = ({
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
   )
+
   const filled = useSelector((state) => state.filledAnswers[questionKey])
+  const { consent } = useSelector((state) => state)
   const setAnswer = (event) => {
     event.preventDefault()
 
@@ -35,7 +37,7 @@ const Answer = ({
         type: 'SET_ANSWERS',
         payload: { key: questionKey, answer: inputValue },
       })
-      ahoyTracking()
+      consent && ahoyTracking()
     }
   }
 
@@ -47,7 +49,7 @@ const Answer = ({
   const ahoyTracking = () => {
     const properties = { question: questionKey, value: inputValue }
     properties[questionKey] = inputValue
-    ahoy.track(`answer`, properties)
+    consent && ahoy.track(`answer`, properties)
   }
 
   useEffect(() => {

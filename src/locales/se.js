@@ -48,16 +48,16 @@ const se = {
 
     footer: {
       subHeader1: 'Om tjänsten',
-      subHeader2: 'Prata med en människa',
+      subHeader2: 'Slå oss en pling!',
       subHeader3: 'Följ oss gärna!',
       aboutUsText:
-        'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och kortvariga kontrakt.',
+        'Vi hjälper entreprenör att hitta kontorslokaler där bra idéer föds och fantastiska företag växer',
       startButton: 'Hitta Kontor',
     },
 
     fantasticOffer: {
       offerTitle: 'För blixtrande snabb kontakt',
-      offerSMS: 'Skicka ett SMS till 031-19 23 42',
+      offerSMS: 'Skicka ett SMS till 070-767 41 00',
       offer1Sub: 'Valfri storlek',
       offer1: 'Från ett öppet landskap till ett eget rum',
       offer2Sub: 'På dina villkor',
@@ -70,7 +70,7 @@ const se = {
       email: 'Hur kan vi kontakta dig?',
       size: 'Hur stort är ditt team?',
       officeType: 'Vilken typ av kontor letar du efter?',
-      phone: 'Slutligen ange ditt nummer så att vi enkelt kan nå dig.',
+      phone: 'Går det bra om jag ringer dig?',
       peers: 'Vill du dela kontor med andra från din bransch?',
       location: 'Vilka områden är du intresserad av?',
       workingHours:
@@ -86,7 +86,7 @@ const se = {
       officeLabel: 'Kontor',
       openSpaceLabel: 'Öppet utrymme',
       combinedLabel: 'Alla',
-      phone: '– Mitt nummer är',
+      phone: '– Ja, mitt nummer är',
       peersNegative: 'Nej',
       peersPositive: 'Ja',
       location: '– Vi är intresserade av',
