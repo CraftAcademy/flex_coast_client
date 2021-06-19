@@ -108,7 +108,7 @@ describe('User can send inquiry', () => {
       cy.get('[data-cy=phone-question-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
-          'Finally, please provide your number so that we can easily reach you.'
+          'Is it ok if I give you a call?'
         )
         cy.get('[data-cy=input]').type('0713371337')
         cy.get('[data-cy=done-btn]').click()

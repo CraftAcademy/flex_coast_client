@@ -15,7 +15,7 @@ const en = {
       id_2: {
         text: testimonials[1].review_en,
         position: testimonials[1].position_en,
-      }
+      },
     },
 
     persons: {
@@ -71,8 +71,7 @@ const en = {
       email: 'Where can we reach you?',
       size: 'How big is your team?',
       officeType: 'What type of office are you looking for?',
-      phone:
-        'Finally, please provide your number so that we can easily reach you.',
+      phone: 'Is it ok if I give you a call?',
       peers: 'Would you like to share office with others from your industry?',
       location: 'Where would you like to be situated?',
       workingHours: 'Do you plan to work full-time or flexible hours?',
@@ -86,7 +85,7 @@ const en = {
       officeLabel: 'Office',
       openSpaceLabel: 'Open space',
       combinedLabel: 'Combined',
-      phone: '– My number is',
+      phone: '– Yes, my number is',
       peersNegative: 'No',
       peersPositive: 'Yes',
       location: "– We're interested in",
