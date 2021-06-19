@@ -7,11 +7,8 @@ import axios from 'axios'
 import './i18n'
 import reportWebVitals from './reportWebVitals'
 
-// axios.defaults.baseURL = 'http://localhost:3000/api'
-axios.defaults.baseURL =
-  process.env.REACT_APP_STAGE === 'production'
-    ? process.env.REACT_APP_API_URL
-    : 'https://flex-coast-api-development.herokuapp.com/'
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
+
 
 ReactDOM.render(
   <Provider store={store}>
