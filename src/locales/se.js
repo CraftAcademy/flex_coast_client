@@ -51,13 +51,13 @@ const se = {
       subHeader2: 'Slå oss en pling!',
       subHeader3: 'Följ oss gärna!',
       aboutUsText:
-        'Vi hjälper entreprenör att hitta kontorslokaler där bra idéer föds och fantastiska företag växer',
+        'Vi hjälper entreprenörer att hitta kontorslokaler där bra idéer föds och fantastiska företag växer',
       startButton: 'Hitta Kontor',
     },
 
     fantasticOffer: {
       offerTitle: 'För blixtrande snabb kontakt',
-      offerSMS: 'Skicka ett SMS till 070-767 41 00',
+      offerSMS: 'Ring oss på 031-296500',
       offer1Sub: 'Valfri storlek',
       offer1: 'Från ett öppet landskap till ett eget rum',
       offer2Sub: 'På dina villkor',
