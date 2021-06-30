@@ -26,7 +26,7 @@ const LandingHeader = ({ landing }) => {
           <CustomButton
             dataCy='phone-question'
             onClick={consent && ahoy.track(`phone_button`)}>
-            <a href='tel:+46317674140'>031-767 41 40</a>
+            <a href='tel:+4631296500'>031-296500</a>
           </CustomButton>
           <LanguageSelect />
         </div>

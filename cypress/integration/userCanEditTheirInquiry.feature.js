@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('User can edit inquiry', () => {
   beforeEach(() => {
     cy.visit('/')

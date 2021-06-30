@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('User can send inquiry', () => {
   beforeEach(() => {
     cy.intercept(
