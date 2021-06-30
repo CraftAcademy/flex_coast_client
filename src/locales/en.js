@@ -52,13 +52,13 @@ const en = {
       subHeader2: 'Give us a buzz!',
       subHeader3: 'Please follow us!',
       aboutUsText:
-        'We provide high end office spaces in Gothenburg with flexible conditions and contracts.',
+        'We help entrepreneurs find office space where good ideas are born and fantastic companies grow.',
       startButton: 'Get Started',
     },
 
     fantasticOffer: {
       offerTitle: 'For lightning fast contact',
-      offerSMS: 'Send an SMS to 070-767 41 00',
+      offerSMS: 'Call us on 031-296500',
       offer1Sub: 'Any size space',
       offer1: 'From a single desk, all the way up to configured offices.',
       offer2Sub: 'On your terms',

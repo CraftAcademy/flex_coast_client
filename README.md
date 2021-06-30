@@ -95,7 +95,6 @@ The backend of Flex Coast is built with Ruby on Rails as a dedicated API. It ser
 ### Login credentials
 
 - **Broker:** </br> email: johndoe@flexcoast.se, </br> password: password
-
 ## Updates/Improvements  
 
 ## License  
