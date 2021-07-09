@@ -98,6 +98,12 @@ const en = {
       start_dateQuarter: 'In 2 months',
       start_dateUnsure: 'Not Sure',
     },
+    rentOutQuestions: {
+      name: 'Please tell us your name',
+      phone: 'Can you leave your phone number?',
+      location: 'Where can we reach you?',
+      extraText: 'Do you have anything else to say?',
+    },
     submitButton: 'Send',
     submitMessage:
       'Thanks for your answers! We will get back to you as soon as possible with the best results!',

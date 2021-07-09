@@ -99,6 +99,12 @@ const se = {
       start_dateQuarter: 'Inom 2 månader',
       start_dateUnsure: 'Osäker',
     },
+    rentOutQuestions: {
+      name: 'Vad heter du?',
+      phone: 'Kan vi få ditt telefonnummer?',
+      location: 'Hur kan vi kontakta dig?',
+      extraText: 'Har du något annat du vill säga?',
+    },
     submitButton: 'Skicka in',
     submitMessage:
       'Tack för dina svar! Vi återkommer så snart som möjligt med dem bästa resultaten!',
