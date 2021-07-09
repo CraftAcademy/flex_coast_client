@@ -18,6 +18,19 @@ const Inquiries = {
     } catch (error) {}
     setLoading(false)
   },
+
+  async sendToHubSpot(formData, setLoading) {
+    setLoading(true)
+    try {
+      let params = { inquiry: { ...formData, language: setLanguageValue() } }
+      await axios.post('/inquiries', params)
+      store.dispatch({
+        type: 'SET_SUBMIT_MESSAGE',
+        payload: i18n.t('officeSubmitMessage')
+      })
+    } catch (error) {}
+    setLoading(false)
+  },
 }
 
 export default Inquiries
