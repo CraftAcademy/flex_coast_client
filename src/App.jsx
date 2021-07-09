@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux'
 import LoadingScreen from './views/LoadingScreen'
 import CookieConsent from 'react-cookie-consent'
 import store from './state/store/configureStore'
+import { Switch, Route } from 'react-router'
+import RentOutForm from './components/RentOutForm'
 const LandingPage = React.lazy(() => import('./views/LandingPage'))
 const Footer = React.lazy(() => import('./components/Footer'))
 
@@ -18,8 +20,15 @@ const App = () => {
   return (
     <>
       <Suspense fallback={<LoadingScreen />}>
-        <LandingPage />
-        <Footer />
+        <Switch>
+          <Route exact path='/'>
+            <LandingPage />
+          </Route>
+          <Route exact path='/rent_out'>
+            <RentOutForm />
+          </Route>
+        </Switch>
+        <Footer landing/>
         <CookieConsent
           location='bottom'
           buttonText='I accept'

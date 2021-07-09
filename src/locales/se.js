@@ -64,6 +64,7 @@ const se = {
       offer2: 'Månad, kvartal eller längre perioder',
       offer3Sub: 'Bästa lägena',
       offer3: 'Välj bland dem bästa lägena i Göteborg',
+      rentOutOffice: 'Hyr Ut Kontor',
     },
 
     question: {
@@ -98,6 +99,12 @@ const se = {
       start_dateNow: 'Idag',
       start_dateQuarter: 'Inom 2 månader',
       start_dateUnsure: 'Osäker',
+    },
+    rentOutQuestions: {
+      name: 'Vad heter du?',
+      phone: 'Kan vi få ditt telefonnummer?',
+      location: 'Hur kan vi kontakta dig?',
+      extraText: 'Har du något annat du vill säga?',
     },
     submitButton: 'Skicka in',
     submitMessage:
