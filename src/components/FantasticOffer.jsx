@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import iconCity from '../assets/iconCityPurple.svg'
 import size from '../assets/sizePurple.svg'
 import calendar from '../assets/calendarPurple.svg'
@@ -24,6 +25,9 @@ const FantasticOffer = () => {
           {t('fantasticOffer.offerSMS')}
         </h2>
       </div>
+      <button data-cy='rent-out-button' className='rent-out-button'>
+        <Link to='/rent_out'>Rent Out Office</Link>
+      </button>
       <div className='offer-container'>
         <Offer
           id={1}
