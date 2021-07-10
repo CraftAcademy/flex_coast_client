@@ -1,27 +1,5 @@
 @import './variables';
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  max-width: 800px;
-  margin: auto;
-  margin-top: 50px;
-  padding: 10px 50px 50px 50px;
-  border-radius: $borderRadius;
-  border: 1px solid lightgray;
-  @media only screen and (max-width: $mobile) {
-    border: none;
-    margin-top: 0;
-    padding: 0 20px 0 20px;
-  }
-
-  .custom-button {
-    width: 200px;
-    margin: 0 auto;
-  }
-}
-
 .welcomeMessage {
   color: $fontColor;
   padding-bottom: 30px;

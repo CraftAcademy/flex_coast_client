@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import LanguageSelect from './LanguageSelect'
 import { useSelector } from 'react-redux'
 import logo from '../assets/logo.svg'
@@ -18,7 +19,9 @@ const LandingHeader = ({ landing }) => {
       transition={{ duration: 0.5 }}
       data-cy='header'
       className={landing ? 'page-header-landing' : 'page-header'}>
-      <img src={logo} alt='logo' className='logo' data-cy='flex-coast' />
+      <Link to='/'>
+        <img src={logo} alt='logo' className='logo' data-cy='flex-coast' />
+      </Link>
       {isSmall ? (
         <LanguageSelect />
       ) : (
