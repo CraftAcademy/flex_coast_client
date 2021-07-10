@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 25px auto;
     max-width: 1280px;
     text-align: center;
     h1 {
@@ -27,6 +27,17 @@
       color: rgb(255, 184, 52);
     }
   }
+
+  .rent-out {
+    align-self: center;
+    .rent-out-button {
+      @extend .custom-button;
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+  }
+
   .offer-container {
     max-width: 1280px;
     margin: 30px auto;

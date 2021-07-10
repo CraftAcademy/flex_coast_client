@@ -18,6 +18,21 @@ const Inquiries = {
     } catch (error) {}
     setLoading(false)
   },
+
+  async sendToHubSpot(formData, setLoading) {
+    setLoading(true)
+    try {
+      let params = { inquiry: { ...formData, language: setLanguageValue() } }
+      await axios.post('/inquiries', params)
+      store.dispatch({
+        type: 'SET_SUCCESS_MESSAGE',
+        payload: i18n.t('officeSubmitMessage')
+      })
+      let { consent } = store.getState()
+      consent && ahoy.track(`rent_out_button`)
+    } catch (error) {}
+    setLoading(false)
+  },
 }
 
 export default Inquiries
