@@ -22,6 +22,7 @@ const CustomButton = ({
   }, [])
 
   const button = (
+    // TODO: De faq is this? onClick={onClick}
     <button className='custom-button' data-cy={dataCy} onClick={onClick}>
       {loading ? <CircularProgress size={25} /> : children}
     </button>

@@ -28,6 +28,12 @@ const Wizard = () => {
     animate: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.25 } },
   }
 
+  const handleSubmit = async () => {
+    setLoading(true)
+    await Inquiries.create(formData)
+    setLoading(false)
+  }
+
   return (
     <>
       {submitMessage ? (
@@ -52,7 +58,7 @@ const Wizard = () => {
             className='wizard-container'
             id='wizard-container'
             data-cy='wizard'
-            tabindex='0'>
+            tabIndex='0'>
             <InquiryCompanySize />
             {formData.size && <InquiryOfficeType />}
             {formData.office_type && <InquiryEmail />}
@@ -67,9 +73,8 @@ const Wizard = () => {
                 variants={submitVariants}>
                 <CustomButton
                   loading={loading}
-                  submit
                   dataCy='submit-btn'
-                  onClick={() => Inquiries.create(formData, setLoading)}>
+                  onClick={() => handleSubmit()}>
                   {t('submitButton')}
                 </CustomButton>
               </motion.div>
