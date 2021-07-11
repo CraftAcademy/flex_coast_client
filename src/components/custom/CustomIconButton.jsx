@@ -8,6 +8,7 @@ const CustomIconButton = ({ toggle }) => {
     <IconButton
       className={toggle ? 'done-btn-filled' : 'done-btn'}
       type='submit'
+      // TODO: refactor away from getElementById
       onClick={() => document.getElementById('wizard-container').focus()}
       data-cy='done-btn'>
       {toggle ? (

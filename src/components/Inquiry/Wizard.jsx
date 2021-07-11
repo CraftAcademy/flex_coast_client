@@ -52,7 +52,7 @@ const Wizard = () => {
             className='wizard-container'
             id='wizard-container'
             data-cy='wizard'
-            tabindex='0'>
+            tabIndex='0'>
             <InquiryCompanySize />
             {formData.size && <InquiryOfficeType />}
             {formData.office_type && <InquiryEmail />}
