@@ -1,10 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
+import ahoy from '../modules/analytics'
 import iconCity from '../assets/iconCityPurple.svg'
 import size from '../assets/sizePurple.svg'
 import calendar from '../assets/calendarPurple.svg'
-import { useTranslation } from 'react-i18next'
 
 const FantasticOffer = () => {
+  const { consent } = useSelector((state) => state)
   const { t } = useTranslation()
 
   const Offer = ({ image, title, content, id }) => {
@@ -24,6 +28,19 @@ const FantasticOffer = () => {
           {t('fantasticOffer.offerSMS')}
         </h2>
       </div>
+      <div className='offer-title'>
+        <h1 data-cy='offer-section-header'>
+          {t('fantasticOffer.rentOutOfficeText')}
+        </h1>
+      </div>
+      <Link
+        to='/rent_out'
+        className='rent-out'
+        onClick={() => consent && ahoy.track(`rent_out_submit_button`)}>
+        <button data-cy='rent-out-button' className='rent-out-button'>
+          {t('fantasticOffer.rentOutOffice')}
+        </button>
+      </Link>
       <div className='offer-container'>
         <Offer
           id={1}

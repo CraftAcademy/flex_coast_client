@@ -4,7 +4,7 @@
   max-width: 1280px;
   padding: 50px;
   display: flex;
-  height: 75px;
+  height: 150px;
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
@@ -22,8 +22,16 @@
     display: flex;
     align-items: center;
     .MuiSelect-select {
-      color: $mainColor;
+      color: $fontColor;
     }
+  }
+
+  .MuiInputBase-input {
+    color: $fontColor;
+  }
+
+  .MuiSelect-icon {
+    color: $fontColor !important;
   }
 
   .dropdown-menu {
@@ -34,7 +42,7 @@
 
   .logo {
     height: 100px;
-    margin-top: 50px;
+    margin-top: 10px;
     cursor: pointer;
     @media only screen and (max-width: $mobile) {
       margin-top: 25px;
@@ -59,6 +67,10 @@
         color: white;
       }
     }
+
+    .MuiSelect-icon {
+      color: white !important;
+    }
   }
 }
 
@@ -76,6 +88,4 @@ input[type='number']::-webkit-outer-spin-button {
   }
 }
 
-.MuiSelect-icon {
-  color: white !important;
-}
+

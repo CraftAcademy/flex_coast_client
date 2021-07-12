@@ -1,17 +1,26 @@
 @import './fantasticOffer.scss', './footer.scss', './header.scss', './hero.scss',
   './mapSection.scss', './questionnaire.scss', './testimonialSlider.scss',
-  'testimonialSlider2.scss', './variables.scss';
+  'testimonialSlider2.scss', './variables.scss', './rentOutForm';
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
 
 #root {
-  font-size: 62.5%;
   background-color: whitesmoke;
+  font-size: 62.5%;
 }
 
 * {
   padding: 0;
   margin: 0;
   font-family: 'Nunito', sans-serif !important;
+}
+
+.success-snackbar {
+  .MuiSnackbarContent-root {
+    background-color: lime;
+    color: white;
+    font-size: 22px;
+    padding: 0 20px;
+  }
 }
 
 h2 {
