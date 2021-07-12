@@ -48,7 +48,7 @@ const Footer = () => {
           <h3 data-cy='footer-contact-header'>{t('footer.subHeader2')}</h3>
           <CustomButton
             dataCy='phone-number'
-            onClick={consent && ahoy.track(`phone_button`)}>
+            onClick={() => consent && ahoy.track(`phone_button`)}>
             <a href='tel:+4631296500'>031-296500</a>
           </CustomButton>
           <CustomButton dataCy='get-started' onClick={scrollToTop}>
