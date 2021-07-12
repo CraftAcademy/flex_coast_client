@@ -37,7 +37,7 @@ const Answer = ({
         type: 'SET_ANSWERS',
         payload: { key: questionKey, answer: inputValue },
       })
-      consent && ahoyTracking()
+      ahoyTracking()
     }
   }
 
