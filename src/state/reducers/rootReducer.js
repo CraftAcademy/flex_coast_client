@@ -20,6 +20,18 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         submitMessage: action.payload,
       }
+    case 'SET_SUCCESS_MESSAGE':
+      return {
+        ...state,
+        successMessageOpen: true,
+        successMessage: action.payload,
+      }
+    case 'CLOSE_SUCCESS_MESSAGE':
+      return {
+        ...state,
+        successMessageOpen: false,
+        successMessage: '',
+      }
     case 'ACCEPT_COOKIES':
       return {
         ...state,
