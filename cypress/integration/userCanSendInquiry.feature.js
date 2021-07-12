@@ -1,19 +1,15 @@
 /* eslint-disable no-undef */
 describe('User can send inquiry', () => {
   beforeEach(() => {
-    cy.intercept(
-      'POST',
-      'https://flex-coast-api-production.herokuapp.com/api/inquiries',
-      {
-        body: {
-          message:
-            'Thank you for your inquiry! We will be in touch with lovely offices soon.',
-        },
-      }
-    )
-    
+    cy.intercept('POST', '**/api/inquiries', {
+      body: {
+        message:
+          'Thank you for your inquiry! We will be in touch with lovely offices soon.',
+      },
+    })
+
     cy.visit('/')
-    cy.get('#rcc-confirm-button').click();
+    cy.get('#rcc-confirm-button').click()
   })
   describe('Successfully', () => {
     it('is expected to display success message', () => {
@@ -69,16 +65,15 @@ describe('User can send inquiry', () => {
           'contain',
           'Where would you like to be situated?'
         )
-        cy.get('[data-testID=locations]').click()
-        cy.wait('@eventRequest')
+        cy.get('[data-testid=locations]').click()
       })
-      cy.get('[data-testID=rrs-option_locations_1]').click()
-      cy.get('[data-testID=rrs-option_locations_2]').click()
-      cy.get('[data-testID=rrs-option_locations_3]').click().click()
+      cy.get('[data-testid=rrs-option_locations_1]').click()
+      cy.get('[data-testid=rrs-option_locations_2]').click()
+      cy.get('[data-testid=rrs-option_locations_3]').click().click()
       cy.get('[data-cy=location-question-container]')
         .find('[data-cy=done-btn]')
         .click({ force: true })
-        cy.wait('@eventRequest')
+      cy.wait('@eventRequest')
 
       cy.get('[data-cy=flexible-question-container]').within(() => {
         cy.get('[data-cy=question]').should(

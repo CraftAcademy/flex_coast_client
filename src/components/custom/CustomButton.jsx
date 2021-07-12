@@ -11,7 +11,9 @@ const CustomButton = ({
 }) => {
   const scroll = () => {
     let container = document.getElementById('wizard-container')
-    container.scrollBy({ top: container.offsetHeight, behavior: 'smooth' })
+    if (container) {
+      container.scrollBy({ top: container.offsetHeight, behavior: 'smooth' })
+    }
   }
 
   useEffect(() => {
@@ -22,7 +24,12 @@ const CustomButton = ({
   }, [])
 
   const button = (
-    <button className='custom-button' data-cy={dataCy} onClick={onClick}>
+    // TODO: De faq is this? onClick={onClick}
+    <button
+      className='custom-button'
+      data-cy={dataCy}
+      onClick={onClick}
+      >
       {loading ? <CircularProgress size={25} /> : children}
     </button>
   )

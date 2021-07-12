@@ -1,6 +1,6 @@
 const initialState = {
   formData: {
-    size: undefined,
+    size: '',
     office_type: '',
     email: '',
     peers: '',

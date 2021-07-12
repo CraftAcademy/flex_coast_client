@@ -64,6 +64,9 @@ const se = {
       offer2: 'Månad, kvartal eller längre perioder',
       offer3Sub: 'Bästa lägena',
       offer3: 'Välj bland dem bästa lägena i Göteborg',
+      rentOutOffice: 'Kontakta oss',
+      rentOutOfficeText: 'Har du kontor som du vill dela med andra?'
+
     },
 
     question: {
@@ -99,9 +102,17 @@ const se = {
       start_dateQuarter: 'Inom 2 månader',
       start_dateUnsure: 'Osäker',
     },
+    rentOutQuestions: {
+      name: 'Vad heter du?',
+      email: 'Kan vi få din mailadress?',
+      phone: 'Kan vi få ditt telefonnummer?',
+      location: 'Hur kan vi kontakta dig?',
+      extraText: 'Har du något annat du vill säga?',
+    },
     submitButton: 'Skicka in',
     submitMessage:
       'Tack för dina svar! Vi återkommer så snart som möjligt med dem bästa resultaten!',
+    officeSubmitMessage: 'Tack för förfrågan'
   },
 }
 

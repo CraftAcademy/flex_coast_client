@@ -37,6 +37,13 @@ const TestimonialsSection = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slider, timeoutActive])
 
+  useEffect(() => {
+    return () => {
+      stopTimer()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <>
       <div className='testimonials-header'>
