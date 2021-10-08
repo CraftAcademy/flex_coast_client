@@ -31,10 +31,11 @@ describe('User can send inquiry', () => {
           'contain',
           'What type of office are you looking for?'
         )
-        cy.get('[data-cy=open-space-label]').should('be.visible')
-        cy.get('[data-cy=office-label]').should('be.visible')
-        cy.get('[data-cy=combined-label]').should('be.visible')
-        cy.get('[data-cy=combined-btn]').click({ force: true })
+        cy.get('[data-cy=office-space]').should('be.visible')
+        cy.get('[data-cy=office-room]').should('be.visible')
+        cy.get('[data-cy=fixed-space]').should('be.visible')
+        cy.get('[data-cy=flexible-space]').should('be.visible')
+        cy.get('[data-cy=office-room]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
         cy.wait('@eventRequest')
       })
