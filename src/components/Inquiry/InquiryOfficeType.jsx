@@ -7,13 +7,26 @@ const InquiryOfficeType = () => {
   const { t } = useTranslation()
 
   const radioButtonData = [
-    { value: 'office', label: t('answer.officeLabel'), dataCy: 'office' },
     {
-      value: 'open_space',
-      label: t('answer.openSpaceLabel'),
-      dataCy: 'open-space',
+      value: 'office_space',
+      label: t('answer.officeLabel'),
+      dataCy: 'office-space',
     },
-    { value: 'combined', label: t('answer.combinedLabel'), dataCy: 'combined' },
+    {
+      value: 'office_room',
+      label: t('answer.officeRoom'),
+      dataCy: 'office-room',
+    },
+    {
+      value: 'fixed_space',
+      label: t('answer.fixedOfficeSpace'),
+      dataCy: 'fixed-space',
+    },
+    {
+      value: 'flexible_space',
+      label: t('answer.flexibleOfficeSpace'),
+      dataCy: 'flexible-space',
+    },
   ]
 
   return (
