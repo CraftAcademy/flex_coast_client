@@ -15,7 +15,7 @@
           justify-content: center;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .compelling-container {
     height: auto;
     padding: 50px 20px 50px 20px;
@@ -73,7 +73,7 @@
           justify-content: space-between;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .compelling-container .offer-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -116,7 +116,7 @@
   height: 120px;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .compelling-container .offer-container .offer img {
     height: 120px;
   }
@@ -253,7 +253,7 @@
   border-bottom: 1px solid lightgray;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .page-header, .page-header-landing {
     margin: 0 20px;
     padding: 15px 0;
@@ -295,7 +295,7 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .page-header .logo, .page-header-landing .logo {
     margin-top: 25px;
     height: 75px;
@@ -310,6 +310,14 @@
   color: white;
   font-size: 18px;
   padding-bottom: 0;
+}
+
+@media only screen and (max-width: 780px) {
+  .page-header-landing .MuiSelect-select {
+    color: white;
+    font-size: 18px;
+    padding-bottom: 0;
+  }
 }
 
 .page-header-landing .dropdown-menu button:first-of-type {
@@ -338,10 +346,10 @@ input[type='number']::-webkit-outer-spin-button {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 730px;
+  height: 820px;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .hero-section {
     min-height: 100vh;
     min-height: -webkit-fill-available;
@@ -363,7 +371,7 @@ input[type='number']::-webkit-outer-spin-button {
   max-width: 900px;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .hero-section .welcome-text {
     padding: 0;
     -webkit-box-orient: vertical;
@@ -407,7 +415,7 @@ input[type='number']::-webkit-outer-spin-button {
   outline: none;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .hero-section .welcome-text #wizard-container {
     max-height: 260px;
     padding: 10px 10px;
@@ -430,13 +438,19 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .hero-section .welcome-text h1 {
-  padding: 30px 0 20px 10px;
+  padding: 30px 0 50px 10px;
   line-height: 1.2;
   font-size: 55px;
   max-width: 800px;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 720px) {
+  .hero-section .welcome-text h1 {
+    font-size: 46px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
   .hero-section .welcome-text h1 {
     text-align: center;
     margin: 75px 0;
@@ -455,7 +469,7 @@ input[type='number']::-webkit-outer-spin-button {
   border-bottom: 3px solid #ffd09c;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .welcomeMessage {
     margin: 20px 20px 50px 20px;
   }
@@ -469,7 +483,7 @@ input[type='number']::-webkit-outer-spin-button {
   padding: 0 20px;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .question-container {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
@@ -500,7 +514,7 @@ input[type='number']::-webkit-outer-spin-button {
   border-radius: 10px;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .question-container p {
     font-size: 18px;
     padding: 20px;
@@ -525,7 +539,7 @@ input[type='number']::-webkit-outer-spin-button {
   margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .answer-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -575,7 +589,7 @@ input[type='number']::-webkit-outer-spin-button {
   background-color: rgba(0, 0, 0, 0);
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .answer-container .input, .answer-container .input:disabled, .answer-container .input-filled {
     width: 100%;
     font-size: 18px;
@@ -668,6 +682,14 @@ input[type='number']::-webkit-outer-spin-button {
   transition: 0.3s;
 }
 
+@media only screen and (max-width: 780px) {
+  .answer-container .done-btn, .answer-container .done-btn-filled {
+    height: 45px;
+    width: 45px;
+    margin-top: 6px;
+  }
+}
+
 .answer-container .done-btn:hover, .answer-container .done-btn-filled:hover {
   background-color: #ffd09c;
 }
@@ -712,7 +734,7 @@ input[type='number']::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .answer-container .radio-group label {
     padding: 8px;
     font-size: 18px;
@@ -778,7 +800,7 @@ input[type='number']::-webkit-outer-spin-button {
   bottom: 100%;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .location-question-container .answer-form-container .rrs .rrs__button + .rrs__options {
     top: 60px;
     bottom: auto;
@@ -872,7 +894,7 @@ input.phone {
   margin-bottom: 25px;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .illu-container .testimonial-subtitle {
     font-size: 12px;
   }
@@ -891,7 +913,7 @@ input.phone {
   }
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .testimonials-header {
     font-size: 14px;
     padding: 0 20px;
@@ -914,7 +936,7 @@ input.phone {
           align-items: center;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .testimonials-container {
     margin-bottom: 0;
     padding-top: 25px;
@@ -955,7 +977,7 @@ input.phone {
   text-align: center;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .testimonials-container .testimonial-container {
     margin: 50px 15px;
   }
@@ -1229,7 +1251,7 @@ section {
   border: 1px solid #ffd09c;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
   .rent-out-page .form-container {
     border: none;
     margin-top: 0;

@@ -53,8 +53,14 @@
   &-landing {
     @extend .page-header;
     border-bottom: none;
-
     .menu-wrapper {
+      .MuiSelect-select {
+        color: white;
+        font-size: 18px;
+        padding-bottom: 0;
+      }
+    }
+    @media only screen and (max-width: $mobile) {
       .MuiSelect-select {
         color: white;
         font-size: 18px;
@@ -87,5 +93,3 @@ input[type='number']::-webkit-outer-spin-button {
     width: 125px;
   }
 }
-
-
