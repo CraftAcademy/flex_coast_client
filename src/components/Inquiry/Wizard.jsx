@@ -9,7 +9,6 @@ import InquiryOfficeType from './InquiryOfficeType'
 import InquiryPhoneNumber from './InquiryPhoneNumber'
 import InquiryPeers from './InquiryPeers'
 import InquiryLocation from './InquiryLocation'
-import InquiryWorkingHours from './InquiryWorkingHours'
 import InquiryStartDate from './InquiryStartDate'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
@@ -64,8 +63,7 @@ const Wizard = () => {
             {formData.office_type && <InquiryEmail />}
             {formData.email && <InquiryPeers />}
             {formData.peers && <InquiryLocation />}
-            {formData.locations[0] && <InquiryWorkingHours />}
-            {formData.flexible && <InquiryStartDate />}
+            {formData.locations[0] && <InquiryStartDate />}
             {formData.start_date && <InquiryPhoneNumber />}
             {formData.phone && (
               <motion.div
