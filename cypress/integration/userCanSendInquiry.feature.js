@@ -31,11 +31,11 @@ describe('User can send inquiry', () => {
           'contain',
           'What type of office are you looking for?'
         )
-        cy.get('[data-cy=office-space]').should('be.visible')
-        cy.get('[data-cy=office-room]').should('be.visible')
-        cy.get('[data-cy=fixed-space]').should('be.visible')
-        cy.get('[data-cy=flexible-space]').should('be.visible')
-        cy.get('[data-cy=office-room]').click({ force: true })
+        cy.get('[data-cy=office-space-label]').should('be.visible')
+        cy.get('[data-cy=office-room-label]').should('be.visible')
+        cy.get('[data-cy=fixed-space-label]').should('be.visible')
+        cy.get('[data-cy=flexible-space-label]').should('be.visible')
+        cy.get('[data-cy=office-room-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
         cy.wait('@eventRequest')
       })
@@ -114,7 +114,7 @@ describe('User can send inquiry', () => {
 
       const expectedOutcome = {
         size: '100',
-        office_type: 'combined',
+        office_type: 'office_room',
         email: 'example@mail.com',
         peers: 'yes',
         locations: ['Lindholmen', 'Gamlestaden'],
