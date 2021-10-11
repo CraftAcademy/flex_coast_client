@@ -76,19 +76,6 @@ describe('User can send inquiry', () => {
         .click({ force: true })
       cy.wait('@eventRequest')
 
-      cy.get('[data-cy=flexible-question-container]').within(() => {
-        cy.get('[data-cy=question]').should(
-          'contain',
-          'Do you plan to work full-time or flexible hours?'
-        )
-        cy.get('[data-cy=full-time-label]').should('be.visible')
-        cy.get('[data-cy=flexible-label]').should('be.visible')
-        cy.get('[data-cy=mixed-label]').should('be.visible')
-        cy.get('[data-cy=mixed-btn]').click({ force: true })
-        cy.get('[data-cy=done-btn]').click()
-        cy.wait('@eventRequest')
-      })
-
       cy.get('[data-cy=start-date-question-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
@@ -118,7 +105,6 @@ describe('User can send inquiry', () => {
         email: 'example@mail.com',
         peers: 'yes',
         locations: ['Lindholmen', 'Gamlestaden'],
-        flexible: 'mixed',
         start_date: 'now',
         phone: '0713371337',
       }
