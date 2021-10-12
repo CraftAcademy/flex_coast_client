@@ -31,10 +31,11 @@ describe('User can send inquiry', () => {
           'contain',
           'What type of office are you looking for?'
         )
-        cy.get('[data-cy=open-space-label]').should('be.visible')
-        cy.get('[data-cy=office-label]').should('be.visible')
-        cy.get('[data-cy=combined-label]').should('be.visible')
-        cy.get('[data-cy=combined-btn]').click({ force: true })
+        cy.get('[data-cy=office-space-label]').should('be.visible')
+        cy.get('[data-cy=office-room-label]').should('be.visible')
+        cy.get('[data-cy=fixed-space-label]').should('be.visible')
+        cy.get('[data-cy=flexible-space-label]').should('be.visible')
+        cy.get('[data-cy=office-room-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
         cy.wait('@eventRequest')
       })
@@ -75,19 +76,6 @@ describe('User can send inquiry', () => {
         .click({ force: true })
       cy.wait('@eventRequest')
 
-      cy.get('[data-cy=flexible-question-container]').within(() => {
-        cy.get('[data-cy=question]').should(
-          'contain',
-          'Do you plan to work full-time or flexible hours?'
-        )
-        cy.get('[data-cy=full-time-label]').should('be.visible')
-        cy.get('[data-cy=flexible-label]').should('be.visible')
-        cy.get('[data-cy=mixed-label]').should('be.visible')
-        cy.get('[data-cy=mixed-btn]').click({ force: true })
-        cy.get('[data-cy=done-btn]').click()
-        cy.wait('@eventRequest')
-      })
-
       cy.get('[data-cy=start-date-question-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
@@ -113,11 +101,10 @@ describe('User can send inquiry', () => {
 
       const expectedOutcome = {
         size: '100',
-        office_type: 'combined',
+        office_type: 'office_room',
         email: 'example@mail.com',
         peers: 'yes',
         locations: ['Lindholmen', 'Gamlestaden'],
-        flexible: 'mixed',
         start_date: 'now',
         phone: '0713371337',
       }
